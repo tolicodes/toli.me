@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+<style>
+
+.link-previews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.link-preview {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.link-preview:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.link-image img {
+  width: 100%;
+  height: 150px; /* Adjust based on your design */
+  object-fit: cover;
+}
+
+.link-info {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.link-title {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.link-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+</style>
+<h1>Toli's Links</h1>
+
+    <div class="link-previews-grid">
+        {% for link in site.data.redirects %}
+        <div class="link-preview">
+          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+            <div class="link-image">
+              <img src="{{ link.image }}" alt="{{ link.title }}">
+            </div>
+            <div class="link-info">
+              <h3 class="link-title">{{ link.title }}</h3>
+              <p class="link-description">{{ link.description }}</p>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      
+
+
+
+  
