@@ -1,37 +1,74 @@
 - description: ToliCodes
-  image: https://tolicodes.com/assets/images/card.jpg?v=5e4c82f6
-  label: tolicodes.com
-  short: /codes
-  title: ToliCodes
-  url: https://tolicodes.com
-- description: DocSend helps you communicate more effectively by telling you what
-    happens to content after you send them and letting you keep control in real time.
-  image: https://assets.docsend.com/assets/social/ds-logo-icon-126807ac9914f82e45e9306394e76a71ae7ff787ae5a8e285c6a60d810289559.jpg
-  label: Resume
-  short: /resume
-  title: DocSend - Simple, intelligent, modern content sending
-  url: https://docsend.com/view/x59muw5yqjru3e6m
+  metadata:
+    image: https://tolicodes.com/assets/images/card.jpg?v=5e4c82f6
+    label: tolicodes.com
+    og:description: ToliCodes
+    og:image: https://tolicodes.com/assets/images/card.jpg?v=5e4c82f6
+    og:title: ToliCodes
+    screenshot_path: screenshots/tolicodes_screenshot.png
+    short: /codes
+    title: ToliCodes
+    url: https://tolicodes.com
+  table: null
+- description: My pdf Resume
+  metadata:
+    image: https://assets.docsend.com/assets/social/ds-logo-icon-126807ac9914f82e45e9306394e76a71ae7ff787ae5a8e285c6a60d810289559.jpg
+    label: Resume
+    og:description: DocSend helps you communicate more effectively by telling you
+      what happens to content after you send them and letting you keep control in
+      real time.
+    og:image: https://assets.docsend.com/assets/social/ds-logo-icon-126807ac9914f82e45e9306394e76a71ae7ff787ae5a8e285c6a60d810289559.jpg
+    og:title: DocSend - Simple, intelligent, modern content sending
+    screenshot_path: screenshots/docsend_screenshot.png
+    short: /resume
+    title: DocSend - Simple, intelligent, modern content sending
+    url: https://docsend.com/view/x59muw5yqjru3e6m
+  table: null
 - description: Anatoliy (Toli) Zaslavskiy's Interactive CV
-  image: https://cv.tolicodes.com/assets/images/card.jpg?v=7361bb63
-  label: Interactive CV
-  short: /cv
-  title: Anatoliy (Toli) Zaslavskiy's Interactive CV
-  url: https://cv.tolicodes.com/
+  metadata:
+    image: https://cv.tolicodes.com/assets/images/card.jpg?v=7361bb63
+    label: Interactive CV
+    og:description: Anatoliy (Toli) Zaslavskiy's Interactive CV
+    og:image: https://cv.tolicodes.com/assets/images/card.jpg?v=7361bb63
+    og:title: Anatoliy (Toli) Zaslavskiy's Interactive CV
+    screenshot_path: screenshots/cv_tolicodes_screenshot.png
+    short: /cv
+    title: Anatoliy (Toli) Zaslavskiy's Interactive CV
+    url: https://cv.tolicodes.com/
+  table: null
 - description: An interactive journey of how Toli landed at Dropbox!
-  image: https://dropbox.tolicodes.com/assets/images/card.jpg?v=1765f69c
-  label: My Dropbox Journey
-  short: /dropbox
-  title: Toli's Dropbox Journey
-  url: https://dropbox.tolicodes.com/
+  metadata:
+    image: https://dropbox.tolicodes.com/assets/images/card.jpg?v=1765f69c
+    label: My Dropbox Journey
+    og:description: An interactive journey of how Toli landed at Dropbox!
+    og:image: https://dropbox.tolicodes.com/assets/images/card.jpg?v=1765f69c
+    og:title: Toli's Dropbox Journey
+    screenshot_path: screenshots/dropbox_tolicodes_screenshot.png
+    short: /dropbox
+    title: Toli's Dropbox Journey
+    url: https://dropbox.tolicodes.com/
+  table: null
 - description: Toli’s Love Bounty
-  image: null
-  label: toli.love
-  short: /love
-  title: toli.love
-  url: https://toli.love/
+  metadata:
+    image: screenshots/toli_love_screenshot.png
+    label: toli.love
+    og:description: Toli’s Love Bounty
+    og:image: null
+    og:title: toli.love
+    screenshot_path: screenshots/toli_love_screenshot.png
+    short: /love
+    title: toli.love
+    url: https://toli.love/
+  table: null
 - description: NFT Project
-  image: https://eastercreatures.carrd.co/assets/images/card.jpg?v=12c812a2
-  label: Easter Creatures
-  short: /easter
-  title: Easter Creatures
-  url: https://eastercreatures.carrd.co/
+  metadata:
+    image: https://eastercreatures.carrd.co/assets/images/card.jpg?v=12c812a2
+    label: Easter Creatures
+    og:description: NFT Project
+    og:image: https://eastercreatures.carrd.co/assets/images/card.jpg?v=12c812a2
+    og:title: Easter Creatures
+    screenshot_path: screenshots/eastercreatures_carrd_co_screenshot.png
+    short: /easter
+    title: Easter Creatures
+    url: https://eastercreatures.carrd.co/
+  table: null
