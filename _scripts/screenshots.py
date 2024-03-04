@@ -24,7 +24,7 @@ def generate_filename(url, suffix, extension=".png"):
 
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
-options.add_argument("window-size=800,600")
+options.add_argument("window-size=390,300")
 driver = webdriver.Chrome(options=options)
 
 with open('_data/redirects.yml', 'r') as file:

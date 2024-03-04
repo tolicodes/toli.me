@@ -5,7 +5,7 @@
   og:image: https://tolicodes.com/assets/images/card.jpg?v=5e4c82f6
   og:title: ToliCodes
   screenshot_path: screenshots/tolicodes_screenshot.png
-  short: /codes
+  short: /tolicodes
   title: ToliCodes
   url: https://tolicodes.com
 - description: My pdf Resume
@@ -69,29 +69,3 @@
   short: /feinfra
   title: How I learned empathy
   url: https://youtu.be/z1VNwapOb8E
-- description: How workplace culture makes a real difference
-  image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/69/1b/04/691b0454-5494-464b-f441-88717145120b/mza_1050018416782084089.jpg/1200x630wp.png
-  og:image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/69/1b/04/691b0454-5494-464b-f441-88717145120b/mza_1050018416782084089.jpg/1200x630wp.png
-  short: /feinfra
-  title: Developer Happiness (JSJabber)
-  url: https://podcasts.apple.com/pl/podcast/jsj-358-pickle-js-tooling-developer-happiness-anatoliy/id1237401284?i=1000433942248
-- image: screenshots/codementor_io_screenshot.png
-  og:image: null
-  title: Guide to API Scraping
-  url: https://www.codementor.io/blog/api-scraping-5fq1gtd4ah
-- image: screenshots/feinfra_screenshot.png
-  og:image: null
-  title: Scaling the FE Team @ HOVER
-  url: https://www.feinfra.com/success-failure-stories/scaling-fe-teams-my-hover-story
-- image: screenshots/fbadsbook_screenshot.png
-  og:image: null
-  title: FB Ads Book
-  url: https://fbadsbook.com/
-- image: https://picklejs.com/img/pickle.png
-  og:image: https://picklejs.com/img/pickle.png
-  title: PickleJS
-  url: https://picklejs.com/
-- image: https://principles.tolicodes.com/img/undraw_online.svg
-  og:image: https://principles.tolicodes.com/img/undraw_online.svg
-  title: Discover My Principles
-  url: https://principles.tolicodes.com/docs/life-principles
