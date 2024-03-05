@@ -1,15 +1,11 @@
-- description: ToliCodes
-  image: https://tolicodes.com/assets/images/card.jpg?v=5e4c82f6
+- image: https://tolicodes.com/assets/images/card.jpg?v=5e4c82f6
   label: tolicodes.com
   og:description: ToliCodes
   og:image: https://tolicodes.com/assets/images/card.jpg?v=5e4c82f6
   og:title: ToliCodes
   screenshot_path: screenshots/tolicodes_screenshot.png
   short: /tolicodes
-  title: ToliCodes
-  url: https://tolicodes.com
-- description: My pdf Resume
-  image: https://assets.docsend.com/assets/social/ds-logo-icon-126807ac9914f82e45e9306394e76a71ae7ff787ae5a8e285c6a60d810289559.jpg
+- image: https://assets.docsend.com/assets/social/ds-logo-icon-126807ac9914f82e45e9306394e76a71ae7ff787ae5a8e285c6a60d810289559.jpg
   label: Resume
   og:description: DocSend helps you communicate more effectively by telling you what
     happens to content after you send them and letting you keep control in real time.
@@ -17,85 +13,59 @@
   og:title: DocSend - Simple, intelligent, modern content sending
   screenshot_path: screenshots/docsend_screenshot.png
   short: /resume
-  title: DocSend - Simple, intelligent, modern content sending
-  url: https://docsend.com/view/x59muw5yqjru3e6m
-- description: Anatoliy (Toli) Zaslavskiy's Interactive CV
-  image: https://cv.tolicodes.com/assets/images/card.jpg?v=7361bb63
+- image: https://cv.tolicodes.com/assets/images/card.jpg?v=7361bb63
   label: Interactive CV
   og:description: Anatoliy (Toli) Zaslavskiy's Interactive CV
   og:image: https://cv.tolicodes.com/assets/images/card.jpg?v=7361bb63
   og:title: Anatoliy (Toli) Zaslavskiy's Interactive CV
   screenshot_path: screenshots/cv_tolicodes_screenshot.png
   short: /cv
-  title: Anatoliy (Toli) Zaslavskiy's Interactive CV
-  url: https://cv.tolicodes.com/
-- description: An interactive journey of how Toli landed at Dropbox!
-  image: https://dropbox.tolicodes.com/assets/images/card.jpg?v=1765f69c
+- image: https://dropbox.tolicodes.com/assets/images/card.jpg?v=1765f69c
   label: My Dropbox Journey
   og:description: An interactive journey of how Toli landed at Dropbox!
   og:image: https://dropbox.tolicodes.com/assets/images/card.jpg?v=1765f69c
   og:title: Toli's Dropbox Journey
   screenshot_path: screenshots/dropbox_tolicodes_screenshot.png
   short: /dropbox
-  title: Toli's Dropbox Journey
-  url: https://dropbox.tolicodes.com/
-- description: Toli’s Love Bounty
-  image: screenshots/toli_love_screenshot.png
+- image: screenshots/toli_love_screenshot.png
   label: toli.love
   og:description: Toli’s Love Bounty
   og:image: null
   og:title: toli.love
   screenshot_path: screenshots/toli_love_screenshot.png
   short: /love
-  title: toli.love
-  url: https://toli.love/
-- description: NFT Project
-  image: https://eastercreatures.carrd.co/assets/images/card.jpg?v=12c812a2
+- image: https://eastercreatures.carrd.co/assets/images/card.jpg?v=12c812a2
   label: Easter Creatures
   og:description: NFT Project
   og:image: https://eastercreatures.carrd.co/assets/images/card.jpg?v=12c812a2
   og:title: Easter Creatures
   screenshot_path: screenshots/eastercreatures_carrd_co_screenshot.png
   short: /easter
-  title: Easter Creatures
-  url: https://eastercreatures.carrd.co/
 - image: screenshots/feinfra_screenshot.png
   og:image: null
+  screenshot_path: screenshots/feinfra_screenshot.png
   short: /feinfra
-  title: Frontend Infra Book
-  url: https://www.feinfra.com/
 - image: https://i.ytimg.com/vi/z1VNwapOb8E/maxresdefault.jpg
   og:image: https://i.ytimg.com/vi/z1VNwapOb8E/maxresdefault.jpg
-  short: /feinfra
-  title: How I learned empathy
-  url: https://youtu.be/z1VNwapOb8E
-- description: How workplace culture makes a real difference
-  image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/69/1b/04/691b0454-5494-464b-f441-88717145120b/mza_1050018416782084089.jpg/1200x630wp.png
+  short: /empathy
+- image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/69/1b/04/691b0454-5494-464b-f441-88717145120b/mza_1050018416782084089.jpg/1200x630wp.png
   og:image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/69/1b/04/691b0454-5494-464b-f441-88717145120b/mza_1050018416782084089.jpg/1200x630wp.png
-  short: /feinfra
-  title: Developer Happiness (JSJabber)
-  url: https://podcasts.apple.com/pl/podcast/jsj-358-pickle-js-tooling-developer-happiness-anatoliy/id1237401284?i=1000433942248
+  short: /developer-happiness
 - image: screenshots/codementor_io_screenshot.png
   og:image: null
-  title: Guide to API Scraping
-  url: https://www.codementor.io/blog/api-scraping-5fq1gtd4ah
+  screenshot_path: screenshots/codementor_io_screenshot.png
+  short: /api-scraping
 - image: screenshots/feinfra_screenshot.png
   og:image: null
+  screenshot_path: screenshots/feinfra_screenshot.png
   short: /scaling-fe
-  title: Scaling the FE Team @ HOVER
-  url: https://www.feinfra.com/success-failure-stories/scaling-fe-teams-my-hover-story
 - image: screenshots/fbadsbook_screenshot.png
   og:image: null
+  screenshot_path: screenshots/fbadsbook_screenshot.png
   short: /fbads
-  title: FB Ads Book
-  url: https://fbadsbook.com/
 - image: https://picklejs.com/img/pickle.png
   og:image: https://picklejs.com/img/pickle.png
   short: /pickle
-  title: PickleJS
-  url: https://picklejs.com/
 - image: https://principles.tolicodes.com/img/undraw_online.svg
   og:image: https://principles.tolicodes.com/img/undraw_online.svg
   short: /principles
-  title: Discover My Principles
-  url: https://principles.tolicodes.com/docs/life-principles

@@ -1,89 +1,73 @@
 ---
 layout: default
-title: toli.me
+title: Toli.me
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-<html>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Site Title</title>
-    <!-- Include Bootstrap CSS -->
+    <title>{{ page.title }}</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
 
+<div class="container mt-5">
+    <input type="text" id="searchInput" class="form-control search-box mb-3" placeholder="Search...">
 
-<!-- Optional: Include Bootstrap JavaScript and its dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</html>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
+        </li>
+        {% assign categories = site.data.categories %}
+        {% for category in categories %}
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="{{ category[0] | slugify }}-tab" data-toggle="tab" href="#{{ category[0] | slugify }}" role="tab" aria-controls="{{ category[0] | slugify }}" aria-selected="false">{{ category[0] }}</a>
+        </li>
+        {% endfor %}
+    </ul>
 
-<style>
-
-.link-previews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.link-preview {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  text-decoration: none;
-  display: block;
-  height: 100%;
-}
-
-.link-preview:hover {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.link-image img {
-  width: 100%;
-  height: 150px; /* Adjust based on your design */
-  object-fit: cover;
-}
-
-.link-info {
-  padding: 10px;
-  background-color: #fff;
-}
-
-.link-title {
-  margin: 0 0 10px 0;
-  color: #333;
-}
-
-.link-description {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-}
-
-</style>
-
-
-
-
-<h1>Toli's Links</h1>
-  <div class="container mt-5">
-    <div class="row">
-        {% for link in site.data.redirects %}
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                {% if link.image %}
-                <img src="{{ link.image }}" class="card-img-top" alt="{{ link.title }}">
-                {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ link.title }}</h5>
-                    <p class="card-text">{{ link.description }}</p>
-                    <a href="{{ link.url }}" target="_blank" class="btn btn-primary">Visit Site</a>
-                </div>
+    <!-- Tab content -->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+            <div class="row">
+                {% for category in categories %}
+                    {% for item in category[1] %}
+                    {% include "card.html" item=item %}
+                    {% endfor %}
+                {% endfor %}
             </div>
         </div>
+        {% for category in categories %}
+            <div class="tab-pane fade" id="{{ category[0] | slugify }}" role="tabpanel" aria-labelledby="{{ category[0] | slugify }}-tab">
+                <div class="row">
+                    {% for item in category[1] %}
+                      {% include "card.html" item=item %}
+                    {% endfor %}
+                </div>
+            </div>
         {% endfor %}
     </div>
 </div>
+
+<!-- Bootstrap and JQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('#searchInput').on('keyup', function() {
+        var value = $(this).val().toLowerCase();
+        $(".card").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+</script>
+
+</body>
+</html>

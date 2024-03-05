@@ -1,0 +1,13 @@
+<!-- _includes/card.html -->
+<div class="col-md-4 mb-4">
+    <div class="card h-100">
+        {% if item.image %}
+        <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.description }}</p>
+            <a href="{{ item.url }}" target="_blank" class="btn btn-primary">Visit Site</a>
+        </div>
+    </div>
+</div>

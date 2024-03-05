@@ -1,0 +1,71 @@
+Books:
+- category: Books
+  short: /feinfra
+  title: Frontend Infra Book
+  url: https://www.feinfra.com/
+- category: Books
+  short: /api-scraping
+  title: Guide to API Scraping
+  url: https://www.codementor.io/blog/api-scraping-5fq1gtd4ah
+- category: Books
+  short: /scaling-fe
+  title: Scaling the FE Team @ HOVER
+  url: https://www.feinfra.com/success-failure-stories/scaling-fe-teams-my-hover-story
+- category: Books
+  short: /fbads
+  title: FB Ads Book
+  url: https://fbadsbook.com/
+Open Source Projects:
+- category: Open Source Projects
+  short: /pickle
+  title: PickleJS
+  url: https://picklejs.com/
+Philosophy:
+- category: Philosophy
+  short: /principles
+  title: Discover My Principles
+  url: https://principles.tolicodes.com/docs/life-principles
+Podcasts:
+- category: Podcasts
+  description: How workplace culture makes a real difference
+  short: /developer-happiness
+  title: Developer Happiness (JSJabber)
+  url: https://podcasts.apple.com/pl/podcast/jsj-358-pickle-js-tooling-developer-happiness-anatoliy/id1237401284?i=1000433942248
+Portfolio:
+- category: Portfolio
+  description: ToliCodes
+  short: /tolicodes
+  title: ToliCodes
+  url: https://tolicodes.com
+Professional:
+- category: Professional
+  description: My pdf Resume
+  short: /resume
+  title: DocSend - Simple, intelligent, modern content sending
+  url: https://docsend.com/view/x59muw5yqjru3e6m
+- category: Professional
+  description: Anatoliy (Toli) Zaslavskiy's Interactive CV
+  short: /cv
+  title: Anatoliy (Toli) Zaslavskiy's Interactive CV
+  url: https://cv.tolicodes.com/
+- category: Professional
+  description: An interactive journey of how Toli landed at Dropbox!
+  short: /dropbox
+  title: Toli's Dropbox Journey
+  url: https://dropbox.tolicodes.com/
+Side Projects:
+- category: Side Projects
+  description: Toli’s Love Bounty
+  short: /love
+  title: toli.love
+  url: https://toli.love/
+- category: Side Projects
+  description: NFT Project
+  short: /easter
+  title: Easter Creatures
+  url: https://eastercreatures.carrd.co/
+Talks:
+- category: Talks
+  short: /empathy
+  title: How I learned empathy
+  url: https://youtu.be/z1VNwapOb8E
