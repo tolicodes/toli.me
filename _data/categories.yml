@@ -38,11 +38,11 @@ Portfolio:
   title: ToliCodes
   url: https://tolicodes.com
 Professional:
-- category: Professional
-  description: My pdf Resume
-  short: /resume
-  title: DocSend - Simple, intelligent, modern content sending
-  url: https://docsend.com/view/x59muw5yqjru3e6m
+# - category: Professional
+#   description: My pdf Resume
+#   short: /resume
+#   title: DocSend - Simple, intelligent, modern content sending
+#   url: https://toli.me/resume.pdf
 - category: Professional
   description: Anatoliy (Toli) Zaslavskiy's Interactive CV
   short: /cv
