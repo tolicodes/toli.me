@@ -1,3 +1,18 @@
+Highlights:
+- category: Highlights
+  short: /empathy
+  title: How I learned empathy
+  url: https://youtu.be/z1VNwapOb8E
+- category: Highlights
+  description: Anatoliy (Toli) Zaslavskiy's Interactive CV
+  short: /cv
+  title: Anatoliy (Toli) Zaslavskiy's Interactive CV
+  url: https://cv.tolicodes.com/
+- category: Highlights
+  description: An interactive journey of how Toli landed at Dropbox!
+  short: /dropbox
+  title: Toli's Dropbox Journey
+  url: https://dropbox.tolicodes.com/
 Books:
 - category: Books
   short: /feinfra
