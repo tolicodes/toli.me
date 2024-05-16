@@ -2,6 +2,7 @@
 docker pull pdf2htmlex/pdf2htmlex:0.18.8.rc2-master-20200820-ubuntu-20.04-x86_64
 docker run -ti --rm -v ./pdf:/pdf -w /pdf pdf2htmlex/pdf2htmlex:0.18.8.rc2-master-20200820-ubuntu-20.04-x86_64 --zoom 1.5 resume.pdf
 cp pdf/resume.html ./resume.html
+cp pdf/resume.pdf ./resume.pdf
 
 # Define the file to modify
 FILE="resume.html"
