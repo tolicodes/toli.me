@@ -18,7 +18,10 @@ sudo bundle install
 bundle exec jekyll serve
 ```
 
+Note that the site will redirect to carrd. So enter localhost:4000/url
+
 ## Resume
+Start docker
 Place resume.pdf in /pdf
 ```
 sh ./_scripts/convert_resume.sh
