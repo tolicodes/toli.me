@@ -20,7 +20,7 @@ title: Resume
 ---"
 
 # Prepend the header content to the file
-echo -e "$HEADER_CONTENT\n$(cat $FILE)" > "$FILE"
+printf "%s\n%s" "$HEADER_CONTENT" "$(cat $FILE)" > "$FILE"
 
 # Define the page container content to add
 PAGE_CONTAINER_OPEN='<div id="page-container">'
