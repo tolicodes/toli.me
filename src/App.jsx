@@ -16,7 +16,7 @@ const sections = [
       { label: "Dropbox Journey", note: "How I got there", href: "https://dropbox.tolicodes.com/" },
       { label: "Portfolio", note: "The greatest hits", href: "https://portfolio.tolicodes.com/" },
       { label: "Accomplishments", note: "A brag sheet, honestly", href: "https://accomplishments.tolicodes.com/" },
-      { label: "Paper Resume", note: "For the traditionalists", href: "https://toli.me/resume" },
+      { label: "Paper Resume", note: "For the traditionalists", href: "/resume.pdf" },
     ],
   },
   {
