@@ -51,8 +51,26 @@ The previous PickleJS domain did not resolve during research, so its main button
 
 React 19 and Vite. Map math and URL parsing are independent modules with Node tests. Hash routes allow direct project links and browser history on a static host without a server rewrite rule. The maps use semantic HTML buttons over raster art; all navigation, tooltips, dialog controls, stories, and links are real UI. Fonts are self-hosted and icons use Phosphor.
 
-`dist/client` is the static production site. The included starter also produces a worker in `dist/server` with the existing Sites packaging contract. Nothing has been published or connected to toli.me. The legacy Jekyll site and its deployment workflow are unchanged; a future release should deliberately select this frontend's build output.
+`dist/client` is the static production site. The included starter also produces a worker in `dist/server` with the existing Sites packaging contract. The Netlify beta deployment uses `beta.toli.me`; the legacy Jekyll site and its deployment workflow remain separate.
 
 ## Review scope
 
 This lives in an isolated `codex/toli-land` worktree of the toli.me repository. It does not modify the unrelated human-crm project. The capital currently features PickleJS, Frontend Infra Book, NYC LeetCode Squad, and Easter Creatures; update `featuredIds` and the capital artwork together when changing the curation.
+
+## Netlify beta release
+
+- Site: `toli-land-beta`
+- Site ID: `bc4a1b57-c973-49eb-b3f0-e7cb69a11925`
+- Custom domain: https://beta.toli.me
+- Netlify URL: https://toli-land-beta.netlify.app
+- Dashboard: https://app.netlify.com/projects/toli-land-beta
+
+From this directory, build, verify, and deploy the static client:
+
+```sh
+npm run build
+npm test
+netlify deploy --prod --no-build --dir dist/client --site bc4a1b57-c973-49eb-b3f0-e7cb69a11925
+```
+
+Only `dist/client` is published. The original artwork, design notes, QA captures, source inventory, and worker packaging stay outside the public deployment. `netlify.toml` records the build output, while the local Netlify link is gitignored. Beta uses the existing Netlify DNS zone; the apex `toli.me` DNS record is unaffected.
