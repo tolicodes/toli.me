@@ -1,0 +1,516 @@
+[
+  {
+    "id": "tolicodes",
+    "title": "ToliCodes",
+    "kingdom": "work",
+    "description": "Toli’s professional website, collected here as a starting point for his engineering work.",
+    "url": "https://tolicodes.com",
+    "kind": "website",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "paper-resume",
+    "title": "Paper Resume",
+    "kingdom": "work",
+    "description": "A direct route to Toli’s résumé.",
+    "url": "https://toli.me/resume",
+    "kind": "resume",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "nyc-leetcode-squad",
+    "title": "NYC LeetCode Squad",
+    "kingdom": "work",
+    "description": "A New York algorithms study community for practicing problems, preparing for interviews, and learning together.",
+    "url": "https://lcsquad.com",
+    "kind": "community",
+    "sourceUrl": "https://toli.me/",
+    "evidenceUrls": [
+      "https://lcsquad.com/"
+    ]
+  },
+  {
+    "id": "neurodiverse-guide-work",
+    "title": "Neurodiverse Guide to the Workplace",
+    "kingdom": "work",
+    "description": "A guide about neurodiversity in the workplace.",
+    "url": "https://tolios.notion.site/Neurodivergent-s-Guide-to-the-Workplace-1125c5807385495da8d1885e689dadba",
+    "kind": "guide",
+    "sourceUrl": "https://toli.me/",
+    "canonicalId": "neurodiverse-guide"
+  },
+  {
+    "id": "picklejs",
+    "title": "PickleJS",
+    "kingdom": "work",
+    "description": "An open-source integration-testing library developed at HOVER to reduce repetitive test code and make scenarios easier to read.",
+    "url": "https://www.picklejs.com/",
+    "kind": "open-source",
+    "sourceUrl": "https://toli.me/",
+    "evidenceUrls": [
+      "https://cv.tolicodes.com/",
+      "https://feinfra.com/scaling-fe-teams-my-hover-story/"
+    ]
+  },
+  {
+    "id": "dropbox-journey",
+    "title": "Dropbox Journey",
+    "kingdom": "work",
+    "description": "A destination about Toli’s work at Dropbox.",
+    "url": "https://dropbox.tolicodes.com/",
+    "kind": "career-story",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "portfolio",
+    "title": "Portfolio",
+    "kingdom": "work",
+    "description": "A collection of Toli’s professional work.",
+    "url": "https://portfolio.tolicodes.com/",
+    "kind": "portfolio",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "accomplishments",
+    "title": "Accomplishments",
+    "kingdom": "work",
+    "description": "A collection of professional accomplishments.",
+    "url": "https://accomplishments.tolicodes.com/",
+    "kind": "collection",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "intuit-interview",
+    "title": "Intuit Interview",
+    "kingdom": "work",
+    "description": "An interview destination linked from Toli’s professional collection.",
+    "url": "https://intuit.tolicodes.com/",
+    "kind": "career-story",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "aspergers-empathy",
+    "title": "Aspergers & Empathy",
+    "kingdom": "speaking",
+    "description": "A video talk titled “Aspergers & Empathy.”",
+    "url": "https://www.youtube.com/watch?v=z1VNwapOb8E",
+    "kind": "talk",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "developer-happiness",
+    "title": "Developer Happiness",
+    "kingdom": "speaking",
+    "description": "A JavaScript Jabber conversation about PickleJS, tooling, and developer happiness.",
+    "url": "https://podcasts.apple.com/pl/podcast/jsj-358-pickle-js-tooling-developer-happiness-anatoliy/id1237401284?i=1000433942248",
+    "kind": "podcast",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "leetcode-squad-podcast",
+    "title": "Leetcode Squad",
+    "kingdom": "speaking",
+    "description": "A Self-Taught Devs conversation about LeetCode and community.",
+    "url": "https://podcasters.spotify.com/pod/show/self-taught-devs/episodes/72-Leetcode-and-Community-with-Anatoliy-Zaslavskiy-e2k0b2u",
+    "kind": "podcast",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "autism-kink",
+    "title": "Autism & Kink",
+    "kingdom": "speaking",
+    "description": "A podcast appearance titled “Autism & Kink.”",
+    "url": "https://www.buzzsprout.com/2465256/episodes/16900443-peanutbutter-kinky",
+    "kind": "podcast",
+    "sourceUrl": "https://toli.me/",
+    "mature": true
+  },
+  {
+    "id": "lifestyle-kink-interview",
+    "title": "LifeStyle: Kink Interview",
+    "kingdom": "speaking",
+    "description": "An interview entry titled “LifeStyle: Kink Interview.”",
+    "url": null,
+    "kind": "image-collection",
+    "sourceUrl": "https://toli.me/",
+    "mature": true
+  },
+  {
+    "id": "frontend-infra-book",
+    "title": "Frontend Infra Book",
+    "kingdom": "publications",
+    "description": "An open-source guide to frontend system design, infrastructure, and engineering decisions, begun while preparing for architectural interviews.",
+    "url": "https://www.feinfra.com",
+    "kind": "book",
+    "sourceUrl": "https://toli.me/",
+    "evidenceUrls": [
+      "https://feinfra.com/"
+    ]
+  },
+  {
+    "id": "fb-ads-book",
+    "title": "FB Ads Book",
+    "kingdom": "publications",
+    "description": "A book about Facebook advertising, linked from Toli’s publications.",
+    "url": "https://fbadsbook.com/",
+    "kind": "book",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "api-scraping",
+    "title": "API Scraping",
+    "kingdom": "publications",
+    "description": "A Codementor article about API scraping.",
+    "url": "https://www.codementor.io/blog/api-scraping-5fq1gtd4ah",
+    "kind": "article",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "neurodiverse-guide-publication",
+    "title": "Neurodiverse Guide to the Workplace",
+    "kingdom": "publications",
+    "description": "A guide about neurodiversity in the workplace.",
+    "url": "https://os.toli.me",
+    "kind": "guide",
+    "sourceUrl": "https://toli.me/",
+    "canonicalId": "neurodiverse-guide"
+  },
+  {
+    "id": "easter-creatures",
+    "title": "Easter Creatures",
+    "kingdom": "creative",
+    "description": "A Miami Easter-egg art experiment connecting children’s creature drawings, hidden eggs, QR codes, and an NFT collection.",
+    "url": "https://eastercreatures.carrd.co/",
+    "kind": "creative-project",
+    "sourceUrl": "https://toli.me/",
+    "evidenceUrls": [
+      "https://eastercreatures.carrd.co/"
+    ]
+  },
+  {
+    "id": "las-chicas",
+    "title": "Las Chicas Art Collective",
+    "kingdom": "creative",
+    "description": "An art collective featured in Toli’s creative collection.",
+    "url": "https://laschicas.tolicodes.com/",
+    "kind": "art-collective",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "spa-date",
+    "title": "Spa Date",
+    "kingdom": "creative",
+    "description": "A project titled “Spa Date,” collected among Toli’s creative work.",
+    "url": "https://spadate.toli.me",
+    "kind": "creative-project",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "acroyoga",
+    "title": "AcroYoga",
+    "kingdom": "hobbies",
+    "description": "An image collection about acroyoga, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "cuddle-parties",
+    "title": "Cuddle Parties",
+    "kingdom": "hobbies",
+    "description": "An image collection about cuddle parties, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "my-doggo",
+    "title": "My Doggo",
+    "kingdom": "hobbies",
+    "description": "An image entry celebrating Toli’s dog.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "public-speaking",
+    "title": "Public Speaking",
+    "kingdom": "hobbies",
+    "description": "An image collection about public speaking, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "swimming",
+    "title": "Swimming",
+    "kingdom": "hobbies",
+    "description": "An image collection about swimming, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "neurodiversity",
+    "title": "Neurodiversity",
+    "kingdom": "hobbies",
+    "description": "An image collection about neurodiversity, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "storytelling",
+    "title": "Storytelling",
+    "kingdom": "hobbies",
+    "description": "An image collection about storytelling, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "weird-stuff",
+    "title": "Weird Stuff",
+    "kingdom": "hobbies",
+    "description": "An image collection about weird stuff, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "volunteering-eco",
+    "title": "Volunteering (Eco)",
+    "kingdom": "hobbies",
+    "description": "An image collection about volunteering (eco), included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "nature",
+    "title": "Nature",
+    "kingdom": "hobbies",
+    "description": "An image collection about nature, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "parody-videos",
+    "title": "Parody Videos",
+    "kingdom": "hobbies",
+    "description": "An image collection about parody videos, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "water-sports",
+    "title": "Water Sports",
+    "kingdom": "hobbies",
+    "description": "An image collection about water sports, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "russian-bathhouse",
+    "title": "Russian Bathhouse",
+    "kingdom": "hobbies",
+    "description": "An image collection about russian bathhouse, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "burning-man",
+    "title": "Burning Man",
+    "kingdom": "hobbies",
+    "description": "An image collection about burning man, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "dall-e-play",
+    "title": "DALL-E Play",
+    "kingdom": "hobbies",
+    "description": "An image collection about dall-e play, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "sex-positivity",
+    "title": "Sex Positivity",
+    "kingdom": "hobbies",
+    "description": "An interest entry titled “Sex Positivity.”",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/",
+    "mature": true
+  },
+  {
+    "id": "hiking",
+    "title": "Hiking",
+    "kingdom": "hobbies",
+    "description": "An image collection about hiking, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "biking",
+    "title": "Biking",
+    "kingdom": "hobbies",
+    "description": "An image collection about biking, included among Toli’s interests.",
+    "url": null,
+    "kind": "interest",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "getting-back-to-love",
+    "title": "Getting Back to Love",
+    "kingdom": "writing",
+    "description": "An essay titled “Getting Back to Love.”",
+    "url": "https://tolicodes.medium.com/getting-back-to-love-2942d026882b",
+    "kind": "essay",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "energy-cords",
+    "title": "Energy Cords and Foreign Energy in your Aura",
+    "kingdom": "writing",
+    "description": "An essay exploring the ideas of energy cords and the aura.",
+    "url": "https://tolicodes.medium.com/energy-cords-and-foreign-energy-in-your-aura-7bae5ac3c57c",
+    "kind": "essay",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "focus-on-negative",
+    "title": "Why We Focus on the Negative and How Can We Change It",
+    "kingdom": "writing",
+    "description": "An essay reflecting on negative focus and the possibility of changing it.",
+    "url": "https://tolicodes.medium.com/why-we-focus-on-the-negative-and-how-its-keeping-us-from-happiness-da2224de0899",
+    "kind": "essay",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "rejection-breakups",
+    "title": "Rejection, Breakups, Vulnerability, and BDSM",
+    "kingdom": "writing",
+    "description": "An essay titled “Rejection, Breakups, Vulnerability, and BDSM.”",
+    "url": "https://tolicodes.medium.com/rejection-breakups-vulnurability-and-bdsm-b2f80b682373",
+    "kind": "essay",
+    "sourceUrl": "https://toli.me/",
+    "mature": true
+  },
+  {
+    "id": "boredom-bipolar",
+    "title": "The Problem with Boredom and Bipolar",
+    "kingdom": "writing",
+    "description": "An essay titled “The Problem with Boredom and Bipolar.”",
+    "url": "https://tolicodes.medium.com/the-problem-with-boredom-and-bipolar-442e62ed29ee",
+    "kind": "essay",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "dota-consciousness",
+    "title": "DOTA and Consciousness",
+    "kingdom": "writing",
+    "description": "An essay titled “DOTA and Consciousness.”",
+    "url": "https://tolicodes.medium.com/dota-and-conciousness-87609258854a",
+    "kind": "essay",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "my-goals",
+    "title": "My Goals",
+    "kingdom": "misc",
+    "description": "A destination for Toli’s goals.",
+    "url": "https://goals.tolicodes.com/",
+    "kind": "personal-collection",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "rituals",
+    "title": "Ritutals",
+    "kingdom": "misc",
+    "description": "A destination for Toli’s rituals.",
+    "url": "https://rituals.tolicodes.com/",
+    "kind": "personal-collection",
+    "sourceUrl": "https://toli.me/",
+    "displayTitle": "Rituals"
+  },
+  {
+    "id": "travels",
+    "title": "Travels",
+    "kingdom": "misc",
+    "description": "A destination for Toli’s travels.",
+    "url": "https://travel.tolicodes.com/",
+    "kind": "travel-collection",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "principles",
+    "title": "Principles",
+    "kingdom": "misc",
+    "description": "A collection of principles.",
+    "url": "https://principles.tolicodes.com/docs/toc",
+    "kind": "personal-collection",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "toliwags",
+    "title": "ToliWags (Dogsitting)",
+    "kingdom": "misc",
+    "description": "Toli’s dogsitting website.",
+    "url": "https://toliwags.com/",
+    "kind": "service",
+    "sourceUrl": "https://toli.me/"
+  },
+  {
+    "id": "dating-bounty",
+    "title": "Dating Bounty",
+    "kingdom": "misc",
+    "description": "A personal project titled “Dating Bounty.”",
+    "url": "https://toli.love/",
+    "kind": "personal-project",
+    "sourceUrl": "https://toli.me/",
+    "mature": true,
+    "sourceSection": "NSFW"
+  },
+  {
+    "id": "kinkbuddy",
+    "title": "KinkBuddy",
+    "kingdom": "misc",
+    "description": "A personal project titled “KinkBuddy.”",
+    "url": "https://kinks.toli.love/",
+    "kind": "personal-project",
+    "sourceUrl": "https://toli.me/",
+    "mature": true,
+    "sourceSection": "NSFW"
+  },
+  {
+    "id": "obscure-parody-vids",
+    "title": "Obscure Parody Vids",
+    "kingdom": "misc",
+    "description": "A video entry titled “Obscure Parody Vids.”",
+    "url": "https://www.youtube.com/watch?v=484U5bUcnb0",
+    "kind": "video",
+    "sourceUrl": "https://toli.me/",
+    "mature": true,
+    "sourceSection": "NSFW"
+  },
+  {
+    "id": "fun-with-dalle",
+    "title": "Fun With DALL-E",
+    "kingdom": "misc",
+    "description": "A collection titled “Fun With DALL-E.”",
+    "url": "https://dalle.toli.me",
+    "kind": "art-collection",
+    "sourceUrl": "https://toli.me/",
+    "mature": true,
+    "sourceSection": "NSFW"
+  }
+]

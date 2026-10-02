@@ -1,0 +1,128 @@
+{
+  "frontend-infra-book": {
+    "eyebrow": "A field guide for frontend builders",
+    "summary": "An open-source guide to frontend system design, infrastructure, and engineering decisions.",
+    "chapters": [
+      {
+        "title": "Why this book exists",
+        "body": "While preparing for architectural frontend interviews, I found many system-design resources focused on backend problems. I brought together lessons from my career, conversations, and mock interviews to create a frontend-focused guide.",
+        "sourceUrl": "https://feinfra.com/"
+      },
+      {
+        "title": "Plan the system",
+        "body": "Explore product requirements, technical requirements, backend integration, security, and DevOps. The chapters offer questions and tradeoffs to consider when planning a frontend system.",
+        "sourceUrl": "https://feinfra.com/"
+      },
+      {
+        "title": "Build shared foundations",
+        "body": "The design-system chapter covers common components, typography, spacing, forms, loading states, and other foundations that help teams build consistently.",
+        "sourceUrl": "https://feinfra.com/design-system-and-common-components/"
+      },
+      {
+        "title": "Keep it responsive",
+        "body": "The performance chapter explores loading speed, bundle size, mobile considerations, and the tradeoffs involved in choosing tools and rendering strategies.",
+        "sourceUrl": "https://feinfra.com/technical-functional-requirements/performance/"
+      }
+    ],
+    "links": [
+      {
+        "label": "Read the book",
+        "url": "https://feinfra.com/"
+      },
+      {
+        "label": "Explore the source",
+        "url": "https://github.com/tolicodes/feinfra"
+      }
+    ]
+  },
+  "picklejs": {
+    "eyebrow": "A little pickle with a practical job",
+    "summary": "An open-source integration-testing library developed at HOVER to make scenarios easier to write and maintain.",
+    "chapters": [
+      {
+        "title": "The problem",
+        "body": "Integration tests were accumulating repetitive setup and hard-to-follow code. UI changes could also force repeated selector updates.",
+        "sourceUrl": "https://feinfra.com/scaling-fe-teams-my-hover-story/"
+      },
+      {
+        "title": "Readable steps",
+        "body": "PickleJS grew from Cypress and Cucumber experiments: reusable English-like steps, shared patterns, and selectors collected in JSON.",
+        "sourceUrl": "https://feinfra.com/scaling-fe-teams-my-hover-story/"
+      },
+      {
+        "title": "Built to be extended",
+        "body": "The library grew into modular tools that teams could adapt to their own needs. HOVER released it as its first open-source project.",
+        "sourceUrl": "https://feinfra.com/scaling-fe-teams-my-hover-story/"
+      }
+    ],
+    "links": [
+      {
+        "label": "Visit PickleJS",
+        "url": "https://www.picklejs.com/"
+      },
+      {
+        "label": "Read the origin story",
+        "url": "https://feinfra.com/scaling-fe-teams-my-hover-story/"
+      }
+    ],
+    "editorNote": "The original PickleJS URL failed the web-tool fetch during inventory. Preserve the exact original destination; the origin-story source is reachable."
+  },
+  "nyc-leetcode-squad": {
+    "eyebrow": "Practice gets better together",
+    "summary": "A New York community that brings people together to practice algorithms, prepare for coding interviews, and help one another learn.",
+    "chapters": [
+      {
+        "title": "It started with a post",
+        "body": "I wanted a more social way to practice LeetCode and stay accountable. After posting on Blind, I organized a first gathering that brought together 26 people, from students to experienced engineers.",
+        "sourceUrl": "https://lcsquad.com/"
+      },
+      {
+        "title": "Learn in good company",
+        "body": "The group combines larger meetups with small study pods, mentorship, and interview practice. Members share approaches to problems and help each other build confidence.",
+        "sourceUrl": "https://lcsquad.com/"
+      },
+      {
+        "title": "Find your people",
+        "body": "The community welcomes different experience levels, with in-person gatherings and a Discord space for virtual practice and organizing local pods.",
+        "sourceUrl": "https://lcsquad.com/"
+      }
+    ],
+    "links": [
+      {
+        "label": "Explore the community",
+        "url": "https://lcsquad.com/"
+      },
+      {
+        "label": "Join the Discord",
+        "url": "https://discord.gg/p9MmYP8ZYm"
+      }
+    ]
+  },
+  "easter-creatures": {
+    "eyebrow": "An idea hatched over breakfast",
+    "summary": "A Miami Easter-egg experiment by Toli and Asya, connecting children’s creature drawings with a neighborhood treasure hunt and an NFT collection.",
+    "chapters": [
+      {
+        "title": "A weekend experiment",
+        "body": "The idea began the morning before Easter: hide eggs around Miami with something unexpected inside. Toli and Asya set themselves the challenge of bringing it to life in 24 hours.",
+        "sourceUrl": "https://eastercreatures.carrd.co/"
+      },
+      {
+        "title": "Draw, hide, discover",
+        "body": "Children supplied the creature drawings. The team made them into NFTs, placed printed QR codes inside eggs, and hid the eggs around Miami, with many in Wynwood.",
+        "sourceUrl": "https://eastercreatures.carrd.co/"
+      },
+      {
+        "title": "More than an egg hunt",
+        "body": "The project became a way to meet neighbors and invite people into art and technology. Its story shares the practical surprises, last-minute printing scramble, and encouragement they found along the way.",
+        "sourceUrl": "https://eastercreatures.carrd.co/"
+      }
+    ],
+    "links": [
+      {
+        "label": "Read the project story",
+        "url": "https://eastercreatures.carrd.co/"
+      }
+    ]
+  }
+}
