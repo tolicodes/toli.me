@@ -61,4 +61,17 @@ Two screenshot attempts captured stale compositor frames immediately after resiz
 
 ## Residual limits
 
-Real-device multitouch and Safari/Firefox were not available in this desktop browser run. Pinch uses standard Pointer Events and its focal-point math has automated coverage. Maximum map zoom naturally reveals the limits of 1536 × 1024 raster art. External destinations may change independently. This is a local, frontend-only site; domain publishing and replacing the existing toli.me deployment are separate release actions.
+Real-device multitouch and Safari/Firefox were not available in this desktop browser run. Pinch uses standard Pointer Events and its focal-point math has automated coverage. Maximum map zoom naturally reveals the limits of 1536 × 1024 raster art. External destinations may change independently. This is a frontend-only site. The original local QA is followed by the Netlify beta verification below; replacing the apex toli.me deployment remains a separate release action.
+
+## Netlify beta verification — 2026-10-02
+
+Published https://beta.toli.me on Netlify project `toli-land-beta` (`bc4a1b57-c973-49eb-b3f0-e7cb69a11925`), deploy `6abfb0ee8a528770c4f9173d`. The deployment contains the tested static client only.
+
+- Rebuilt the client and reran all 16 tests before publishing; all passed.
+- Netlify-managed DNS record points `beta.toli.me` to `toli-land-beta.netlify.app`.
+- HTTPS returned HTTP 200 with normal certificate validation; the existing issued `*.toli.me` certificate covers beta.
+- Downloaded the live index and all 13 illustrations over HTTPS; their SHA-256 digests exactly match the local production build.
+- Browser-verified world → Capital → Frontend Infra Book → next chapter → world. No console errors.
+- Live browser evidence: `docs/qa/live-beta-book.jpg`, 1280 × 720 desktop, initial book chapter, light theme.
+
+Deployment configuration commit: `3f5b366`. Original application commit: `bf60669`.
