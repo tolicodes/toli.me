@@ -75,3 +75,34 @@ Published https://beta.toli.me on Netlify project `toli-land-beta` (`bc4a1b57-c9
 - Live browser evidence: `docs/qa/live-beta-book.jpg`, 1280 × 720 desktop, initial book chapter, light theme.
 
 Deployment configuration commit: `3f5b366`. Original application commit: `bf60669`.
+
+
+## Character landmark refinement — 2026-10-03
+
+final result: passed
+
+The latest user direction replaces architectural interpretations with actual symbols and characters: a storybook with arms and legs for Frontend Infra Book and a Dota magician for DOTA & Consciousness. Invoker is the assumed Dota hero; the optional hero clarification received no answer before generation.
+
+### Source and matched evidence
+
+- New source visual truth: `docs/artwork-source/projects/frontend-infra-book.png` and `docs/artwork-source/maps/{world,capital,publications,writing}.png`, each 1536 × 1024. Built-in ImageGen performed five precise object edits. Exact prompts and provenance: `docs/character-artwork-prompts.md`.
+- Before screenshots use the previous release on `https://beta.toli.me`; after screenshots use the tested production build at `http://127.0.0.1:4174`. Both have light theme, scroll 0, initial map or initial story chapter, and the same viewport. Desktop is 1280 × 720 CSS/screenshot pixels; mobile is 390 × 844 CSS/screenshot pixels, one screenshot pixel per CSS pixel.
+- `docs/qa/symbols-map-comparison.jpg`: world, Capital, Publications, before left / after right. Each desktop frame is proportionally reduced to 768 × 432 for the contact sheet. Original captures retain 1280 × 720 dimensions.
+- `docs/qa/symbols-story-comparison.jpg`: book story, Dota story, Writing map, same before/after setup.
+- `docs/qa/symbols-mobile-comparison.jpg`: full-resolution book before/after and Dota before/after, each 390 × 844.
+- Focused source/implementation pairs: `docs/qa/symbols-book-source-comparison.jpg` and `symbols-dota-source-comparison.jpg`, source left / rendered right, each panel 390 × 355. The book source is scaled to 355px high and center-cropped to 390px. The writing source is scaled to 1331px wide and cropped at (910,426), matching the actual landmark crop. The browser artwork region starts at y65. The live location button is an intentional UI overlay. These pairs were inspected together, as were the full-screen comparisons.
+- `docs/qa/symbols-publications-mobile-focused.jpg` verifies that “Find it in The Great Library” focuses the walking book on a phone, showing its face, both hands, and both boots.
+
+### Findings and verification
+
+No actionable P0/P1/P2 findings. This refinement passed its first rendered comparison; no layout or crop corrections were required.
+
+- **Fonts/typography:** Cormorant Garamond and Nunito Sans hierarchy, line wrapping, and readable buttons match the preceding release in the matched pairs. Raster map labels remain intact and readable.
+- **Spacing/layout:** Map geography, UI proportions, text rhythm, and project page layout remain consistent. Characters fit the existing hit regions. The phone book crop includes all limbs and the primary link; the Dota crop includes the robe, face, three orbs, and primary link. Both phone project pages report 390px document width at a 390px viewport and scroll 0.
+- **Colors/tokens:** The green-and-gold book and purple/gold mage fit the existing sunny sea-and-garden palette. Paper, forest ink, and accessible gold UI tokens are unchanged.
+- **Image quality/fidelity:** Same book identity appears in four illustrations. Dota uses the official Invoker visual reference, adapted to the existing picturebook style. Optimized WebP assets retain the silhouettes and details. The phone source comparisons show the actual generated art, with expected raster filtering/compression and no placeholder substitutions.
+- **Copy/content:** Source-grounded project summaries and destinations remain unchanged. Updated book and Dota image descriptions match the new artwork. Added a DotaMage Storybook example; existing FrontendBook and map examples use the refreshed art.
+- **Interactions:** Verified world → Capital → book, next chapter → “Plan the system,” Writing map → Dota, and phone book → focused Publications map. Browser console errors: none.
+- **Checks:** `npm run build` passed; `npm test` passed 16/16; `npm run build-storybook` passed with 15 stories including DotaMage. The pre-existing Storybook Node deprecation and development-bundle size notices remain nonblocking.
+
+Real-device multitouch and Safari/Firefox were not rerun for this artwork-only refinement. No gesture or routing code changed. Original generation sources and matched before/after screenshots are retained in the repository.

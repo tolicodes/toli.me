@@ -70,7 +70,7 @@ export function ProjectStory({
           <img
             src={project.artwork}
             alt={
-              project.featured
+              project.featured || project.id === "dota-consciousness"
                 ? project.motif
                 : `The illustrated ${maps[project.kingdom].title} kingdom`
             }

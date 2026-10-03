@@ -9,17 +9,20 @@ The capital gathers a few featured projects around a golden compass plaza. Golde
 ## Literal landmarks with a second idea
 
 - PickleJS: a giant bumpy pickle with a tiny workshop door. Inside its story, testing is explained as checking the bridges between parts of an application.
-- Frontend Infra Book: a giant open storybook whose pages unfold into a little city. A ribbon bookmark becomes a footbridge. Its project page has short chapters rather than a wall of text.
+- Frontend Infra Book: a friendly walking storybook with a green cover, smiling face, gold corners, paper arms, ribbon legs, and brown boots. The same character appears in the world, Capital, Publications, and detail artwork. Its project page has short chapters rather than a wall of text.
 - NYC LeetCode Squad: a New York neighborhood wrapped in enormous code brackets, with people gathered around a communal table.
 - Easter Creatures: a pastel egg cracked open into a habitat for curious creatures.
 - API Scraping: a watermill and sieve gathering readable scrolls from a stream.
 - Speaking: a microphone amphitheater and small stages for individual conversations.
 - Writing: a quill, inkwell river, and distinct little story places.
+- DOTA & Consciousness: a purple-and-gold Dota mage with three floating spell orbs, replacing the chessboard. Invoker is the assumed hero for this pass; the user asked for the Dota magician without naming a hero.
 - Creative: studios growing out of a painter's palette, an egg habitat, and a steaming spa garden.
 - Hobbies: a connected adventure landscape with literal bikes, trails, water, a dog, and movement gardens.
 - Misc: a treasure chest of small curiosities, with a deliberately separate path to mature material from the existing site.
 
 ## How it moves
+
+The latest art direction favors objects and characters with strong silhouettes. Architecture establishes each kingdom, while the individual items embody their subjects. Character faces, hands, and feet should remain visible at ordinary map zoom and in phone detail crops.
 
 Drag to explore, pinch or use controls to zoom, and tap a landmark to enter. Keyboard users can tab through landmarks and use map controls. A compact atlas provides direct travel and searchable access to every item. Returning restores the previous map view. Reduced-motion preferences remove camera flights and decorative movement.
 

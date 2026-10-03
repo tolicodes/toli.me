@@ -25,6 +25,10 @@ export const Interest = {
   args: { project: projectById.acroyoga, from: "hobbies" },
 };
 
+export const DotaMage = {
+  args: { project: projectById["dota-consciousness"], from: "writing" },
+};
+
 export const BookSecondChapter = {
   args: FrontendBook.args,
   play: async ({ canvasElement }) => {
