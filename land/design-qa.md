@@ -106,3 +106,7 @@ No actionable P0/P1/P2 findings. This refinement passed its first rendered compa
 - **Checks:** `npm run build` passed; `npm test` passed 16/16; `npm run build-storybook` passed with 15 stories including DotaMage. The pre-existing Storybook Node deprecation and development-bundle size notices remain nonblocking.
 
 Real-device multitouch and Safari/Firefox were not rerun for this artwork-only refinement. No gesture or routing code changed. Original generation sources and matched before/after screenshots are retained in the repository.
+
+### Published character release
+
+Committed as `d7ee12a` and published to https://beta.toli.me, Netlify deploy `6ac07eaf4807192de81ce094`. The live index and all five changed illustrations return HTTPS 200 and have SHA-256 digests identical to the tested production build. The live book page visibly renders the walking character and updated accessible description; no browser console errors.
