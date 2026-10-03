@@ -141,3 +141,12 @@ The first desktop pass found the Russian Bathhouse label touching the Hobbies ca
 - **Checks:** Production build passed; `npm test` passed 16/16; Storybook built successfully with 18 stories, including permanent labels and dense Hobbies desktop/mobile examples. `git diff --check` passed. Production browser console had no warnings or errors. A separate read-only code review found no blockers in labels or crop behavior.
 
 Real-device multitouch, Safari, and Firefox were not tested in this desktop browser session. The full-map phone overview deliberately shrinks labels; zooming or the accessible Atlas provides detailed navigation. Original PNGs, prompts, comparison artifacts, and screenshots are retained outside the served bundle.
+
+### Published clean-symbol release
+
+Application commit: `db74745`. Published to https://beta.toli.me on Netlify deploy `6ac08a9a1b9c57ae0db9f3ea`.
+
+- Live index and all twelve WebP assets returned HTTPS 200 with SHA-256 digests identical to the tested production build.
+- A transient local DNS lookup interrupted the first concurrent verification; a complete sequential verification succeeded without changing DNS or deployment settings.
+- Browser-verified live world → Capital → PickleJS through its permanent label, plus the Frontend Infra Book page. The new illustrations and explanatory screens render correctly. No browser warnings or errors.
+- Live desktop evidence: `docs/qa/clean-live-world.jpg`, `clean-live-capital.jpg`, `clean-live-pickle.jpg`, and `clean-live-book.jpg`. Temporary viewport override reset; the published Capital is retained as the deliverable tab.
