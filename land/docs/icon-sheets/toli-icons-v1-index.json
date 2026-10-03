@@ -1,0 +1,434 @@
+[
+  {
+    "number": 1,
+    "id": "tolicodes",
+    "title": "ToliCodes",
+    "sheetLabel": "ToliCodes",
+    "category": "work",
+    "featured": false
+  },
+  {
+    "number": 2,
+    "id": "paper-resume",
+    "title": "Paper Resume",
+    "sheetLabel": "Paper Resume",
+    "category": "work",
+    "featured": false
+  },
+  {
+    "number": 3,
+    "id": "nyc-leetcode-squad",
+    "title": "NYC LeetCode Squad",
+    "sheetLabel": "NYC LeetCode Squad",
+    "category": "work",
+    "featured": true
+  },
+  {
+    "number": 4,
+    "id": "neurodiverse-guide-work",
+    "title": "Neurodiverse Guide to the Workplace",
+    "sheetLabel": "Workplace Guide",
+    "category": "work",
+    "featured": false
+  },
+  {
+    "number": 5,
+    "id": "picklejs",
+    "title": "PickleJS",
+    "sheetLabel": "PickleJS",
+    "category": "work",
+    "featured": true
+  },
+  {
+    "number": 6,
+    "id": "dropbox-journey",
+    "title": "Dropbox Journey",
+    "sheetLabel": "Dropbox Journey",
+    "category": "work",
+    "featured": false
+  },
+  {
+    "number": 7,
+    "id": "portfolio",
+    "title": "Portfolio",
+    "sheetLabel": "Portfolio",
+    "category": "work",
+    "featured": false
+  },
+  {
+    "number": 8,
+    "id": "accomplishments",
+    "title": "Accomplishments",
+    "sheetLabel": "Accomplishments",
+    "category": "work",
+    "featured": false
+  },
+  {
+    "number": 9,
+    "id": "intuit-interview",
+    "title": "Intuit Interview",
+    "sheetLabel": "Intuit Interview",
+    "category": "work",
+    "featured": false
+  },
+  {
+    "number": 10,
+    "id": "aspergers-empathy",
+    "title": "Aspergers & Empathy",
+    "sheetLabel": "Aspergers & Empathy",
+    "category": "speaking",
+    "featured": false
+  },
+  {
+    "number": 11,
+    "id": "developer-happiness",
+    "title": "Developer Happiness",
+    "sheetLabel": "Developer Happiness",
+    "category": "speaking",
+    "featured": false
+  },
+  {
+    "number": 12,
+    "id": "leetcode-squad-podcast",
+    "title": "Leetcode Squad",
+    "sheetLabel": "LeetCode Podcast",
+    "category": "speaking",
+    "featured": false
+  },
+  {
+    "number": 13,
+    "id": "autism-kink",
+    "title": "Autism & Kink",
+    "sheetLabel": "Autism & Kink",
+    "category": "speaking",
+    "featured": false
+  },
+  {
+    "number": 14,
+    "id": "lifestyle-kink-interview",
+    "title": "LifeStyle: Kink Interview",
+    "sheetLabel": "LifeStyle Interview",
+    "category": "speaking",
+    "featured": false
+  },
+  {
+    "number": 15,
+    "id": "frontend-infra-book",
+    "title": "Frontend Infra Book",
+    "sheetLabel": "Frontend Infra Book",
+    "category": "publications",
+    "featured": true
+  },
+  {
+    "number": 16,
+    "id": "fb-ads-book",
+    "title": "FB Ads Book",
+    "sheetLabel": "FB Ads Book",
+    "category": "publications",
+    "featured": false
+  },
+  {
+    "number": 17,
+    "id": "api-scraping",
+    "title": "API Scraping",
+    "sheetLabel": "API Scraping",
+    "category": "publications",
+    "featured": false
+  },
+  {
+    "number": 18,
+    "id": "neurodiverse-guide-publication",
+    "title": "Neurodiverse Guide to the Workplace",
+    "sheetLabel": "Neurodiverse Guide",
+    "category": "publications",
+    "featured": false
+  },
+  {
+    "number": 19,
+    "id": "easter-creatures",
+    "title": "Easter Creatures",
+    "sheetLabel": "Easter Creatures",
+    "category": "creative",
+    "featured": true
+  },
+  {
+    "number": 20,
+    "id": "las-chicas",
+    "title": "Las Chicas Art Collective",
+    "sheetLabel": "Las Chicas",
+    "category": "creative",
+    "featured": false
+  },
+  {
+    "number": 21,
+    "id": "spa-date",
+    "title": "Spa Date",
+    "sheetLabel": "Spa Date",
+    "category": "creative",
+    "featured": false
+  },
+  {
+    "number": 22,
+    "id": "acroyoga",
+    "title": "AcroYoga",
+    "sheetLabel": "AcroYoga",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 23,
+    "id": "cuddle-parties",
+    "title": "Cuddle Parties",
+    "sheetLabel": "Cuddle Parties",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 24,
+    "id": "my-doggo",
+    "title": "My Doggo",
+    "sheetLabel": "My Doggo",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 25,
+    "id": "public-speaking",
+    "title": "Public Speaking",
+    "sheetLabel": "Public Speaking",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 26,
+    "id": "swimming",
+    "title": "Swimming",
+    "sheetLabel": "Swimming",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 27,
+    "id": "neurodiversity",
+    "title": "Neurodiversity",
+    "sheetLabel": "Neurodiversity",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 28,
+    "id": "storytelling",
+    "title": "Storytelling",
+    "sheetLabel": "Storytelling",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 29,
+    "id": "weird-stuff",
+    "title": "Weird Stuff",
+    "sheetLabel": "Weird Stuff",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 30,
+    "id": "volunteering-eco",
+    "title": "Volunteering (Eco)",
+    "sheetLabel": "Volunteering (Eco)",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 31,
+    "id": "nature",
+    "title": "Nature",
+    "sheetLabel": "Nature",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 32,
+    "id": "parody-videos",
+    "title": "Parody Videos",
+    "sheetLabel": "Parody Videos",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 33,
+    "id": "water-sports",
+    "title": "Water Sports",
+    "sheetLabel": "Water Sports",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 34,
+    "id": "russian-bathhouse",
+    "title": "Russian Bathhouse",
+    "sheetLabel": "Russian Bathhouse",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 35,
+    "id": "burning-man",
+    "title": "Burning Man",
+    "sheetLabel": "Burning Man",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 36,
+    "id": "dall-e-play",
+    "title": "DALL-E Play",
+    "sheetLabel": "DALL-E Play",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 37,
+    "id": "sex-positivity",
+    "title": "Sex Positivity",
+    "sheetLabel": "Sex Positivity",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 38,
+    "id": "hiking",
+    "title": "Hiking",
+    "sheetLabel": "Hiking",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 39,
+    "id": "biking",
+    "title": "Biking",
+    "sheetLabel": "Biking",
+    "category": "hobbies",
+    "featured": false
+  },
+  {
+    "number": 40,
+    "id": "getting-back-to-love",
+    "title": "Getting Back to Love",
+    "sheetLabel": "Back to Love",
+    "category": "writing",
+    "featured": false
+  },
+  {
+    "number": 41,
+    "id": "energy-cords",
+    "title": "Energy Cords and Foreign Energy in your Aura",
+    "sheetLabel": "Energy Cords",
+    "category": "writing",
+    "featured": false
+  },
+  {
+    "number": 42,
+    "id": "focus-on-negative",
+    "title": "Why We Focus on the Negative and How Can We Change It",
+    "sheetLabel": "A Different Perspective",
+    "category": "writing",
+    "featured": false
+  },
+  {
+    "number": 43,
+    "id": "rejection-breakups",
+    "title": "Rejection, Breakups, Vulnerability, and BDSM",
+    "sheetLabel": "Vulnerability",
+    "category": "writing",
+    "featured": false
+  },
+  {
+    "number": 44,
+    "id": "boredom-bipolar",
+    "title": "The Problem with Boredom and Bipolar",
+    "sheetLabel": "Boredom & Bipolar",
+    "category": "writing",
+    "featured": false
+  },
+  {
+    "number": 45,
+    "id": "dota-consciousness",
+    "title": "DOTA and Consciousness",
+    "sheetLabel": "DOTA & Consciousness",
+    "category": "writing",
+    "featured": false
+  },
+  {
+    "number": 46,
+    "id": "my-goals",
+    "title": "My Goals",
+    "sheetLabel": "My Goals",
+    "category": "misc",
+    "featured": false
+  },
+  {
+    "number": 47,
+    "id": "rituals",
+    "title": "Ritutals",
+    "sheetLabel": "Rituals",
+    "category": "misc",
+    "featured": false
+  },
+  {
+    "number": 48,
+    "id": "travels",
+    "title": "Travels",
+    "sheetLabel": "Travels",
+    "category": "misc",
+    "featured": false
+  },
+  {
+    "number": 49,
+    "id": "principles",
+    "title": "Principles",
+    "sheetLabel": "Principles",
+    "category": "misc",
+    "featured": false
+  },
+  {
+    "number": 50,
+    "id": "toliwags",
+    "title": "ToliWags (Dogsitting)",
+    "sheetLabel": "ToliWags",
+    "category": "misc",
+    "featured": false
+  },
+  {
+    "number": 51,
+    "id": "dating-bounty",
+    "title": "Dating Bounty",
+    "sheetLabel": "Dating Bounty",
+    "category": "misc",
+    "featured": false
+  },
+  {
+    "number": 52,
+    "id": "kinkbuddy",
+    "title": "KinkBuddy",
+    "sheetLabel": "KinkBuddy",
+    "category": "misc",
+    "featured": false
+  },
+  {
+    "number": 53,
+    "id": "obscure-parody-vids",
+    "title": "Obscure Parody Vids",
+    "sheetLabel": "Obscure Parody Vids",
+    "category": "misc",
+    "featured": false
+  },
+  {
+    "number": 54,
+    "id": "fun-with-dalle",
+    "title": "Fun With DALL-E",
+    "sheetLabel": "Fun With DALL-E",
+    "category": "misc",
+    "featured": false
+  }
+]
