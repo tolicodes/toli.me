@@ -61,21 +61,13 @@ export function ProjectStory({
       </header>
       <main id="main-content" tabIndex={-1} className="story-layout">
         <div
-          className={`story-art ${project.featured ? "" : "is-landmark"}`}
+          className={`story-art ${project.artworkIsMap ? "is-landmark" : ""}`}
           style={{
-            "--landmark-x": project.landmark?.x || 50,
-            "--landmark-y": project.landmark?.y || 50,
+            "--landmark-x": project.landmark?.x ?? 50,
+            "--landmark-y": project.landmark?.y ?? 50,
           }}
         >
-          <img
-            src={project.artwork}
-            alt={
-              project.featured || project.id === "dota-consciousness"
-                ? project.motif
-                : `The illustrated ${maps[project.kingdom].title} kingdom`
-            }
-            fetchPriority="high"
-          />
+          <img src={project.artwork} alt={project.motif} fetchPriority="high" />
           <button
             className="art-location"
             onClick={() => onMap(project.kingdom, project.id)}
@@ -197,7 +189,15 @@ export function ProjectStory({
         <div className="related-places">
           {related.map((item) => (
             <button key={item.id} onClick={() => onProject(item, "capital")}>
-              <img src={item.artwork} alt="" loading="lazy" />
+              <div
+                className={`related-art ${item.artworkIsMap ? "is-landmark" : ""}`}
+                style={{
+                  "--landmark-x": item.landmark?.x ?? 50,
+                  "--landmark-y": item.landmark?.y ?? 50,
+                }}
+              >
+                <img src={item.artwork} alt="" loading="lazy" />
+              </div>
               <span>
                 {item.title}
                 <ArrowUpRight size={15} />

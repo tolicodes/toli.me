@@ -110,3 +110,34 @@ Real-device multitouch and Safari/Firefox were not rerun for this artwork-only r
 ### Published character release
 
 Committed as `d7ee12a` and published to https://beta.toli.me, Netlify deploy `6ac07eaf4807192de81ce094`. The live index and all five changed illustrations return HTTPS 200 and have SHA-256 digests identical to the tested production build. The live book page visibly renders the walking character and updated accessible description; no browser console errors.
+
+## Clean symbol maps — 2026-10-03
+
+final result: passed
+
+The user's new direction makes the actual subjects the landmarks: Pickle Rick, a living storybook, the Dota mage, and simple objects. All nine maps were redrawn on warm cream paper. City architecture, crowds, scenery, and illustrated signboards were removed. A small crown marks the Capital; a handful of thin pale paths connect the symbols. All 54 entries, explanations, chapters, and destinations remain available.
+
+### Source and matched evidence
+
+- Source visual truth: twelve 1536 × 1024 PNGs in `docs/artwork-source` (nine maps, three standalone project heroes). Built-in ImageGen created the illustrations. Exact prompts, source paths, and generation outcomes are saved in `docs/clean-root-artwork-prompts.json` and `docs/clean-artwork-prompts.md`.
+- Pickle Rick appears in both Capital and Work. The project hero and related thumbnail reuse the Work-map symbol; the obsolete generic-pickle hero was removed. The twelve optimized served WebPs total about 1.15 MB.
+- Before captures are the preceding published beta. After captures use the production build at `http://127.0.0.1:4174`. Matched viewport, light theme, scroll 0, initial story chapter, and corresponding map framing: desktop 1280 × 720; phone 390 × 844. Original screenshots retain those dimensions.
+- `docs/qa/clean-desktop-comparison.jpg`: world, Capital, Pickle story, before left / after right. Each frame is proportionally reduced to 768 × 432. `clean-mobile-comparison.jpg`: Capital and Pickle, before left / after right at full phone resolution.
+- `docs/qa/clean-all-maps.jpg`: all nine final desktop maps in reading order: world, Capital, Work, Publications, Creative, Writing, Speaking, Hobbies, Misc. Each frame is proportionally reduced to 640 × 360. All nine originals are retained as `clean-<map>-desktop-after.jpg`.
+- `clean-capital-source-comparison.jpg`: generated source left / actual browser art right, 765 × 510 per panel. Source is scaled to the observed map rectangle; browser crop is (258,117), rounded from x257.5. Real text labels are the intentional implementation overlay.
+- `clean-pickle-source-comparison.jpg`: source Work map scaled to 1331px wide, cropped at (910,9) to 390 × 355; browser crop at (0,65), same dimensions. `clean-book-source-comparison.jpg`: source scaled to 355px high and center-cropped to 390px; browser crop at (0,65). The location button is an intentional overlay. Both source/render pairs and the complete before/after sheets were inspected together.
+- Additional evidence: `clean-related-mobile-after.jpg`, `clean-hobbies-mobile-after.jpg`, `clean-hobbies-mobile-overview.jpg`, and `clean-keyboard-focus.jpg`.
+
+### Findings and corrections
+
+The first desktop pass found the Russian Bathhouse label touching the Hobbies caption. Its label region was widened to avoid wrapping and moved upward slightly. The rebuilt final view has no label-to-label overlaps or label-to-fixed-UI overlaps across all nine desktop maps. No actionable P0/P1/P2 findings remain.
+
+- **Typography:** Real Nunito Sans labels replace baked-in signboards, remain readable at exploration scale, wrap where needed, and shrink in the full-map phone overview. Full titles stay available on focus/hover and in accessible button names. Cormorant Garamond display typography and story text hierarchy remain consistent.
+- **Spacing/layout:** Symbols have generous empty space. Desktop fit reserves enough footer clearance for labels. Phone maps begin at readable detail and retain pan, zoom, and a whole-map overview; partial symbols at viewport edges are intentional. Story artwork remains first on phones, with the primary action visible in the checked Pickle and book screens. Both have 390px document width at a 390px viewport.
+- **Colors/tokens:** Cream paper and forest ink remain the foundation. Green book/pickle, purple-and-gold mage, red apple/code braces, and pastel creature egg provide the focal color. Paths stay pale and subordinate.
+- **Image quality/fidelity:** Large recognizable silhouettes replace miniature environments. Pickle Rick's blue unibrow and face are visible at map and story sizes; the book retains its face, arms, ribbon legs, and boots. Source/render pairs confirm matching subjects and framing, allowing for WebP compression and browser resampling. The all-map contact sheet confirms every category follows the clean symbol direction.
+- **Copy/content:** All 54 source entries remain discoverable. Motif descriptions now match the actual objects. Project facts, URLs, and chapter copy were preserved. No fictional performance claims or new destinations were added.
+- **Interactions:** Clicking the permanent PickleJS text label opens its explanatory page, including where the label extends beyond the main hotspot rectangle. Keyboard Tab visibly outlines labels; Enter opens the selected project. Book chapter advancement reaches “Plan the system.” Related thumbnails display the correct cropped Pickle, apple, and creature egg. Whole-map fitting works on the dense phone Hobbies map. Existing gesture/routing logic is preserved.
+- **Checks:** Production build passed; `npm test` passed 16/16; Storybook built successfully with 18 stories, including permanent labels and dense Hobbies desktop/mobile examples. `git diff --check` passed. Production browser console had no warnings or errors. A separate read-only code review found no blockers in labels or crop behavior.
+
+Real-device multitouch, Safari, and Firefox were not tested in this desktop browser session. The full-map phone overview deliberately shrinks labels; zooming or the accessible Atlas provides detailed navigation. Original PNGs, prompts, comparison artifacts, and screenshots are retained outside the served bundle.

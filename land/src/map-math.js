@@ -6,7 +6,10 @@ export function clamp(value, min, max) {
 }
 
 export function fitScale(width, height) {
-  return Math.min(width / ART_WIDTH, Math.max(200, height - 116) / ART_HEIGHT);
+  return Math.min(
+    width / ART_WIDTH,
+    Math.max(200, height - (width >= 700 ? 210 : 116)) / ART_HEIGHT,
+  );
 }
 
 export function constrainView(view, size) {

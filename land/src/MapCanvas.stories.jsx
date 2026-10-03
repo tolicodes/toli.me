@@ -9,7 +9,7 @@ export default {
     map: maps.world,
     spots: getMapSpots("world"),
     reducedMotion: false,
-    showLabels: false,
+    showLabels: true,
     onSelect: fn(),
     onSaveView: fn(),
   },
@@ -68,4 +68,32 @@ export const SavedZoom = {
 
 export const ReducedMotion = {
   args: { reducedMotion: true },
+};
+
+export const PermanentLabels = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "Category labels stay visible beneath the symbols. The Capital has a crown; hover and keyboard focus still reveal the kingdom names.",
+      },
+    },
+  },
+};
+
+export const DenseHobbies = {
+  args: { map: maps.hobbies, spots: getMapSpots("hobbies") },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "All 18 interests retain permanent labels. Longer titles wrap within their destination's width; full-map overviews shrink labels with the artwork to avoid collisions.",
+      },
+    },
+  },
+};
+
+export const DenseHobbiesMobile = {
+  ...Mobile,
+  args: DenseHobbies.args,
 };

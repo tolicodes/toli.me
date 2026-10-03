@@ -32,7 +32,7 @@ export function MapCanvas({
   savedView,
   onSaveView,
   reducedMotion = false,
-  showLabels = false,
+  showLabels = true,
 }) {
   const viewportRef = useRef(null);
   const viewRef = useRef({ x: 0, y: 0, scale: 1 });
@@ -308,56 +308,86 @@ export function MapCanvas({
               setReady(false);
             }}
           />
-          {spots.map((spot) => (
-            <button
-              key={spot.id}
-              type="button"
-              className={`landmark ${hovered === spot.id ? "is-hovered" : ""} ${showLabels ? "show-label" : ""}`}
-              data-landmark={spot.id}
-              style={{
-                left: `${spot.x - spot.w / 2}%`,
-                top: `${spot.y - spot.h / 2}%`,
-                width: `${spot.w}%`,
-                height: `${spot.h}%`,
-              }}
-              aria-label={`${spot.destination === "map" ? "Enter" : "Discover"} ${spot.title}${spot.featured ? ", featured" : ""}`}
-              onClick={(event) => {
-                if (event.detail === 0) choose(spot);
-              }}
-              onMouseEnter={() => !dragging && setHovered(spot.id)}
-              onMouseLeave={() => setHovered(null)}
-              onFocus={() => {
-                setHovered(spot.id);
-                const element = viewportRef.current;
-                const pointX =
-                  (spot.x / 100) * ART_WIDTH * viewRef.current.scale +
-                  viewRef.current.x;
-                const pointY =
-                  (spot.y / 100) * ART_HEIGHT * viewRef.current.scale +
-                  viewRef.current.y;
-                if (
-                  pointX < 30 ||
-                  pointX > element.clientWidth - 30 ||
-                  pointY < 80 ||
-                  pointY > element.clientHeight - 80
-                )
-                  updateView(
-                    focusPoint(viewRef.current, spot, sizeRef.current, 1),
-                  );
-              }}
-              onBlur={() => setHovered(null)}
-            >
-              <span className="landmark-focus" aria-hidden="true" />
-              <span
-                className="landmark-tooltip"
-                style={{ "--inverse-scale": 1 / view.scale }}
+          {spots.map((spot) => {
+            const label =
+              map.id === "world" && spot.id !== "capital"
+                ? spot.subtitle || spot.title
+                : spot.title;
+            // Keep labels readable at exploration scale, but let a full-map
+            // phone overview shrink them enough to preserve spacing.
+            const labelScale = Math.max(view.scale, 0.55);
+            return (
+              <button
+                key={spot.id}
+                type="button"
+                className={`landmark ${hovered === spot.id ? "is-hovered" : ""}`}
+                data-landmark={spot.id}
+                style={{
+                  left: `${spot.x - spot.w / 2}%`,
+                  top: `${spot.y - spot.h / 2}%`,
+                  width: `${spot.w}%`,
+                  height: `${spot.h}%`,
+                }}
+                aria-label={`${spot.destination === "map" ? "Enter" : "Discover"} ${label}${label !== spot.title ? `, ${spot.title}` : ""}${spot.featured ? ", featured" : ""}`}
+                onClick={(event) => {
+                  if (event.detail === 0) choose(spot);
+                }}
+                onMouseEnter={() => !dragging && setHovered(spot.id)}
+                onMouseLeave={() => setHovered(null)}
+                onFocus={() => {
+                  setHovered(spot.id);
+                  const element = viewportRef.current;
+                  const pointX =
+                    (spot.x / 100) * ART_WIDTH * viewRef.current.scale +
+                    viewRef.current.x;
+                  const pointY =
+                    (spot.y / 100) * ART_HEIGHT * viewRef.current.scale +
+                    viewRef.current.y;
+                  if (
+                    pointX < 30 ||
+                    pointX > element.clientWidth - 30 ||
+                    pointY < 80 ||
+                    pointY > element.clientHeight - 80
+                  )
+                    updateView(
+                      focusPoint(viewRef.current, spot, sizeRef.current, 1),
+                    );
+                }}
+                onBlur={() => setHovered(null)}
               >
-                {spot.featured && <Crown size={14} weight="fill" />}
-                <span>{spot.title}</span>
-                <ArrowUpRight size={14} />
-              </span>
-            </button>
-          ))}
+                <span className="landmark-focus" aria-hidden="true" />
+                {showLabels && (
+                  <span
+                    className={`landmark-label ${map.id === "world" ? "is-kingdom" : ""} ${spot.id === "capital" ? "is-capital" : ""}`}
+                    aria-hidden="true"
+                    style={{
+                      left:
+                        spot.labelX == null
+                          ? undefined
+                          : `${50 + ((spot.labelX - spot.x) / spot.w) * 100}%`,
+                      top:
+                        spot.labelY == null
+                          ? undefined
+                          : `${50 + ((spot.labelY - spot.y) / spot.h) * 100}%`,
+                      "--label-scale": 1 / labelScale,
+                      "--label-width": `${Math.min(220, (spot.w / 100) * ART_WIDTH * labelScale * 0.9)}px`,
+                    }}
+                  >
+                    {spot.id === "capital" && <Crown size={15} weight="fill" />}
+                    <span>{label}</span>
+                  </span>
+                )}
+                <span
+                  className="landmark-tooltip"
+                  style={{ "--inverse-scale": 1 / view.scale }}
+                >
+                  {spot.featured && <Crown size={14} weight="fill" />}
+                  <span>{spot.title}</span>
+                  <ArrowUpRight size={14} />
+                </span>
+              </button>
+            );
+          })}
         </div>
       </div>
       {!ready && (

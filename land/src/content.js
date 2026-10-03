@@ -10,7 +10,15 @@ export const featuredIds = [
   "easter-creatures",
 ];
 
-const spot = (id, x, y, w = 21, h = 25, title) => ({ id, x, y, w, h, title });
+const spot = (id, x, y, w = 21, h = 25, title, labelY) => ({
+  id,
+  x,
+  y,
+  w,
+  h,
+  title,
+  labelY,
+});
 
 export const maps = {
   world: {
@@ -22,14 +30,14 @@ export const maps = {
     invitation: "Take the scenic route.",
     center: [0.5, 0.48],
     spots: [
-      spot("capital", 50, 45, 37, 40),
-      spot("work", 21, 19, 25, 29),
-      spot("publications", 77, 20, 29, 32),
-      spot("writing", 14, 45, 24, 28),
-      spot("speaking", 86, 45, 24, 28),
-      spot("creative", 19, 75, 27, 30),
-      spot("hobbies", 81, 77, 29, 30),
-      spot("misc", 50, 83, 24, 25),
+      spot("capital", 50, 48, 29, 31, undefined, 61),
+      spot("work", 25, 20, 24, 29, undefined, 34),
+      spot("publications", 76, 20, 27, 33, undefined, 36),
+      spot("writing", 13, 45, 24, 30, undefined, 64),
+      spot("speaking", 88, 47, 19, 30, undefined, 64),
+      spot("creative", 21, 76, 26, 29, undefined, 92),
+      spot("hobbies", 79, 77, 27, 26, undefined, 92),
+      spot("misc", 50, 80, 24, 29, undefined, 96),
     ],
   },
   capital: {
@@ -42,10 +50,10 @@ export const maps = {
     center: [0.5, 0.48],
     mobileCenter: [0.29, 0.48],
     spots: [
-      spot("picklejs", 19, 47, 26, 49),
-      spot("nyc-leetcode-squad", 37, 22, 26, 32),
-      spot("frontend-infra-book", 73, 26, 34, 37),
-      spot("easter-creatures", 81, 59, 27, 40),
+      spot("picklejs", 18, 54, 26, 53, undefined, 82),
+      spot("nyc-leetcode-squad", 38, 22, 26, 28, undefined, 36),
+      spot("frontend-infra-book", 73, 28, 32, 36, undefined, 48),
+      spot("easter-creatures", 82, 63, 25, 38, undefined, 84),
     ],
   },
   work: {
@@ -57,15 +65,15 @@ export const maps = {
     invitation: "Something is always being built here.",
     center: [0.49, 0.45],
     spots: [
-      spot("tolicodes", 20, 19, 23, 29),
-      spot("accomplishments", 50, 13, 18, 20),
-      spot("picklejs", 85, 20, 22, 32),
-      spot("nyc-leetcode-squad", 49, 45, 29, 36),
-      spot("neurodiverse-guide-work", 14, 46, 23, 27),
-      spot("dropbox-journey", 87, 49, 22, 28),
-      spot("intuit-interview", 17, 74, 25, 26),
-      spot("paper-resume", 49, 83, 24, 24),
-      spot("portfolio", 82, 78, 25, 29),
+      spot("tolicodes", 20, 21, 23, 28, undefined, 35),
+      spot("accomplishments", 50, 15, 18, 26, undefined, 29),
+      spot("picklejs", 83, 21, 20, 33, undefined, 39),
+      spot("nyc-leetcode-squad", 50, 45, 25, 29, undefined, 59),
+      spot("neurodiverse-guide-work", 15, 48, 25, 26, undefined, 64),
+      spot("dropbox-journey", 85, 51, 24, 28, undefined, 65),
+      spot("intuit-interview", 22, 79, 28, 24, undefined, 93),
+      spot("paper-resume", 50, 81, 21, 27, undefined, 95),
+      spot("portfolio", 79, 78, 27, 30, undefined, 95),
     ],
   },
   publications: {
@@ -76,10 +84,10 @@ export const maps = {
     invitation: "Every book opens a little world.",
     center: [0.5, 0.37],
     spots: [
-      spot("frontend-infra-book", 50, 27, 39, 41),
-      spot("fb-ads-book", 18, 51, 29, 37),
-      spot("api-scraping", 83, 53, 28, 38),
-      spot("neurodiverse-guide-publication", 50, 76, 34, 32),
+      spot("frontend-infra-book", 49, 25, 33, 35, undefined, 46),
+      spot("fb-ads-book", 20, 52, 28, 34, undefined, 69),
+      spot("api-scraping", 83, 53, 28, 34, undefined, 69),
+      spot("neurodiverse-guide-publication", 50, 76, 31, 29, undefined, 91),
     ],
   },
   creative: {
@@ -91,9 +99,9 @@ export const maps = {
     invitation: "Leave a little room for the wonderful.",
     center: [0.49, 0.48],
     spots: [
-      spot("easter-creatures", 33, 35, 42, 51),
-      spot("las-chicas", 77, 33, 37, 45),
-      spot("spa-date", 60, 72, 44, 43),
+      spot("easter-creatures", 30, 35, 29, 41, undefined, 58),
+      spot("las-chicas", 75, 33, 31, 35, undefined, 54),
+      spot("spa-date", 58, 75, 38, 35, undefined, 94),
     ],
   },
   speaking: {
@@ -104,11 +112,11 @@ export const maps = {
     invitation: "Pull up a chair.",
     center: [0.5, 0.46],
     spots: [
-      spot("aspergers-empathy", 20, 29, 30, 34),
-      spot("developer-happiness", 50, 18, 29, 32),
-      spot("leetcode-squad-podcast", 84, 31, 29, 34),
-      spot("autism-kink", 25, 69, 34, 34),
-      spot("lifestyle-kink-interview", 79, 70, 34, 34),
+      spot("aspergers-empathy", 20, 33, 26, 23, undefined, 47),
+      spot("developer-happiness", 50, 18, 25, 28, undefined, 35),
+      spot("leetcode-squad-podcast", 83, 35, 23, 28, undefined, 51),
+      spot("autism-kink", 26, 69, 24, 28, undefined, 85),
+      spot("lifestyle-kink-interview", 78, 73, 33, 25, undefined, 89),
     ],
   },
   writing: {
@@ -120,12 +128,12 @@ export const maps = {
     invitation: "Follow a thought somewhere.",
     center: [0.5, 0.45],
     spots: [
-      spot("getting-back-to-love", 50, 23, 32, 34),
-      spot("energy-cords", 19, 42, 28, 32, "Energy Cords"),
-      spot("focus-on-negative", 84, 36, 29, 32, "A Different Perspective"),
-      spot("rejection-breakups", 21, 69, 29, 32, "Vulnerability"),
-      spot("boredom-bipolar", 50, 64, 28, 32, "Boredom & Bipolar"),
-      spot("dota-consciousness", 83, 68, 29, 33, "DOTA & Consciousness"),
+      spot("getting-back-to-love", 50, 23, 25, 26, undefined, 36),
+      spot("energy-cords", 20, 38, 27, 24, "Energy Cords", 49),
+      spot("focus-on-negative", 82, 35, 26, 22, "A Different Perspective", 45),
+      spot("rejection-breakups", 21, 68, 26, 28, "Vulnerability", 83),
+      spot("boredom-bipolar", 50, 66, 24, 28, "Boredom & Bipolar", 82),
+      spot("dota-consciousness", 81, 69, 25, 37, "DOTA & Consciousness", 89),
     ],
   },
   hobbies: {
@@ -144,7 +152,9 @@ export const maps = {
         "public-speaking",
         "swimming",
         "neurodiversity",
-      ].map((id, i) => spot(id, [10, 27, 43, 58, 74, 90][i], 22, 14, 24)),
+      ].map((id, i) =>
+        spot(id, [10, 27, 43, 58, 74, 90][i], 22, 14, 24, undefined, 31),
+      ),
       ...[
         "storytelling",
         "weird-stuff",
@@ -152,7 +162,9 @@ export const maps = {
         "nature",
         "parody-videos",
         "water-sports",
-      ].map((id, i) => spot(id, [10, 27, 43, 58, 74, 90][i], 49, 14, 24)),
+      ].map((id, i) =>
+        spot(id, [10, 27, 43, 58, 74, 90][i], 48, 14, 24, undefined, 57),
+      ),
       ...[
         "russian-bathhouse",
         "burning-man",
@@ -160,7 +172,17 @@ export const maps = {
         "sex-positivity",
         "hiking",
         "biking",
-      ].map((id, i) => spot(id, [10, 27, 43, 58, 74, 90][i], 79, 14, 24)),
+      ].map((id, i) =>
+        spot(
+          id,
+          [10, 27, 43, 58, 74, 90][i],
+          76,
+          i === 0 ? 18 : 14,
+          24,
+          undefined,
+          i === 0 ? 84.5 : 86,
+        ),
+      ),
     ],
   },
   misc: {
@@ -172,15 +194,15 @@ export const maps = {
     invitation: "See what washes ashore.",
     center: [0.5, 0.45],
     spots: [
-      spot("my-goals", 20, 22, 23, 27),
-      spot("rituals", 50, 20, 23, 26),
-      spot("travels", 80, 22, 25, 27),
-      spot("principles", 20, 46, 25, 25),
-      spot("toliwags", 50, 46, 26, 25),
-      spot("fun-with-dalle", 82, 46, 25, 25),
-      spot("dating-bounty", 18, 72, 25, 28),
-      spot("kinkbuddy", 50, 72, 25, 28),
-      spot("obscure-parody-vids", 82, 73, 25, 30),
+      spot("my-goals", 20, 22, 23, 27, undefined, 36),
+      spot("rituals", 50, 22, 25, 28, undefined, 36),
+      spot("travels", 80, 22, 25, 27, undefined, 37),
+      spot("principles", 19, 48, 24, 29, undefined, 63),
+      spot("toliwags", 51, 48, 26, 29, undefined, 63),
+      spot("fun-with-dalle", 83, 48, 25, 29, undefined, 64),
+      spot("dating-bounty", 18, 75, 25, 28, undefined, 89),
+      spot("kinkbuddy", 50, 74, 25, 26, undefined, 89),
+      spot("obscure-parody-vids", 82, 75, 25, 28, undefined, 90),
     ],
   },
 };
@@ -229,9 +251,11 @@ export const projects = inventory.map((entry) => {
     eyebrow: copy?.eyebrow || maps[entry.kingdom].category,
     chapters: copy?.chapters || [],
     links,
-    artwork: isFeatured
-      ? `/assets/projects/${entry.id}.webp`
-      : `/assets/maps/${entry.kingdom}.webp`,
+    artworkIsMap: !isFeatured || entry.id === "picklejs",
+    artwork:
+      isFeatured && entry.id !== "picklejs"
+        ? `/assets/projects/${entry.id}.webp`
+        : `/assets/maps/${entry.kingdom}.webp`,
     landmark: maps[entry.kingdom].spots.find((s) => s.id === entry.id),
   };
 });

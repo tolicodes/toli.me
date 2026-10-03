@@ -40,8 +40,9 @@ The build must precede the tests because the packaging checks inspect `dist`. `n
 - `docs/site-copy.json`: concise presentation copy for the site.
 - `docs/featured-detail-copy.json`: the four featured stories, chapter text, and primary sources.
 - `docs/landmark-brainstorm.json`: the literal illustration idea for each entry.
-- `public/assets`: 13 optimized WebP illustrations, about 8.8 MB total. Maps load as visited; only the current map is needed initially.
-- `docs/artwork-source`: original generated PNGs, kept outside the production asset directory.
+- `public/assets`: 12 optimized WebP illustrations, about 1.15 MB total. Maps load as visited; only the current map is needed initially.
+- `docs/artwork-source`: generated PNGs, kept outside the production asset directory. The current art uses recognizable symbols on cream paper with sparse paths; HTML labels stay readable while zooming. PickleJS reuses its Work-map landmark for the story and thumbnails.
+- `docs/clean-artwork-prompts.md` and `docs/clean-root-artwork-prompts.json`: generation prompts and provenance for the clean symbol direction.
 - `docs/references` and `docs/qa`: concept art, before/after evidence, and browser screenshots.
 - `design-qa.md`: comparison results, interaction checks, and limitations.
 
