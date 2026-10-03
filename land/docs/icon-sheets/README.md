@@ -1,5 +1,7 @@
 # Toli’s little worlds — categorized icon sheet v2
 
+**Later scope update, October 3:** Toli narrowed the personal site to 15 personal destinations and an external Work link to ToliCodes. The 54-icon sheets below preserve the earlier exploration; they are no longer the target content inventory. The exact retained scope and proposal-versus-implementation boundary are recorded in [the project instructions](../../AGENTS.md#toli-land-design-decisions). Actual-logo/character hybrids were discussed and references collected, but no hybrid sheet was generated before this change of direction.
+
 Updated October 3, 2026 with built-in ImageGen. Toli asked why LeetCode used an apple and requested all icons grouped by category. The apple was an assistant-created NYC metaphor, now rejected for these LeetCode concepts.
 
 - [Categorized sheet](toli-icons-v2-categorized.png): 1024 × 1536 PNG, all 54 entries across Work (9), Publications (4), Speaking (5), Creative (3), Hobbies (18), Writing (6), and Misc (9).
