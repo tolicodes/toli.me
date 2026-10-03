@@ -18,5 +18,6 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Selecting a landmark opens an illustrated page explaining the project with real links and a reliable return to the originating map.
 - Latest direction (2026-10-03): a clean symbol map on warm cream paper. Remove city detail, crowds, buildings, scenery, ornate signs, and dense road networks. Use a few thin paths and large recognizable characters/objects; names are real HTML labels below the symbols. Use generated raster artwork and actual icon-library icons, never CSS/SVG substitutes for illustration.
 - Keep unknown descriptions modest and factual. The selected featured projects are editorial defaults, configurable in content data.
+- Icon-sheet feedback (2026-10-03): the NYC apple does not communicate LeetCode. Use a coding/problem-solving community symbol for LeetCode and carry the same emblem into its podcast icon. Present the complete icon catalogue grouped into its seven categories. The specific puzzle-team replacement is a proposal until selected.
 - Add Storybook stories for components and meaningful interaction states. Verify desktop, phone, keyboard, reduced motion, navigation history, and zoom behavior.
 - Keep the legacy site outside this directory intact. Commit only this task's changes.
