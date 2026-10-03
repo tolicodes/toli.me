@@ -11,7 +11,7 @@ const sections = [
       { label: "Neurodivergent’s Guide to the Workplace", note: "The book I needed at 25", href: "https://os.toli.me/" },
       { label: "NYC LeetCode Squad", note: "Misery loves company", href: "https://lcsquad.com/" },
       { label: "PickleJS", note: "Open-source visual regression tooling", href: "https://www.picklejs.com/" },
-      { label: "FB Ads Book", note: "A whole book about ads, yes", href: "https://fbadsbook.com/" },
+      { label: "FB Ads Book", note: "A whole book about ads, yes", href: "https://fbads.toli.me/" },
       { label: "API Scraping", note: "The Codementor guide", href: "https://www.codementor.io/blog/api-scraping-5fq1gtd4ah" },
       { label: "Dropbox Journey", note: "How I got there", href: "https://dropbox.tolicodes.com/" },
       { label: "Portfolio", note: "The greatest hits", href: "https://portfolio.tolicodes.com/" },
