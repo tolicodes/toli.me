@@ -1,0 +1,37 @@
+[
+  {
+    "file": "source-567c3082_original.jpg",
+    "sourceUrl": "https://travel.tolicodes.com/assets/images/gallery01/567c3082_original.jpg?v=e51bc810",
+    "bytes": 215869,
+    "sha256": "fc689f7539ae6c7dd6d1fc7706bd361e818c02f0bd508fa6058e8cfe02eba844",
+    "locationVerified": false
+  },
+  {
+    "file": "source-image01.jpg",
+    "sourceUrl": "https://travel.tolicodes.com/assets/images/image01.jpg?v=e51bc810",
+    "bytes": 390532,
+    "sha256": "c18918bac25354ab3f5b152bd52c2cfecb898f0172b6eb435e7e88b093adf682",
+    "locationVerified": false
+  },
+  {
+    "file": "source-image02.jpg",
+    "sourceUrl": "https://travel.tolicodes.com/assets/images/image02.jpg?v=e51bc810",
+    "bytes": 104095,
+    "sha256": "9143d0b143057b6ad8f240038a98a1352b4ab84476aa40235eca49ce0092ce67",
+    "locationVerified": false
+  },
+  {
+    "file": "source-image03.jpg",
+    "sourceUrl": "https://travel.tolicodes.com/assets/images/image03.jpg?v=e51bc810",
+    "bytes": 107179,
+    "sha256": "7301961852aef8c26fbcda0b6d6c20a74e9b54c810df0a556b363537ce0b21a7",
+    "locationVerified": null
+  },
+  {
+    "file": "source-image04.jpg",
+    "sourceUrl": "https://travel.tolicodes.com/assets/images/image04.jpg?v=e51bc810",
+    "bytes": 104095,
+    "sha256": "9143d0b143057b6ad8f240038a98a1352b4ab84476aa40235eca49ce0092ce67",
+    "locationVerified": false
+  }
+]

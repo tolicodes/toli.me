@@ -1,0 +1,139 @@
+@import "@fontsource/cormorant-garamond/latin-700.css";
+@import "@fontsource/cormorant-garamond/latin-600.css";
+@import "@fontsource/cormorant-garamond/latin-400-italic.css";
+@import "@fontsource/nunito-sans/latin-400.css";
+@import "@fontsource/nunito-sans/latin-700.css";
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+.personal-site { --paper: #fcfaf1; --ink: #102e29; --muted: #5f625d; --line: #cbcfc0; --leaf: #749265; min-height: 100vh; color: var(--ink); background: var(--paper); font-family: Georgia, "Times New Roman", serif; font-size: 18px; line-height: 1.4; }
+.personal-site *, .personal-site *::before, .personal-site *::after { box-sizing: border-box; }
+.personal-site a { color: inherit; text-decoration: none; }
+.personal-site a:focus-visible, .personal-site button:focus-visible { outline: 3px solid #a66f27; outline-offset: 5px; border-radius: 2px; }
+.personal-site a:hover { color: #456c40; }
+.personal-site h1, .personal-site h2, .personal-site h3, .personal-site p { margin: 0; }
+.personal-site h1, .personal-site h2, .personal-site h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 700; line-height: 1.02; letter-spacing: -.035em; }
+.personal-site ul { list-style: none; margin: 0; padding: 0; }
+.personal-site img { display: block; max-width: 100%; }
+.personal-site svg { flex: 0 0 auto; vertical-align: middle; }
+.personal-container { width: min(1120px, calc(100% - 128px)); margin: 0 auto; }
+.personal-header { display: flex; align-items: center; justify-content: space-between; min-height: 82px; gap: 32px; }
+.personal-wordmark { font-family: "Cormorant Garamond", Georgia, serif; font-size: 46px; font-weight: 700; letter-spacing: -.05em; line-height: 1; }
+.personal-wordmark span { color: #a8772f; }
+.personal-header nav { display: flex; align-items: center; gap: 28px; font-size: 16px; }
+.personal-header nav a { display: flex; align-items: center; gap: 6px; min-height: 44px; }
+.personal-header nav a[aria-current] { text-decoration: underline; text-underline-offset: 7px; text-decoration-color: var(--leaf); }
+.personal-menu-button { display: none; }
+.personal-hero { min-height: 211px; display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 8px 0 28px; }
+.personal-hero h1 { font-size: clamp(64px, 8.1vw, 100px); line-height: .95; letter-spacing: -.05em; }
+.personal-handwritten { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 600; }
+.personal-hello { font-size: 29px; line-height: 1; margin-bottom: 1px !important; }
+.personal-intro { font-size: 26px; line-height: 1.2; margin-top: 8px !important; }
+.personal-portrait { display: flex; align-items: center; gap: 22px; flex: 0 0 auto; }
+.personal-portrait img { width: 160px; height: 183px; object-fit: cover; border-radius: 50%; transform: rotate(6deg); }
+.personal-portrait p { font-size: 27px; line-height: 1.05; transform: rotate(-9deg); }
+.personal-feature { display: grid; grid-template-columns: 42% 1fr; gap: 35px; align-items: center; min-height: 246px; padding: 14px 0; border-top: 1px solid var(--line); }
+.personal-feature-art { height: 216px; display: flex; align-items: center; justify-content: center; }
+.personal-feature-art img { width: 100%; height: 100%; object-fit: contain; }
+.personal-feature-art.guide img, .personal-feature-art.dating img { height: 280px; }
+.personal-feature-art.drawn img { height: 198px; object-fit: cover; object-position: top; border: 1px solid var(--ink); }
+.personal-feature h2 { font-size: clamp(42px, 5.5vw, 66px); }
+.personal-feature-copy > p:not(.drawn-signature) { font-size: 25px; margin-top: 7px; }
+.drawn-signature { color: #c03463; font-size: 28px; line-height: 1; margin-bottom: 3px !important; }
+.personal-text-link { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 20px; margin-top: 10px; text-decoration: underline !important; text-decoration-color: #9dba8b !important; text-decoration-thickness: 3px !important; text-underline-offset: 7px; }
+.personal-text-link svg { width: 20px; height: 20px; }
+.personal-index-columns { display: grid; grid-template-columns: 1.17fr 1fr; gap: 34px; padding: 28px 0 12px; border-top: 1px solid var(--line); }
+.personal-index-columns > section + section { padding-left: 34px; border-left: 1px solid var(--line); }
+.personal-index-columns h2 { font-size: 42px; }
+.personal-section-intro { color: var(--muted); font-size: 17px; margin-top: 5px !important; }
+.personal-writing-list { margin-top: 12px !important; }
+.personal-writing-list li + li { border-top: 1px solid var(--line); }
+.personal-writing-list a { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; padding: 15px 0; font-size: 21px; line-height: 1.35; }
+.personal-writing-list svg { width: 19px; height: 19px; }
+.personal-explore-list { margin-top: 10px !important; }
+.personal-explore-list li + li { border-top: 1px solid var(--line); }
+.personal-explore-list a { display: grid; grid-template-columns: 42px 1fr 20px; gap: 17px; align-items: center; padding: 13px 0; }
+.personal-explore-list a > svg:first-child { color: #688550; }
+.personal-explore-list h3 { font-size: 27px; letter-spacing: -.02em; }
+.personal-explore-list p { color: var(--muted); font-size: 16px; line-height: 1.35; margin-top: 3px; }
+.personal-footer { display: grid; grid-template-columns: 1fr 3fr 1fr; gap: 20px; align-items: center; padding: 30px 0 20px; text-align: center; }
+.personal-footer > .personal-handwritten { font-size: 22px; transform: rotate(-7deg); }
+.personal-footer > img { width: 160px; height: 110px; object-fit: contain; }
+.personal-contact { display: inline-flex; justify-content: center; align-items: center; gap: 12px; color: var(--paper) !important; background: var(--ink); border-radius: 40px; min-height: 48px; min-width: 190px; padding: 8px 26px; font-size: 21px; }
+.personal-contact:hover { background: #36533c; }
+.personal-footer-wordmark { display: block; margin-top: 12px; font-size: 16px; }
+.personal-footer div > p { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.personal-page-heading { padding: 32px 0 38px; border-bottom: 1px solid var(--line); }
+.personal-back { display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; margin-bottom: 17px; }
+.personal-page-heading h1 { font-size: clamp(58px, 7vw, 88px); }
+.personal-page-heading > p { font-size: 24px; max-width: 680px; margin-top: 15px; }
+.personal-project { display: grid; grid-template-columns: 1fr; padding: 32px 0; border-bottom: 1px solid var(--line); }
+.personal-project.has-image { grid-template-columns: 38% 1fr; align-items: center; gap: 42px; }
+.personal-project h2 { font-size: 46px; }
+.personal-project p { font-size: 22px; margin-top: 10px; max-width: 580px; }
+.personal-project-image { display: block; height: 270px; }
+.personal-project-image img { height: 100%; width: 100%; object-fit: contain; }
+.personal-project-image.drawn img { object-fit: cover; object-position: top; }
+.personal-project-image.las-chicas img { object-fit: contain; }
+.personal-all-writing { max-width: 820px; padding-bottom: 32px; }
+.personal-all-writing .personal-writing-list a { font-size: 26px; padding: 26px 0; }
+.personal-page-heading > .personal-travel-note { font-family: "Nunito Sans", sans-serif; display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--muted); margin-top: 24px; }
+.personal-travel-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 36px; padding-top: 10px; }
+.personal-travel-groups section { border-bottom: 1px solid var(--line); padding: 28px 0; }
+.personal-eyebrow { font-family: "Nunito Sans", sans-serif; font-size: 13px; color: #738164; margin-bottom: 12px !important; }
+.personal-travel-groups h2 { font-size: 34px; }
+.personal-travel-groups ul { margin-top: 18px; font-size: 21px; line-height: 1.8; }
+.personal-archive-note { max-width: 650px; color: var(--muted); font-size: 16px; padding: 28px 0; }
+.personal-archive-note a { text-decoration: underline; text-underline-offset: 3px; }
+.personal-archive-note svg { width: 15px; height: 15px; margin-left: 3px; }
+.personal-sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.personal-skip { position: fixed; top: 10px; left: 10px; z-index: 100; transform: translateY(-150%); background: var(--paper); padding: 12px 20px; border: 1px solid var(--ink); }
+.personal-skip:focus { transform: translateY(0); }
+.personal-site main:focus { outline: none; }
+@media (min-width: 1250px) { .personal-feature { min-height: 276px; } .personal-feature-art { height: 248px; } .personal-feature-art.drawn img { height: 218px; } .personal-hero { min-height: 256px; } }
+@media (max-width: 1000px) { .personal-container { width: calc(100% - 64px); } .personal-header nav { gap: 20px; } .personal-portrait { gap: 14px; } .personal-portrait img { width: 138px; height: 166px; } .personal-portrait p { font-size: 24px; } .personal-intro { font-size: 24px; } }
+@media (max-width: 760px) {
+  .personal-container { width: calc(100% - 40px); }
+  .personal-header { min-height: 76px; flex-wrap: wrap; gap: 0; padding: 15px 0; }
+  .personal-wordmark { font-size: 40px; }
+  .personal-menu-button { display: flex; align-items: center; gap: 7px; min-height: 44px; padding: 8px 0 8px 14px; border: 0; background: transparent; color: var(--ink); font: 16px Georgia, serif; cursor: pointer; }
+  .personal-header nav { display: none; flex-basis: 100%; flex-wrap: wrap; gap: 2px 25px; padding-top: 15px; border-top: 1px solid var(--line); margin-top: 15px; font-size: 18px; }
+  .personal-header nav.is-open { display: flex; }
+  .personal-hero { gap: 12px; flex-wrap: wrap; padding: 22px 0 28px; }
+  .personal-hero h1 { font-size: clamp(58px, 13vw, 80px); }
+  .personal-hello { font-size: 25px; }
+  .personal-intro { font-size: 23px; max-width: 460px; line-height: 1.3; }
+  .personal-desktop-break { display: none; }
+  .personal-portrait { margin: 12px 0 0; gap: 24px; }
+  .personal-portrait img { width: 103px; height: 118px; }
+  .personal-portrait p { font-size: 25px; }
+  .personal-feature { grid-template-columns: 1fr; gap: 15px; padding: 25px 0 29px; }
+  .personal-feature-art { height: 230px; max-width: 420px; width: 100%; margin: 0 auto; }
+  .personal-feature-art.drawn { height: 190px; }
+  .personal-feature-art.drawn img { height: 190px; }
+  .personal-feature-art.guide img, .personal-feature-art.dating img { height: 270px; }
+  .personal-feature h2 { font-size: clamp(42px, 9.7vw, 60px); }
+  .personal-feature-copy > p:not(.drawn-signature) { font-size: 22px; }
+  .personal-text-link { font-size: 19px; }
+  .personal-index-columns { grid-template-columns: 1fr; gap: 30px; }
+  .personal-index-columns > section + section { border-left: 0; border-top: 1px solid var(--line); padding: 26px 0 0; }
+  .personal-index-columns h2 { font-size: 39px; }
+  .personal-footer { grid-template-columns: 1fr; gap: 15px; padding-top: 32px; }
+  .personal-footer > .personal-handwritten { display: none; }
+  .personal-footer > img { margin: 0 auto; height: 75px; }
+  .personal-footer div > p { max-width: 280px; margin: 5px auto 0; }
+  .personal-page-heading { padding: 8px 0 27px; }
+  .personal-page-heading h1 { font-size: 55px; }
+  .personal-page-heading > p { font-size: 22px; }
+  .personal-project.has-image { grid-template-columns: 1fr; gap: 20px; }
+  .personal-project-image { height: 270px; }
+  .personal-project-image.easter { height: 330px; }
+  .personal-project h2 { font-size: 40px; }
+  .personal-project p { font-size: 21px; }
+  .personal-all-writing .personal-writing-list a { font-size: 23px; }
+  .personal-travel-groups { grid-template-columns: 1fr 1fr; gap: 0 22px; }
+  .personal-travel-groups h2 { font-size: 29px; }
+  .personal-travel-groups ul { font-size: 18px; }
+}
+@media (max-width: 360px) { .personal-travel-groups { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

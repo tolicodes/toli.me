@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-10-03",
+  "method": "Built-in image_gen.imagegen",
+  "purpose": "Individual transparent production assets for selected normal-site concept 3. Generated character artwork, not an exact original book cover or historical project asset.",
+  "selectedConcept": "docs/normal-site-concepts/03-personal-index.png",
+  "processing": "Generated PNG alpha preserved. Original PNGs retained under docs/personal-character-originals. ImageMagick converted to optimized WebP at quality 88; dimensions and exceptions are recorded per asset. No manual drawing, crops, or background removal.",
+  "assets": [
+    {
+      "id": "guide-character",
+      "publicPath": "public/assets/personal/guide-character.webp",
+      "originalPath": "docs/personal-character-originals/guide-character.png",
+      "generatedSourcePath": "/Users/toli/.codex/generated_images/01a10448-e7d5-7562-a93a-f9db97457cca/exec-2d0fda7a-c941-4056-a913-d1ad708b53cf.png",
+      "references": [
+        "/Users/toli/Documents/GitHub/toli-land/land/docs/normal-site-concepts/03-personal-index.png",
+        "/Users/toli/Documents/GitHub/toli-land/land/docs/normal-site-concepts/references/neurodivergent-guide-public.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: website feature illustration, single isolated transparent PNG, square 1024x1024.\nPrimary request: Draw the charming green walking Neurodiverse Guide book character shown in the supplied concept reference, as ONE complete standalone character. Make it production-ready to use alongside website text.\n\nInput images: Image 1 is the SELECTED WEBSITE CONCEPT and controls the exact character design, drawing style and color. Re-create ONLY its middle green walking book character; do not reproduce the page, typography, layout, portrait, comic or other characters. Image 2 is a supporting SOURCE for the illustration on the book cover: use the support-group picture near the lower center, showing people gathered around and supporting one central person. Keep that recognizable composition on the cover.\n\nSubject and style: Cheerful evergreen clothbound hardback book with lightly worn gold border details, cream paper pages, cream cartoon glove hands spread open in a welcoming gesture, short cream legs, oversized brown lace-up boots in a jaunty walking pose. The green book has no face; its cover illustration and open arms give it personality. The cover title MUST read exactly \"Neurodiverse Guide\" on two lines in white, clearly legible, above the colorful support-group picture. Preserve the friendly storybook ink outlines, warm hand-painted watercolor texture and slightly imperfect organic edges from Image 1. The cover should face mostly forward with a little three-quarter dimension, as in Image 1.\nComposition/framing: Full character centered, including all fingers and boots, with generous transparent safe margins of 12-15 percent. Character silhouette comfortably fills about 72 percent of the square; arrange slightly wide rather than very tall, so it remains strong at a 300x240 desktop feature slot and a 190x180 mobile slot. A few very small golden joy marks by the raised hands are okay if separated cleanly. \nScene/backdrop: GENUINELY TRANSPARENT alpha background. No opaque white or beige background, no checkerboard pattern baked into the image, no floor, no landscape, no grass, no background wash. A tiny soft transparent contact shadow under boots is optional.\nText (verbatim): \"Neurodiverse Guide\". No other text.\nConstraints: One book character only. No UI. No title outside book. No surrounding webpage. Match the selected reference faithfully. Preserve clean alpha edges and crisp details at small size.",
+      "checks": {
+        "originalSize": [
+          1254,
+          1254
+        ],
+        "webpSize": [
+          800,
+          800
+        ],
+        "webpBytes": 127600,
+        "alpha": true,
+        "titleVerified": "Neurodiverse Guide",
+        "visualReview": "Whole book, hands, boots and cover picture visible; recognizably matches selected concept. The support-group illustration is a generated interpretation of the source image."
+      }
+    },
+    {
+      "id": "dating-bounty",
+      "publicPath": "public/assets/personal/dating-bounty.webp",
+      "originalPath": "docs/personal-character-originals/dating-bounty.png",
+      "generatedSourcePath": "/Users/toli/.codex/generated_images/01a10448-e7d5-7562-a93a-f9db97457cca/exec-1274332a-ae80-4598-9f55-894e6b043678.png",
+      "references": [
+        "/Users/toli/Documents/GitHub/toli-land/land/docs/normal-site-concepts/03-personal-index.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: website feature illustration, single isolated transparent PNG, square 1024x1024.\nPrimary request: Draw the charming blush-pink walking envelope character shown in the supplied concept reference, as ONE complete standalone character for the Dating Bounty website feature.\n\nInput image: Image 1 is the SELECTED WEBSITE CONCEPT. It controls the exact envelope character design, friendly ink outlines, watercolor style, warm colors and pose. Re-create ONLY the pink walking envelope character near the lower-middle of the page. Do not reproduce any page layout, portrait, comic, book character, UI, heading or background.\n\nSubject/style: A cheerful blush-pink paper envelope with gently curved triangular flap and a bright small red heart wax seal at the flap point. Two round shiny black eyes, a little open smile and rosy cheeks, cream cartoon glove hands, cream short legs and brown lace-up boots. Jaunty walking pose. One glove hand rests in a welcoming gesture while the other holds a small cream note to the side. Keep the proportions, warm hand-painted watercolor texture, dark brown outlines, asymmetrical organic shape and cute expression of the selected reference. The actual envelope has no arms that obscure the seal. Three small floating red/pink hearts around it, positioned well within the safe margins.\nText (verbatim): The hand-held note reads \"Good people find each other\" in small dark readable hand lettering on several short lines, with a tiny red heart below. No other text.\nComposition/framing: Whole envelope, note, hands, hearts and boots visible, centered in a square with generous transparent safe margins of at least12 percent. Asset should remain recognizable when rendered in a 300x240 desktop feature slot and190x180mobile slot. The slightly wide overall arrangement must feel balanced.\nScene/backdrop: GENUINELY TRANSPARENT alpha background. No opaque white or cream background, no checkerboard pattern baked into the image, no floor, no landscape, no grass, no surrounding watercolor wash. A tiny soft transparent contact shadow under boots is optional.\nConstraints: One envelope character only. No UI, no title outside note, no words outside note, no scenery, no crop of any limb or heart. Match selected concept faithfully. Clean alpha edges and crisp details at small size.",
+      "checks": {
+        "originalSize": [
+          1254,
+          1254
+        ],
+        "webpSize": [
+          800,
+          800
+        ],
+        "webpBytes": 78142,
+        "alpha": true,
+        "noteVerified": "Good people find each other",
+        "visualReview": "Whole envelope, note, hearts, hands and boots visible; recognizably matches selected concept."
+      }
+    },
+    {
+      "id": "footer-sprig",
+      "publicPath": "public/assets/personal/footer-sprig.webp",
+      "originalPath": "docs/personal-character-originals/footer-sprig.png",
+      "generatedSourcePath": "/Users/toli/.codex/generated_images/01a10448-e7d5-7562-a93a-f9db97457cca/exec-e67caa7f-a3a8-431c-a115-92c1f3819b16.png",
+      "references": [
+        "docs/normal-site-concepts/03-personal-index.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: tiny standalone botanical footer decoration for a personal website, transparent PNG, square composition.\nPrimary request: A small, restrained hand-painted sprig patch matching the illustrated footer plants in Image1, the selected personal-site design. Re-create only the little green botanical tuft with a couple of tiny golden-yellow flowers, as one isolated asset.\nReference: Image1 is the selected website concept. Use only its bottom-left/bottom-right botanical decoration for stylistic reference. Do not reproduce any page, text, buttons, characters, UI or other artwork.\nSubject: A single modest cluster of slender soft sage and olive-green leaves, 3-4 shorter grassy blades and two delicate stems with tiny five-petal golden yellow flowers. Fine imperfect dark-green ink outlines and light watercolor washes, natural asymmetry. Charming, airy and subtle. No pot. No face.\nComposition: One low, slightly wide patch occupying about 65percent of a square, centered with ample clear space around all edges. Designed to be readable as a quiet 150x80-pixel footer ornament. Very restrained pale translucent green dab of earth immediately beneath the leaves is okay. Do not make a full landscape, horizontal divider or repeating texture.\nBackground: Genuinely TRANSPARENT alpha. No white background, no beige paper, no baked checkerboard. Entire background empty and transparent.\nConstraints: No text, no UI, no arrows, no people, no animals, no borders, no frames, no extra objects. Match the refined friendly watercolor-and-ink style of Image1.",
+      "processing": "Resized to 640px maximum edge and encoded WebP quality88; alpha preserved.",
+      "checks": {
+        "originalSize": [
+          1536,
+          1024
+        ],
+        "webpSize": [
+          640,
+          427
+        ],
+        "webpBytes": 27000,
+        "alpha": true,
+        "visualReview": "Green sprig patch with two yellow flowers; intact framing and transparent background; visually checked composited on cream."
+      }
+    },
+    {
+      "id": "toli-portrait",
+      "publicPath": "public/assets/personal/toli-portrait.webp",
+      "originalPath": "docs/normal-site-concepts/references/toli-public-portrait.jpg",
+      "method": "Original public-source photograph; no ImageGen",
+      "processing": "Whole photograph resized to 640x640 and encoded WebP quality88. No crop, retouching, color changes, or likeness edits.",
+      "checks": {
+        "webpSize": [
+          640,
+          640
+        ],
+        "webpBytes": 48792,
+        "alpha": false,
+        "visualReview": "Same smiling portrait and original brown hair, with original background and framing intact."
+      }
+    }
+  ]
+}
