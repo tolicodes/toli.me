@@ -1,0 +1,13 @@
+{
+  "id": "bc4a1b57-c973-49eb-b3f0-e7cb69a11925",
+  "name": "toli-land-beta",
+  "custom_domain": "beta.toli.me",
+  "domain_aliases": [],
+  "managed_dns": true,
+  "dns_zone_id": "6a52a77284b0c40590094b69",
+  "force_ssl": true,
+  "ssl": true,
+  "ssl_url": "https://beta.toli.me",
+  "url": "https://beta.toli.me",
+  "published_deploy_id": "6ac1a1735a2b126bc0f0bcd4"
+}

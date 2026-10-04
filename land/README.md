@@ -44,10 +44,10 @@ The old illustrated map components, 54-entry inventory, tests, and artwork remai
 
 React 19 and Vite; self-hosted fonts and Phosphor icons. Hash routing supports direct section links on static hosting. The build produces the static site in `dist/client` and preserves the Sites worker contract in `dist/server` and `dist/.openai/hosting.json`.
 
-The Netlify beta uses the existing `toli-land-beta` site, ID `bc4a1b57-c973-49eb-b3f0-e7cb69a11925`, at https://beta.toli.me. Build, test, commit, then publish:
+Production is https://toli.me, using the existing Netlify site `toli-land-beta`, ID `bc4a1b57-c973-49eb-b3f0-e7cb69a11925`. `www.toli.me` redirects to the apex; https://beta.toli.me remains an alias of the same production deployment, not an isolated staging environment. Build, test, commit, then publish:
 
 ```sh
 netlify deploy --prod --no-build --dir dist/client --site bc4a1b57-c973-49eb-b3f0-e7cb69a11925
 ```
 
-Only `dist/client` is deployed. Design notes, source evidence, QA images, and worker packaging stay outside that output. The apex domain and legacy Jekyll site are managed separately. This work lives in the isolated `codex/toli-land` checkout and does not modify human-crm.
+Only `dist/client` is deployed. Design notes, source evidence, QA images, and worker packaging stay outside that output. The authorized October 3 apex cutover keeps the tested deployment unchanged; DNS, HTTPS, asset checks, propagation caveat, and rollback are recorded in `docs/apex-cutover/`. The legacy Jekyll source remains intact. This work lives in the isolated `codex/toli-land` checkout and does not modify human-crm.

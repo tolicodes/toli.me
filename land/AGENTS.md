@@ -19,6 +19,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - **Native Travels:** Keep the visited-country archive inside the site. The original explicit list contains 14 countries, verified against its map permalink. Copy that list exactly; do not infer visit dates, claim it is a current lifetime total, or publish ambiguous Hawaii/template content and unrelated photos as travel evidence. Source evidence lives in `docs/travel-import/`.
 - **Travel map drawing follow-up (October 3):** Toli requested a map for Travels. The illustrated concept at `docs/travel-map-concept/travel-map.png` uses the site's cream/green palette and 14 named markers. This drawing is not yet integrated or selected for release. Use geographic data and real text overlays for accurate responsive markers if implementing it; generated filled-country variants were unreliable around small neighboring countries.
 
+- **Production cutover, October 3, 2026:** Toli authorized moving the redesigned site to `https://toli.me`. The existing Netlify site `toli-land-beta` now serves that primary domain; `www.toli.me` redirects to it and `beta.toli.me` remains an alias of the same deployment. Publishing `--prod` to this site now changes the public apex as well as beta. Keep the legacy source intact and preserve unrelated DNS and mail records. Receipts and rollback are in `docs/apex-cutover/`.
+
 ### Earlier implemented direction and visual preferences
 
 - Build a responsive website, not a framed mobile app.

@@ -1,0 +1,50 @@
+[
+  {
+    "hostname": "beta.toli.me",
+    "type": "NETLIFY",
+    "ttl": 3600,
+    "priority": null,
+    "weight": null,
+    "port": null,
+    "flag": null,
+    "tag": null,
+    "id": "6abfb1238ae8e200074eea80",
+    "site_id": "bc4a1b57-c973-49eb-b3f0-e7cb69a11925",
+    "dns_zone_id": "6a52a77284b0c40590094b69",
+    "errors": [],
+    "managed": true,
+    "value": "toli-land-beta.netlify.app"
+  },
+  {
+    "hostname": "www.toli.me",
+    "type": "NETLIFY",
+    "ttl": 3600,
+    "priority": null,
+    "weight": null,
+    "port": null,
+    "flag": null,
+    "tag": null,
+    "id": "6ac1a804d128270008693c95",
+    "site_id": "bc4a1b57-c973-49eb-b3f0-e7cb69a11925",
+    "dns_zone_id": "6a52a77284b0c40590094b69",
+    "errors": [],
+    "managed": true,
+    "value": "toli-land-beta.netlify.app"
+  },
+  {
+    "hostname": "toli.me",
+    "type": "A",
+    "ttl": 300,
+    "priority": null,
+    "weight": null,
+    "port": null,
+    "flag": null,
+    "tag": null,
+    "id": "6ac1a8dc869e05fd1a99857a",
+    "site_id": null,
+    "dns_zone_id": "6a52a77284b0c40590094b69",
+    "errors": [],
+    "managed": false,
+    "value": "75.2.60.5"
+  }
+]
