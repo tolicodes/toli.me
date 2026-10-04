@@ -28,7 +28,7 @@ const datingBounty = {
   id: "dating-bounty",
   title: "Dating Bounty",
   description: "A very personal side project.",
-  href: "https://toli.love/",
+  href: "https://love.toli.me/",
   cta: "Take a look",
   image: "/assets/personal/dating-bounty.webp",
   imageAlt: "A cheerful pink envelope character with a heart seal and a little matchmaking note.",
