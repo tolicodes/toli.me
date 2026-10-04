@@ -36,4 +36,6 @@ Real-device Safari/Firefox and physical screen-reader testing were not performed
 
 ## Release
 
-Verified locally. Netlify beta publication and live verification will be recorded in `docs/normal-site-qa/release.json` after deployment.
+Published application commit `735d5c1` to https://beta.toli.me using Netlify deploy `6ac1a1735a2b126bc0f0bcd4`. Ten live files (index, JavaScript, CSS, and seven WebP assets) returned HTTPS 200 and matched the tested local build byte-for-byte. Receipt and hashes: `docs/normal-site-qa/release.json` and `netlify-deploy.json`.
+
+Live browser checks confirmed the homepage, original Creative artwork, and internal Travels page with all 14 countries at 390px without horizontal overflow. Every Creative image loaded; browser console showed no warnings/errors. Evidence: `live-home.jpg`, `live-home-full.jpg`, `live-creative.jpg`, and `live-travels-mobile.jpg` in the same QA directory.
