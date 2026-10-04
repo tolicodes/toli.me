@@ -91,7 +91,7 @@ export function TravelPage() {
   return <>
     <PageHeading title="Places I’ve been" intro="A little of the world I’ve explored."><p className="personal-travel-note"><GlobeHemisphereWest size={22} weight="duotone" aria-hidden="true" />{travelArchive.countries.length} countries in my travel archive</p></PageHeading>
     <div className="personal-travel-groups">{groups.map((group, index) => <section key={group} aria-labelledby={`region-${index}`}><p className="personal-eyebrow">{String(index + 1).padStart(2, "0")}</p><h2 id={`region-${index}`}>{group}</h2><ul>{travelArchive.countries.filter((country) => country.group === group).map((country) => <li key={country.id}>{country.name}</li>)}</ul></section>)}</div>
-    <p className="personal-archive-note">Collected from <OutboundLink href={travelArchive.sourceUrl}>my original travel page</OutboundLink>. A snapshot of where I’d been when I made that page.</p>
+    <p className="personal-archive-note">Started with <OutboundLink href={travelArchive.sourceUrl}>my original travel page</OutboundLink>, with more places added along the way.</p>
   </>;
 }
 

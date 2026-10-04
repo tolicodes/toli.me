@@ -133,8 +133,9 @@ export const writing = [
 
 // Copied from docs/travel-import/travel-data.json, verified October 3, 2026
 // against the original travel page's explicit visited list and map permalink.
-// This is the source archive, not a newly verified lifetime tally. Ambiguous
-// Hawaii/June 2020 mentions, template text and unverified trip dates stay out.
+// Spain was added at Toli’s request on October 3, 2026. The original imported
+// list remains preserved in docs/travel-import/. No trip dates or complete
+// lifetime tally are inferred; ambiguous source mentions stay excluded.
 export const travelArchive = {
   title: "Places I’ve been",
   intro: "A little of the world I’ve explored.",
@@ -147,6 +148,7 @@ export const travelArchive = {
     { id: "fi", name: "Finland", group: "Europe" },
     { id: "fr", name: "France", group: "Europe" },
     { id: "it", name: "Italy", group: "Europe" },
+    { id: "es", name: "Spain", group: "Europe" },
     { id: "ru", name: "Russia", group: "Europe & Asia" },
     { id: "tz", name: "Tanzania", group: "Africa" },
     { id: "il", name: "Israel", group: "Asia" },

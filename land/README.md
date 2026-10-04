@@ -22,7 +22,7 @@ The packaging tests inspect the build output, so build before running checks fro
 - `#/publications`: the guide and Principles.
 - `#/creative`: Drawn, Easter Creatures, Las Chicas, Spa Date, and Obscure Parody Videos.
 - `#/writing`: all six original essays, linked directly to Medium.
-- `#/travels`: 14 countries copied from the original explicit visited list, grouped geographically. It is an archive, not a verified current lifetime count.
+- `#/travels`: 15 countries grouped geographically: the original 14-country archive plus Spain, added at Toli’s request on October 3, 2026. No visit dates or complete lifetime count are inferred.
 - Work links directly to https://tolicodes.com.
 
 Mobile navigation expands inline and supports Escape. Routes update the document title, focus the new content, reset scroll, and support browser history. Unknown/retired map URLs safely return to home. There is no map interaction required to find the retained content.

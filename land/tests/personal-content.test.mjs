@@ -44,11 +44,14 @@ test("all six essays retain their original titles and direct Medium destinations
   for (const { href } of writing) assert.equal(new URL(href).hostname, "tolicodes.medium.com");
 });
 
-test("embedded travel data exactly matches the verified 14-country import", () => {
-  assert.equal(travelArchive.countries.length, 14);
-  assert.equal(new Set(travelArchive.countries.map(({ id }) => id)).size, 14);
+test("travel list preserves the original import and adds Spain as requested", () => {
+  assert.equal(travelArchive.countries.length, 15);
+  assert.equal(new Set(travelArchive.countries.map(({ id }) => id)).size, 15);
+  assert.deepEqual(travelArchive.countries.find(({ id }) => id === "es"), {
+    id: "es", name: "Spain", group: "Europe",
+  });
   assert.deepEqual(
-    travelArchive.countries,
+    travelArchive.countries.filter(({ id }) => id !== "es"),
     travelSource.visitedCountries.map(({ id, name, group }) => ({ id, name, group })),
   );
   assert.equal(travelArchive.sourceUrl, travelSource.source.url);
