@@ -11,4 +11,4 @@ Verification: production build, all 25 tests and Storybook build pass. Browser c
 - [Before desktop](before-desktop.jpg) / [after desktop](after-desktop.jpg)
 - [Before phone](before-phone.jpg) / [after phone](after-phone.jpg)
 
-Deployment status and source revision are recorded separately in `release.json` after publishing. The October 3 generated drawing remains a historical concept and is not the map used by the application.
+Published to https://toli.me/#/travels as Netlify deploy `6ac3571db1623cfc2f042bcd`, from committed source `75942a0`. Live index/JavaScript/CSS return trusted HTTPS 200 and match the tested build hashes. Live desktop and phone checks confirm all 15 highlights/list entries, no overflow and no browser warnings/errors. See [release receipt](release.json), [live desktop](live-desktop.jpg), and [live phone](live-phone.jpg). The October 3 generated drawing remains a historical concept and is not the map used by the application.
