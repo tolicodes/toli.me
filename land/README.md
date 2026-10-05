@@ -14,7 +14,7 @@ npm test
 npm run build-storybook
 ```
 
-The packaging tests inspect the build output, so build before running checks from a fresh checkout. Storybook has 29 examples, including 11 Personal Index page, component, and phone states. `npm run storybook` opens its development server on port 6006. No accounts, secrets, database, or external font/image requests are needed.
+The packaging tests inspect the build output, so build before running checks from a fresh checkout. Storybook has 30 examples, including 12 Personal Index page, component, and phone states. `npm run storybook` opens its development server on port 6006. No accounts, secrets, database, or external font/image requests are needed.
 
 ## Content and navigation
 
@@ -22,7 +22,7 @@ The packaging tests inspect the build output, so build before running checks fro
 - `#/publications`: the guide and Principles.
 - `#/creative`: Drawn, Easter Creatures, Las Chicas, Spa Date, and Obscure Parody Videos.
 - `#/writing`: all six original essays, linked directly to Medium.
-- `#/travels`: 15 countries grouped geographically: the original 14-country archive plus Spain, added at Toli’s request on October 3, 2026. No visit dates or complete lifetime count are inferred.
+- `#/travels`: A world map above 15 countries grouped geographically: the original 14-country archive plus Spain, added at Toli’s request on October 3, 2026. No visit dates or complete lifetime count are inferred.
 - Work links directly to https://tolicodes.com.
 
 Mobile navigation expands inline and supports Escape. Routes update the document title, focus the new content, reset scroll, and support browser history. Unknown/retired map URLs safely return to home. There is no map interaction required to find the retained content.
@@ -35,6 +35,8 @@ Mobile navigation expands inline and supports Escape. Routes update the document
 - `docs/personal-artwork-sources.json`: original Easter Creatures drawing, Las Chicas workshop photo, and published Drawn comic provenance.
 - `docs/personal-character-assets.json`: generated book/envelope/sprig prompts and original portrait provenance.
 - `public/assets/personal/`: optimized WebP artwork and untouched original source copies.
+- `src/TravelMap.jsx`, `travel-map.js`, `travel-geography.json`: responsive Natural Earth map with archive-driven highlights. Regenerate the projected boundaries with `node scripts/generate-travel-geography.mjs`; add new archive countries’ ISO numeric identifiers to `travel-map.js`.
+- `docs/travel-map-update/`: map data license, matched screenshots, verification and release evidence.
 - `docs/travel-import/`: captured source, exact country list, evidence, and excluded ambiguous material.
 - `docs/normal-site-qa/`, `design-qa.md`: matched before/after screenshots, reference comparisons, checks, and release receipt.
 
