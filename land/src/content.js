@@ -217,6 +217,12 @@ export const kingdomIds = [
   "misc",
 ];
 
+// Keep captured source inventories intact while maintained destinations follow the book's new host.
+const currentBookUrl = (value) =>
+  typeof value === "string"
+    ? value.replace(/^https?:\/\/(?:www\.)?feinfra\.com(?=\/|[?#]|$)/, "https://feinfra.toli.me")
+    : value;
+
 export const projects = inventory.map((entry) => {
   const copy = detailCopy[entry.id];
   const isFeatured = featuredIds.includes(entry.id);
@@ -244,13 +250,17 @@ export const projects = inventory.map((entry) => {
   const title = entry.id === "rituals" ? "Rituals" : entry.title;
   return {
     ...entry,
+    url: currentBookUrl(entry.url),
     title,
     featured: isFeatured,
     motif: motifs[entry.id],
     summary: copy?.summary || siteCopy[entry.id] || entry.description,
     eyebrow: copy?.eyebrow || maps[entry.kingdom].category,
-    chapters: copy?.chapters || [],
-    links,
+    chapters: (copy?.chapters || []).map((chapter) => ({
+      ...chapter,
+      sourceUrl: currentBookUrl(chapter.sourceUrl),
+    })),
+    links: links.map((link) => ({ ...link, url: currentBookUrl(link.url) })),
     artworkIsMap: !isFeatured || entry.id === "picklejs",
     artwork:
       isFeatured && entry.id !== "picklejs"
