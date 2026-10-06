@@ -7,7 +7,7 @@ const sections = [
     blurb: "Software, communities, and the occasional book about both.",
     links: [
       { label: "ToliCodes", note: "Everything code", href: "https://tolicodes.com/" },
-      { label: "Frontend Infra Book", note: "Foundations that scale with teams", href: "https://www.feinfra.com/" },
+      { label: "Frontend Infra Book", note: "Foundations that scale with teams", href: "https://feinfra.toli.me/" },
       { label: "Neurodivergent’s Guide to the Workplace", note: "The book I needed at 25", href: "https://os.toli.me/" },
       { label: "NYC LeetCode Squad", note: "Misery loves company", href: "https://lcsquad.com/" },
       { label: "PickleJS", note: "Open-source visual regression tooling", href: "https://www.picklejs.com/" },
