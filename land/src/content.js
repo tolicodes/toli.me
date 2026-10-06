@@ -238,7 +238,7 @@ export const projects = inventory.map((entry) => {
     links = [
       {
         label: "Read the origin story",
-        url: "https://feinfra.com/scaling-fe-teams-my-hover-story/",
+        url: "https://feinfra.toli.me/scaling-fe-teams-my-hover-story/",
       },
     ];
   const title = entry.id === "rituals" ? "Rituals" : entry.title;

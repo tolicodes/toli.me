@@ -42,6 +42,8 @@ Mobile navigation expands inline and supports Escape. Routes update the document
 
 The old illustrated map components, 54-entry inventory, tests, and artwork remain as historical work and Storybook examples. The app entry point no longer imports that experience. The earlier QA record is preserved at `docs/qa/toli-land-design-qa-archived.md`.
 
+On October 6, 2026, the maintained map/Storybook link for Scaling Frontend Teams at HOVER moved to `https://feinfra.toli.me/scaling-fe-teams-my-hover-story/`, preserving its chapter path as `feinfra.com` is set to expire. Frozen inventories, archives, and resume binaries retain their historical URLs. The active Personal Index has no Frontend Infra Book destination; this source correction does not change its production bundle or require a Netlify release. The free build and all 25 existing tests passed; all 35 production files remained byte-identical, and the live JS/CSS matched the build without an old Feinfra URL. The new chapter URL returned trusted HTTPS 200. Verification is recorded in `/Users/toli/Documents/domain-migration/2026-10-06/toli-personal-link-migration-receipt.json`.
+
 ## Architecture and publishing
 
 React 19 and Vite; self-hosted fonts and Phosphor icons. Hash routing supports direct section links on static hosting. The build produces the static site in `dist/client` and preserves the Sites worker contract in `dist/server` and `dist/.openai/hosting.json`.
@@ -53,3 +55,5 @@ netlify deploy --prod --no-build --dir dist/client --site bc4a1b57-c973-49eb-b3f
 ```
 
 Only `dist/client` is deployed. Design notes, source evidence, QA images, and worker packaging stay outside that output. The authorized October 3 apex cutover keeps the tested deployment unchanged; DNS, HTTPS, asset checks, propagation caveat, and rollback are recorded in `docs/apex-cutover/`. The legacy Jekyll source remains intact. This work lives in the isolated `codex/toli-land` checkout and does not modify human-crm.
+
+The October 6 production inspection confirmed this Netlify site still owns `toli.me`, `www.toli.me`, and `beta.toli.me`, with a ready production deployment and no linked Git build configuration. GitHub Pages retains a `toli.me` custom-domain setting on the earlier repository's `main` branch, but current DNS and the live homepage identify Netlify's Personal Index. A push to this checkout is source backup; publication remains the explicit Netlify command above.
