@@ -67,3 +67,9 @@ Hash changes between the public collection pages create pageview events. Anonymo
 Free verification: production build and all 29 tests passed, including host/opt-out boundaries, analytics URL redaction and hash-pageview behavior. Project configuration and deployment are complete. Actual recording receipt is verified separately in the Wiki/rollout evidence. The existing hosting/canonical redirects and site design are preserved.
 
 October 7 deployment verification: Netlify deploy `6ac69700143c29686c92bd74` is live at https://toli.me; trusted HTTPS homepage bytes match the tested build. This documentation commit does not republish application code.
+
+## Replay viewport correction — October 7, 2026
+
+The original network-mask callback returned null for every call. SDK 1.438.2 also invokes it with a URL-only object to mask replay page metadata; dropping that call removed the rrweb Meta event and its viewport dimensions, leaving the playback iframe hidden. Received sessions/full DOM snapshots alone did not verify usable playback; a recorded viewport resize could incidentally make some earlier playback work.
+
+The callback now retains sanitized URL-only metadata and rejects actual network-request records. Headers, bodies, console capture, input masking, production-host/privacy opt-outs and private-context gates retain their contracts. Replay page URLs now use the existing URL sanitizer. A regression invokes the installed SDK's actual URL-mask path and verifies that page metadata survives while request payloads are rejected. Corrected source and checks are committed before publishing; new visual playback and deployment receipts are verified separately. Old recordings lacking viewport metadata are preserved and may remain black.

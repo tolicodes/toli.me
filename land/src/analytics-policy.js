@@ -60,7 +60,12 @@ export function startAnalytics(client, { projectToken, apiHost, site, win, hashR
       blockSelector: '[data-private], .ph-no-capture, input[type="hidden"], input[type="file"]',
       recordHeaders: false,
       recordBody: false,
-      maskCapturedNetworkRequestFn: () => null,
+      // The SDK uses URL-only calls for replay Meta events as well as network requests.
+      // Preserve sanitized page metadata so rrweb receives viewport dimensions.
+      maskCapturedNetworkRequestFn: (request) =>
+        request && Object.keys(request).length === 1 && typeof request.name === "string"
+          ? { name: cleanUrl(request.name) }
+          : null,
     },
     before_send: sanitizeEvent,
     loaded: (instance) => {
