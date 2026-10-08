@@ -76,8 +76,9 @@ export function PhotoGallery({ initiallyExpanded = false }) {
 export function HomePage() {
   return <>
     <section className="personal-hero" aria-labelledby="personal-title">
-      <div><p className="personal-handwritten personal-hello">Hi,</p><h1 id="personal-title">Hi, I’m Toli.</h1><p className="personal-intro">Stories, strange little creations, and<br className="personal-desktop-break" /> things I’ve learned along the way.</p></div>
+      <div className="personal-hero-heading"><p className="personal-handwritten personal-hello">Hi,</p><h1 id="personal-title">Hi, I’m Toli.</h1></div>
       <div className="personal-portrait"><img src="/assets/personal/toli-portrait.webp" width="640" height="640" alt="Toli laughing" /><p className="personal-handwritten">Nice to<br />meet you!</p></div>
+      <p className="personal-intro">Stories, strange little creations, and<br className="personal-desktop-break" /> things I’ve learned along the way.</p>
     </section>
     <CreativePreview />
     <section className="personal-home-section personal-popular-writing" aria-labelledby="writing-heading"><div className="personal-section-heading"><div><h2 id="writing-heading">Writing</h2><p className="personal-section-intro">Reader favorites on connection, vulnerability, and the stories we tell ourselves.</p></div><a className="personal-text-link" href="#/writing">All writing <ArrowRight aria-hidden="true" /></a></div><WritingList items={popularWriting} /></section>

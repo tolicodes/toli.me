@@ -24,13 +24,14 @@ body { margin: 0; min-width: 320px; }
 .personal-header nav a { display: flex; align-items: center; gap: 6px; min-height: 44px; }
 .personal-header nav a[aria-current] { text-decoration: underline; text-underline-offset: 7px; text-decoration-color: var(--leaf); }
 .personal-menu-button { display: none; }
-.personal-hero { min-height: 211px; display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 8px 0 28px; }
+.personal-hero { min-height: 211px; display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "heading portrait" "intro portrait"; align-content: center; column-gap: 40px; padding: 8px 0 28px; }
+.personal-hero-heading { grid-area: heading; min-width: 0; }
 .personal-hero h1 { font-size: clamp(64px, 8.1vw, 100px); line-height: .95; letter-spacing: -.05em; }
 .personal-handwritten { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 600; }
 .personal-hello { font-size: 29px; line-height: 1; margin-bottom: 1px !important; }
-.personal-intro { font-size: 26px; line-height: 1.2; margin-top: 8px !important; }
-.personal-portrait { display: flex; align-items: center; gap: 22px; flex: 0 0 auto; }
-.personal-portrait img { width: 160px; height: 183px; object-fit: cover; border-radius: 50%; transform: rotate(6deg); }
+.personal-intro { grid-area: intro; font-size: 26px; line-height: 1.2; margin-top: 8px !important; }
+.personal-portrait { grid-area: portrait; display: flex; align-items: center; gap: 22px; }
+.personal-portrait img { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; }
 .personal-portrait p { font-size: 27px; line-height: 1.05; transform: rotate(-9deg); }
 .personal-feature { display: grid; grid-template-columns: 42% 1fr; gap: 35px; align-items: center; min-height: 246px; padding: 14px 0; border-top: 1px solid var(--line); }
 .personal-feature-art { height: 216px; display: flex; align-items: center; justify-content: center; }
@@ -102,7 +103,7 @@ body { margin: 0; min-width: 320px; }
 .personal-skip:focus { transform: translateY(0); }
 .personal-site main:focus { outline: none; }
 @media (min-width: 1250px) { .personal-feature { min-height: 276px; } .personal-feature-art { height: 248px; } .personal-feature-art.drawn img { height: 218px; } .personal-hero { min-height: 256px; } }
-@media (max-width: 1000px) { .personal-container { width: calc(100% - 64px); } .personal-header nav { gap: 20px; } .personal-portrait { gap: 14px; } .personal-portrait img { width: 138px; height: 166px; } .personal-portrait p { font-size: 24px; } .personal-intro { font-size: 24px; } }
+@media (max-width: 1000px) { .personal-container { width: calc(100% - 64px); } .personal-header nav { gap: 20px; } .personal-portrait { gap: 14px; } .personal-portrait img { width: 138px; height: 138px; } .personal-portrait p { font-size: 24px; } .personal-intro { font-size: 24px; } }
 @media (max-width: 760px) {
   .personal-container { width: calc(100% - 40px); }
   .personal-header { min-height: 76px; flex-wrap: wrap; gap: 0; padding: 15px 0; }
@@ -110,13 +111,13 @@ body { margin: 0; min-width: 320px; }
   .personal-menu-button { display: flex; align-items: center; gap: 7px; min-height: 44px; padding: 8px 0 8px 14px; border: 0; background: transparent; color: var(--ink); font: 16px Georgia, serif; cursor: pointer; }
   .personal-header nav { display: none; flex-basis: 100%; flex-wrap: wrap; gap: 2px 25px; padding-top: 15px; border-top: 1px solid var(--line); margin-top: 15px; font-size: 18px; }
   .personal-header nav.is-open { display: flex; }
-  .personal-hero { gap: 12px; flex-wrap: wrap; padding: 22px 0 28px; }
+  .personal-hero { gap: 12px; padding: 22px 0 28px; }
   .personal-hero h1 { font-size: clamp(58px, 13vw, 80px); }
   .personal-hello { font-size: 25px; }
   .personal-intro { font-size: 23px; max-width: 460px; line-height: 1.3; }
   .personal-desktop-break { display: none; }
-  .personal-portrait { margin: 12px 0 0; gap: 24px; }
-  .personal-portrait img { width: 103px; height: 118px; }
+  .personal-portrait { gap: 24px; }
+  .personal-portrait img { width: 96px; height: 96px; }
   .personal-portrait p { font-size: 25px; }
   .personal-feature { grid-template-columns: 1fr; gap: 15px; padding: 25px 0 29px; }
   .personal-feature-art { height: 230px; max-width: 420px; width: 100%; margin: 0 auto; }
@@ -180,11 +181,11 @@ body { margin: 0; min-width: 320px; }
 .personal-more-photos[open] .when-open { display: inline; }
 .personal-hero { align-items: flex-start; }
 @media (max-width: 760px) {
-  .personal-hero { position: relative; display: block; padding-top: 24px; }
-  .personal-hero h1 { font-size: 57px; padding-right: 115px; }
-  .personal-portrait { position: absolute; top: 24px; right: 0; margin: 0; }
+  .personal-hero { grid-template-areas: "heading portrait" "intro intro"; column-gap: 20px; row-gap: 22px; padding-top: 24px; }
+  .personal-hero h1 { font-size: clamp(44px, 12vw, 57px); }
+  .personal-portrait { margin: 0; }
   .personal-portrait p { display: none; }
-  .personal-intro { margin-top: 20px !important; }
+  .personal-intro { margin-top: 0 !important; }
   .personal-home-section { padding: 28px 0; }
   .personal-home-section > h2, .personal-section-heading h2 { font-size: 42px; }
   .personal-section-heading { display: block; }
