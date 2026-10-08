@@ -79,6 +79,9 @@ body { margin: 0; min-width: 320px; }
 .personal-all-writing .personal-writing-list a { font-size: 26px; padding: 26px 0; }
 .personal-page-heading > .personal-travel-note { font-family: "Nunito Sans", sans-serif; display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--muted); margin-top: 24px; }
 .personal-travel-map { margin: 28px 0 8px; padding: 16px 20px 14px; background: #f1f0e3; border: 1px solid var(--line); border-radius: 12px; }
+.personal-travel-views { display: inline-flex; margin-top: 24px; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 8px; }
+.personal-travel-views button { padding: 10px 18px; min-height: 44px; border: 0; border-radius: 5px; color: var(--ink); background: transparent; font: 15px "Nunito Sans", sans-serif; cursor: pointer; }
+.personal-travel-views button[aria-pressed="true"] { color: var(--paper); background: var(--ink); }
 .personal-travel-map > svg { display: block; width: 100%; height: auto; }
 .personal-travel-map path { fill: #dddccc; stroke: var(--paper); stroke-width: .65; stroke-linejoin: round; }
 .personal-travel-map path.is-visited { fill: #527550; }

@@ -1,5 +1,5 @@
 import React from "react";
-import { FeaturedProject, PersonalSite, PhotoGallery, SiteHeader, SiteFooter } from "./PersonalSite.jsx";
+import { FeaturedProject, PersonalSite, PhotoGallery, SiteHeader, SiteFooter, TravelPage } from "./PersonalSite.jsx";
 import { featuredProjects } from "./personal-content.js";
 
 export default { title: "Personal Index/Site", component: PersonalSite, parameters: { layout: "fullscreen" } };
@@ -18,6 +18,8 @@ export const HeaderOpen = { render: () => frame(<SiteHeader initiallyOpen />) };
 export const MobileNavigationOpen = { render: () => phone("header-open") };
 export const FeaturedDatingBounty = { render: () => frame(<FeaturedProject project={featuredProjects[2]} />) };
 export const Footer = { render: () => frame(<SiteFooter />) };
+export const UnitedStatesTravels = { render: () => frame(<TravelPage initialView="us" />) };
+export const MobileUnitedStatesTravels = { render: () => phone("united-states-travels") };
 
 export const PhotosCollapsed = { render: () => frame(<PhotoGallery />) };
 export const PhotosExpanded = { render: () => frame(<PhotoGallery initiallyExpanded />) };

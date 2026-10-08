@@ -14,7 +14,7 @@ npm test
 npm run build-storybook
 ```
 
-The packaging tests inspect the build output, so build before running checks from a fresh checkout. Storybook has 32 examples, including 14 Personal Index page, component, and phone states. `npm run storybook` opens its development server on port 6006. No accounts, secrets, database, or external font/image requests are needed.
+The packaging tests inspect the build output, so build before running checks from a fresh checkout. Storybook includes Personal Index page, component, phone, gallery and U.S. travel-map states. `npm run storybook` opens its development server on port 6006. No accounts, secrets, database, or external font/image requests are needed.
 
 ## Content and navigation
 
@@ -22,7 +22,7 @@ The packaging tests inspect the build output, so build before running checks fro
 - `#/publications`: the guide and Principles.
 - `#/creative`: Drawn, Easter Creatures, Las Chicas, Spa Date, and Obscure Parody Videos.
 - `#/writing`: all six original essays, linked directly to Medium, with thumbnails and short summaries.
-- `#/travels`: A world map above 15 countries grouped geographically: the original 14-country archive plus Spain, added at Toli’s request on October 3, 2026. No visit dates or complete lifetime count are inferred.
+- `#/travels`: World / United States map views. The U.S. view fills 8 selected states and pins 13 places; the default world view remains above 15 countries grouped geographically: the original 14-country archive plus Spain, added at Toli’s request on October 3, 2026. No visit dates or complete lifetime count are inferred.
 - Work links directly to https://tolicodes.com.
 
 Mobile navigation expands inline and supports Escape. Routes update the document title, focus the new content, reset scroll, and support browser history. Unknown/retired map URLs safely return to home. There is no map interaction required to find the retained content.
@@ -91,3 +91,13 @@ Home writing now selects Energy Cords (52 visible Medium claps), Rejection/Break
 `src/personal-photos.json` contains 14 previously public, curated portraits/activity/friends/Promise photographs. Optimized WebPs live as `public/assets/personal/profile-photo-*.webp`; original photo files remain in their original repository. Six display initially and native disclosure reveals eight more, with three desktop/two phone columns and full-photo links. Curation is subjective presentation, not permanent deletion. Collapsed and expanded gallery states are available in Storybook. Build, existing content/privacy/route/package checks and matched desktop/phone browser QA precede the explicit Netlify publication; deployment/source matching is recorded separately in the task receipt.
 
 Storybook now disables Vite’s duplicate public-directory copy through `viteFinal` while retaining Storybook `staticDirs`; the two concurrent copy paths caused EEXIST errors. This affects component preview packaging only, not the production Vite/Netlify build.
+
+## United States travel map — October 7, 2026
+
+Implemented: Travels adds a World / United States switch above the map. World remains the default and preserves the 15-country archive. The U.S. view colors all of Toli’s eight explicitly selected states and pins all 13 supplied places; the exact list lives in `src/us-travel.js`. Kauai is labeled as an island. This personal list supersedes the earlier suggested popularity shortlist; no ranking, dates or additional destinations are inferred.
+
+`USTravelMap.jsx` lazily loads pinned Leaflet 1.9.4 and static state GeoJSON generated from us-atlas 3.0.1’s 2017 Census cartographic boundaries at 1:10m scale. Run `node scripts/generate-us-geography.mjs` to regenerate; four-decimal coordinates reduce payload without changing the cartographic scale. No external tiles, geocoder, map account or API key is used. The main viewport contains the lower 48 states and D.C.; Hawaii has its own inset on desktop and panel on phones. Complete Hawaii geometry is filled, including islands without pins. Alaska and territories are outside these views and not selected.
+
+Pins have geographic center coordinates, accessible names, keyboard activation, tooltips and popups. The state/place list also selects and zooms a pin; Reset view fits both maps. Wheel zoom is disabled to preserve page scrolling, with mainland zoom controls at the top right. The Hawaii inset sits below the central mainland area so it does not obscure California or Florida pins. ResizeObserver refits the maps, and unmount disconnects observers/removes Leaflet instances. Map animations are disabled. Dedicated desktop and phone Storybook states cover the new view.
+
+Free verification: production build, all 33 tests and Storybook build pass. New geographic checks verify the exact selection, each pin inside its matching state and mainland bounds excluding remote territories. Browser QA at 1024 × 900 and 390 × 844 checks eight fills, 13 pins, no horizontal overflow, place selection, keyboard activation, reset, zoom and switching/remounting. Visual QA found and corrected an initial viewport failure and remote-territory bounds; element counts alone had not established correct map framing. Matched light-theme, top-scroll before/after screenshots and additional complete-map/island captures live in `docs/us-travel-map/`. Source is ready for the established Netlify publication; deployed bytes are verified separately in its release receipt.

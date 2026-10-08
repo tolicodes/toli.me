@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowUpRight, BookOpen, GlobeHemisphereWest, List, Palette, X } from "@phosphor-icons/react";
 import { creativeProjects, featuredProjects, publications, travelArchive, writing, popularWriting } from "./personal-content.js";
 import { pageHref, readPersonalRoute } from "./personal-routing.js";
 import { TravelMap } from "./TravelMap.jsx";
+const USTravelMap = lazy(() => import("./USTravelMap.jsx"));
 import "./personal-site.css";
 import personalPhotos from "./personal-photos.json";
 
@@ -105,13 +106,17 @@ export function WritingPage() {
   return <><PageHeading title="Writing" intro="Thoughts, reflections, and the occasional deep dive." /><div className="personal-all-writing"><WritingList /></div></>;
 }
 
-export function TravelPage() {
+export function TravelPage({ initialView = "world" }) {
+  const [view, setView] = useState(initialView);
   const groups = [...new Set(travelArchive.countries.map(({ group }) => group))];
   return <>
-    <PageHeading title="Places I’ve been" intro="A little of the world I’ve explored."><p className="personal-travel-note"><GlobeHemisphereWest size={22} weight="duotone" aria-hidden="true" />{travelArchive.countries.length} countries in my travel archive</p></PageHeading>
+    <PageHeading title="Places I’ve been" intro="A little of the world I’ve explored."><p className="personal-travel-note"><GlobeHemisphereWest size={22} weight="duotone" aria-hidden="true" />{view === "world" ? `${travelArchive.countries.length} countries in my travel archive` : "A closer look at my U.S. travels"}</p></PageHeading>
+    <div className="personal-travel-views" role="group" aria-label="Travel map view"><button aria-pressed={view === "world"} onClick={() => setView("world")}>World</button><button aria-pressed={view === "us"} onClick={() => setView("us")}>United States</button></div>
+    {view === "us" ? <Suspense fallback={<p className="personal-archive-note" role="status">Loading the U.S. map…</p>}><USTravelMap /></Suspense> : <>
     <TravelMap />
     <div className="personal-travel-groups">{groups.map((group, index) => <section key={group} aria-labelledby={`region-${index}`}><p className="personal-eyebrow">{String(index + 1).padStart(2, "0")}</p><h2 id={`region-${index}`}>{group}</h2><ul>{travelArchive.countries.filter((country) => country.group === group).map((country) => <li key={country.id}>{country.name}</li>)}</ul></section>)}</div>
     <p className="personal-archive-note">Started with <OutboundLink href={travelArchive.sourceUrl}>my original travel page</OutboundLink>, with more places added along the way.</p>
+    </>}
   </>;
 }
 
