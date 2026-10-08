@@ -17,7 +17,7 @@ const guide = {
   id: "neurodiverse-guide",
   title: "Neurodiverse Guide",
   description: "Making work work for different minds.",
-  href: "https://os.toli.me",
+  href: "https://neurodiverse.toli.me/",
   cta: "Read the guide",
   image: "/assets/personal/guide-character.webp",
   imageAlt: "An illustrated Neurodiverse Guide book with welcoming arms and walking boots.",
