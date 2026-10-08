@@ -82,6 +82,7 @@ export const creativeProjects = [
     id: "obscure-parody-vids",
     title: "Obscure Parody Videos",
     description: "A detour into the wonderfully obscure.",
+    subtitle: "Currently private on YouTube.",
     href: "https://www.youtube.com/watch?v=484U5bUcnb0",
     cta: "Watch the video",
   },

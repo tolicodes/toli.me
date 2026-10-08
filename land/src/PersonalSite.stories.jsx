@@ -1,5 +1,5 @@
 import React from "react";
-import { FeaturedProject, PersonalSite, PhotoGallery, SiteHeader, SiteFooter, TravelPage } from "./PersonalSite.jsx";
+import { CompactFeaturedProjects, CreativeList, FeaturedProject, PersonalSite, PhotoGallery, SiteHeader, SiteFooter, TravelPage } from "./PersonalSite.jsx";
 import { featuredProjects } from "./personal-content.js";
 
 export default { title: "Personal Index/Site", component: PersonalSite, parameters: { layout: "fullscreen" } };
@@ -23,3 +23,6 @@ export const MobileUnitedStatesTravels = { render: () => phone("united-states-tr
 
 export const PhotosCollapsed = { render: () => frame(<PhotoGallery />) };
 export const PhotosExpanded = { render: () => frame(<PhotoGallery initiallyExpanded />) };
+export const CompactMainProjects = { render: () => frame(<CompactFeaturedProjects />) };
+export const CreativeRows = { render: () => frame(<CreativeList />) };
+export const MobileCreative = { render: () => phone("creative") };

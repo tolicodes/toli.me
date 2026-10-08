@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect, useRef, useState } from "react";
-import { ArrowRight, ArrowUpRight, BookOpen, GlobeHemisphereWest, List, Palette, X } from "@phosphor-icons/react";
+import { ArrowRight, ArrowUpRight, Bathtub, BookOpen, FilmSlate, GlobeHemisphereWest, List, Palette, X } from "@phosphor-icons/react";
 import { creativeProjects, featuredProjects, publications, travelArchive, writing, popularWriting } from "./personal-content.js";
 import { pageHref, readPersonalRoute } from "./personal-routing.js";
 import { TravelMap } from "./TravelMap.jsx";
@@ -57,14 +57,23 @@ const exploreItems = [
   { page: "travels", title: "Travels", copy: "A little of the world I’ve explored.", Icon: GlobeHemisphereWest },
 ];
 
+function ProjectThumbnail({ project }) {
+  const Icon = project.id === "spa-date" ? Bathtub : FilmSlate;
+  return project.image ? <img className={`personal-project-thumb ${project.imageClass || ""}`} src={project.image} alt="" width="112" height="88" loading="lazy" /> : <span className="personal-project-thumb personal-project-thumb--icon" aria-hidden="true"><Icon size={34} weight="duotone" /></span>;
+}
+
+export function CompactFeaturedProjects() {
+  return <section className="personal-home-section personal-main-projects" aria-labelledby="projects-heading"><h2 id="projects-heading">Main projects</h2><ul className="personal-main-project-grid">{featuredProjects.map((project) => <li key={project.id}><OutboundLink href={project.href}><ProjectThumbnail project={project} /><span className="personal-main-project-copy"><strong>{project.title}</strong><span className="personal-writing-description">{project.description}</span>{project.subtitle && <span className="personal-writing-description">{project.subtitle}</span>}</span></OutboundLink></li>)}</ul></section>;
+}
+
+export function CreativeList({ items = creativeProjects }) {
+  return <ul className="personal-writing-list personal-creative-list">{items.map((project) => <li key={project.id}><OutboundLink href={project.href}><ProjectThumbnail project={project} /><span><strong>{project.title}</strong><span className="personal-writing-description">{project.description}</span>{project.subtitle && <span className="personal-writing-description">{project.subtitle}</span>}</span></OutboundLink></li>)}</ul>;
+}
+
 function CreativePreview() {
   return <section className="personal-home-section" aria-labelledby="creative-heading">
-    <div className="personal-section-heading"><div><h2 id="creative-heading">Creative</h2><p className="personal-section-intro">Comics, strange little creatures, art collaborations, and wonderfully obscure videos.</p></div><a className="personal-text-link" href="#/creative">Explore creative <ArrowRight aria-hidden="true" /></a></div>
-    <div className="personal-creative-grid">{creativeProjects.slice(0, 3).map((project) => <article key={project.id}>
-      <a href={project.href} target="_blank" rel="noopener noreferrer" className={`personal-creative-image ${project.imageClass}`} tabIndex={-1}><img src={project.image} alt={project.imageAlt} width="800" height="800" loading="lazy" /></a>
-      <h3><OutboundLink href={project.href}>{project.title}</OutboundLink></h3><p>{project.description}</p>
-    </article>)}</div>
-    <div className="personal-creative-extras">{creativeProjects.slice(3).map((project) => <article key={project.id}><h3><OutboundLink href={project.href}>{project.title}</OutboundLink></h3><p>{project.description}</p></article>)}</div>
+    <div className="personal-section-heading"><div><h2 id="creative-heading">Creative</h2><p className="personal-section-intro">Art experiments and wonderfully obscure videos.</p></div><a className="personal-text-link" href="#/creative">All creative <ArrowRight aria-hidden="true" /></a></div>
+    <CreativeList items={creativeProjects.filter((project) => project.id !== "drawn")} />
   </section>;
 }
 
@@ -80,9 +89,9 @@ export function HomePage() {
       <div className="personal-portrait"><img src="/assets/personal/toli-portrait.webp" width="640" height="640" alt="Toli laughing" /><p className="personal-handwritten">Nice to<br />meet you!</p></div>
       <p className="personal-intro">Stories, strange little creations, and<br className="personal-desktop-break" /> things I’ve learned along the way.</p>
     </section>
+    <CompactFeaturedProjects />
     <CreativePreview />
     <section className="personal-home-section personal-popular-writing" aria-labelledby="writing-heading"><div className="personal-section-heading"><div><h2 id="writing-heading">Writing</h2><p className="personal-section-intro">Reader favorites on connection, vulnerability, and the stories we tell ourselves.</p></div><a className="personal-text-link" href="#/writing">All writing <ArrowRight aria-hidden="true" /></a></div><WritingList items={popularWriting} /></section>
-    <section className="personal-featured" aria-label="Guides and personal projects">{featuredProjects.filter((project) => project.id !== "drawn").map((project) => <FeaturedProject key={project.id} project={project} />)}</section>
     <PhotoGallery />
     <section className="personal-home-section" aria-labelledby="explore-heading"><h2 id="explore-heading">More to explore</h2><ul className="personal-explore-list">{exploreItems.filter(({page}) => page !== "creative").map(({ page, title, copy, Icon }) => <li key={page}><a href={pageHref(page)}><Icon size={40} weight="duotone" aria-hidden="true" /><div><h3>{title}</h3><p>{copy}</p></div><ArrowRight aria-hidden="true" /></a></li>)}</ul></section>
   </>;
@@ -92,10 +101,10 @@ export function CollectionPage({ page = "creative" }) {
   const projects = page === "publications" ? publications : creativeProjects;
   return <>
     <PageHeading title={pageTitles[page]} intro={page === "publications" ? "Things I’ve learned, gathered into something you can take with you." : "Comics, creatures, collaborations, and a few very personal experiments."} />
-    <div className="personal-collection">{projects.map((project) => <article className={`personal-project ${project.image ? "has-image" : ""}`} key={project.id}>
+    {page === "creative" ? <CreativeList /> : <div className="personal-collection">{projects.map((project) => <article className={`personal-project ${project.image ? "has-image" : ""}`} key={project.id}>
       {project.image && <a href={project.href} target="_blank" rel="noopener noreferrer" className={`personal-project-image ${project.imageClass || ""}`} tabIndex={-1}><img src={project.image} alt={project.imageAlt} loading="lazy" width="800" height="800" /></a>}
       <div><h2>{project.title}</h2><p>{project.description}</p>{project.subtitle && <p className="personal-project-subtitle">{project.subtitle}</p>}<OutboundLink href={project.href} className="personal-text-link">{project.cta}</OutboundLink></div>
-    </article>)}</div>
+    </article>)}</div>}
   </>;
 }
 
