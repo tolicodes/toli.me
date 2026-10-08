@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-08",
+  "testedSource": {
+    "sha": "0f3f6f4a60181bb8d94f4ad523a8c27414fe1bdc",
+    "subject": "Freeze rejection article cartoon thumbnail brief",
+    "checkout": "/Users/toli/Documents/toli-rejection-image-frozen-20261008",
+    "cleanBeforeAndAfter": true
+  },
+  "runtime": {
+    "tool": "built-in image_gen",
+    "model": "tool-selected default",
+    "transparent_background": false,
+    "requests": 1
+  },
+  "prompt": "brief.json",
+  "references": [
+    {
+      "path": "/Users/toli/Documents/GitHub/toli-drawn/docs/style-guide-sign-free/character-reference-sheet-no-slogans.png",
+      "sha256": "26bf29430f43695b31acc976bac7e6e34fcf1f55f54b28b7cbd6958feb69633d"
+    },
+    {
+      "path": "/Users/toli/Documents/GitHub/toli-drawn/docs/style-guide-sign-free/gold-01-asya-warm-date-page.png",
+      "sha256": "ea82db14728434e9fbffc2555c96d3cd413f62a1f8593f257de6e8b723ede664"
+    },
+    {
+      "path": "/Users/toli/Documents/GitHub/toli-drawn/docs/style-guide-sign-free/gold-04-alyssa-pier-date-page.png",
+      "sha256": "04f2a12c100b8dbb226447c00e21e24459e334f82ed79f562c4e3da7177224c0"
+    }
+  ],
+  "output": {
+    "id": "rejection-breakups-cartoon",
+    "originalFile": "public/assets/personal/originals/rejection-breakups-cartoon.png",
+    "optimizedFile": "public/assets/personal/rejection-breakups-cartoon.webp",
+    "originalSha256": "37e5973d4d290f4599ad776a6705613543a4b55f97004217a42673fa19379579",
+    "optimizedSha256": "084e394b05f5c17180098c72f089d0748c0f5cdbe7b0757fee8f9d34bca879f5",
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "optimizedDimensions": [
+      960,
+      960
+    ],
+    "originalBytes": 2560999,
+    "optimizedBytes": 214162
+  },
+  "styleReview": "Compared finished render with cleaned character sheet and warm date/pier references: ink hatching, textured gouache, warm amber/deep navy palette, round glasses, dark curls, stubble and pendant consistent. Wordless thumbnail intentionally replaces page lettering.",
+  "contentReview": "One embodied character; readable cracked heart, sadness/tenderness; no invented partner, factual breakup scene, sexual activity, text or claimed healing outcome.",
+  "decision": "keep",
+  "authorization": "User: use cartoon for the rejection essay",
+  "publication": "Recorded separately after implementation and browser QA."
+}

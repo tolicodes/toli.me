@@ -62,6 +62,51 @@
       "optimizedSha256": "00528dacc5b6be205f50cbe759c2b47e26159af252907d412946f23c6165f3ee",
       "optimizedBytes": 231156,
       "optimizedDimensions": "640x960"
+    },
+    {
+      "id": "spa-date",
+      "originalFile": "public/assets/personal/originals/spa-date.jpg",
+      "optimizedFile": "public/assets/personal/spa-date.webp",
+      "originalSha256": "54db7f9b1628914725ca2ba5a4b79b6a19cb3527870124492b4750f928612621",
+      "optimizedSha256": "d2d0856b0a20853b49f665cf59795538bd0a7b28e6fee88f03fb497d732ada00",
+      "originalDimensions": [
+        1024,
+        892
+      ],
+      "optimizedDimensions": [
+        960,
+        836
+      ],
+      "originalBytes": 164200,
+      "optimizedBytes": 99482,
+      "title": "Spa Date",
+      "publicPage": "https://spadate.toli.me",
+      "sourceAssetUrl": "https://spadate.toli.me/assets/images/image11.jpg?v=d490bc30",
+      "identity": "Existing original site illustration: two feet in a candlelit jacuzzi.",
+      "verification": "Fetched public site HTML and source image over trusted HTTPS; visually inspected full original.",
+      "optimization": "Pillow auto-orient, bound within 960x960 without upscaling, metadata stripped, WebP quality 87; full frame preserved."
+    },
+    {
+      "id": "obscure-parody",
+      "originalFile": "public/assets/personal/originals/obscure-parody.jpg",
+      "optimizedFile": "public/assets/personal/obscure-parody.webp",
+      "originalSha256": "2fd45b89e45587e18bcd23f5bde81a709bbe11a841ee4125c720ddbcd37f3bfc",
+      "optimizedSha256": "e0c55c35a429a667c1be164af4ad880c9e650f5f872a37add8b13788606ca7e8",
+      "originalDimensions": [
+        1170,
+        658
+      ],
+      "optimizedDimensions": [
+        960,
+        540
+      ],
+      "originalBytes": 61835,
+      "optimizedBytes": 32416,
+      "title": "Obscure Parody Videos",
+      "publicPage": "https://www.youtube.com/watch?v=484U5bUcnb0",
+      "identity": "Actual paused video frame at approximately 0:30, captured without player controls or captions.",
+      "verification": "Authenticated YouTube page visually inspected; video remains Private. Toli explicitly requested this screenshot thumbnail on toli.me. No privacy setting or private video title published.",
+      "optimization": "Pillow bound within 960x960 without upscaling, metadata stripped, WebP quality 87; full frame preserved."
     }
   ]
 }

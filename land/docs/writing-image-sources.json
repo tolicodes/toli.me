@@ -18,8 +18,23 @@
     },
     {
       "id": "rejection-breakups",
-      "asset": "/assets/personal/toli-portrait.webp",
-      "fallback": "Existing author portrait; original Medium article has no lead artwork"
+      "originalFile": "public/assets/personal/originals/rejection-breakups-cartoon.png",
+      "optimizedFile": "public/assets/personal/rejection-breakups-cartoon.webp",
+      "originalSha256": "37e5973d4d290f4599ad776a6705613543a4b55f97004217a42673fa19379579",
+      "optimizedSha256": "084e394b05f5c17180098c72f089d0748c0f5cdbe7b0757fee8f9d34bca879f5",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "optimizedDimensions": [
+        960,
+        960
+      ],
+      "originalBytes": 2560999,
+      "optimizedBytes": 214162,
+      "asset": "/assets/personal/rejection-breakups-cartoon.webp",
+      "source": "Generated at Toli\u2019s request, October 8, 2026",
+      "receipt": "docs/rejection-thumbnail-2026-10-08/receipt.json"
     },
     {
       "id": "boredom-bipolar",

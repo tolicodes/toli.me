@@ -139,3 +139,11 @@ Three phone renders are retained in desktop-corresponding order as unselected pr
 ## Rejection article cartoon — October 8, 2026
 
 Toli requested a cartoon image for Rejection, Breakups, Vulnerability, and BDSM. `docs/rejection-thumbnail-2026-10-08/brief.json` freezes the exact built-in generation prompt and cleaned comic reference hashes before rendering. The wordless cracked-heart illustration is an editorial metaphor drawn from the essay, not a factual depiction of a partner or breakup. The full master style prompt is preserved; the page structure is adapted to a single thumbnail. Generation, visual review, consuming artwork changes and publication are recorded separately.
+
+## Source thumbnails — October 8, 2026
+
+Implemented: the rejection essay now uses Toli’s requested wordless cartoon, replacing its author-portrait fallback on Home and Writing. One built-in generation ran against clean frozen source `0f3f6f4a60181bb8d94f4ad523a8c27414fe1bdc`; `docs/rejection-thumbnail-2026-10-08/receipt.json` retains exact prompt/reference provenance, output hashes, separate style/content review and keep decision. Spa Date uses its existing public jacuzzi illustration, and Obscure Parody Videos uses the requested actual screenshot at approximately 0:30. Both Creative placements share those assets. The video remains private, with the existing status subtitle and generic public listing title.
+
+Original files are preserved beside full-frame, metadata-stripped WebPs (maximum 960px, no upscaling, quality 87). Provenance is in the existing writing/artwork source records. Layout, hero portrait, routes and the six-plus-eight public gallery remain unchanged. Apple Photos review produced a separate private 12-photo proposal limited to the first 1,620 photos; selection and high-resolution source retrieval remain pending. Thumbnail-copy review does not establish original-resolution suitability. Build/tests and matched desktop/phone browser QA precede production publication; deployment evidence is recorded separately.
+
+Free checks completed for the thumbnail candidate: production build, all 33 existing tests, Storybook build and whitespace checks pass. No new interaction state or layout contract was introduced. Hosted visual verification and production bytes remain separate from these local checks.

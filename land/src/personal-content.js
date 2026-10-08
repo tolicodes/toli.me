@@ -77,6 +77,9 @@ export const creativeProjects = [
     description: "A playful invitation to a spa date.",
     href: "https://spadate.toli.me",
     cta: "Take a look",
+    image: "/assets/personal/spa-date.webp",
+    imageAlt: "Two cheerful illustrated feet in a candlelit jacuzzi, from the original Spa Date page.",
+    imageClass: "spa-date",
   },
   {
     id: "obscure-parody-vids",
@@ -85,6 +88,9 @@ export const creativeProjects = [
     subtitle: "Currently private on YouTube.",
     href: "https://www.youtube.com/watch?v=484U5bUcnb0",
     cta: "Watch the video",
+    image: "/assets/personal/obscure-parody.webp",
+    imageAlt: "A still from Toli’s parody video with three performers and a vacuum cleaner.",
+    imageClass: "parody",
   },
 ];
 
@@ -120,8 +126,8 @@ export const writing = [
     id: "rejection-breakups",
     title: "Rejection, Breakups, Vulnerability, and BDSM",
     description: "Learning to ask for what I want, face rejection, and explore trust without closing myself off to love.",
-    image: "/assets/personal/toli-portrait.webp",
-    imageAlt: "Toli laughing, used as an author portrait for an essay without lead artwork.",
+    image: "/assets/personal/rejection-breakups-cartoon.webp",
+    imageAlt: "An illustrated Toli gently holding a cracked, glowing heart on a garden bench at dusk.",
     href: "https://tolicodes.medium.com/rejection-breakups-vulnurability-and-bdsm-b2f80b682373",
     cta: "Read the essay",
   },
