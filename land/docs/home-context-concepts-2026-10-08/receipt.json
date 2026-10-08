@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-08",
+  "source": "aeb81c097da28123cdd7186b5f7de0c1de9b8ce2",
+  "subject": "Freeze About and Now homepage concept brief",
+  "frozen_checkout": "/Users/toli/Documents/toli-site-design-frozen-20261008",
+  "source_status": "Clean committed source before generation; no further edits during rendering",
+  "runtime": {
+    "tool": "built-in image_gen",
+    "model": "tool-selected default, no override exposed",
+    "transparent_background": false,
+    "requests": 3,
+    "requested_canvas": "1440x2160 portrait desktop scrolling concepts"
+  },
+  "brief": "land/docs/home-context-concepts-2026-10-08/brief.json",
+  "renders": [
+    {
+      "display_order": 1,
+      "direction": "Personal index",
+      "original": "/Users/toli/.codex/generated_images/01a1191f-2776-7a20-9914-2d99b95b2ba4/exec-efea66fa-4eab-404c-aacd-7c54239f3b66.png",
+      "retained_copy": "/Users/toli/Documents/toli-home-concepts-2026-10-08/concept-1.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "99325718a1849a4c622956d8c6bf9cb2294993b74327a1ed2d390ec0d04d902f"
+    },
+    {
+      "display_order": 2,
+      "direction": "Notes in the margin",
+      "original": "/Users/toli/.codex/generated_images/01a1191f-2776-7a20-9914-2d99b95b2ba4/exec-988f9490-e4a3-49cf-a13e-abe5cb67e7a6.png",
+      "retained_copy": "/Users/toli/Documents/toli-home-concepts-2026-10-08/concept-2.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "eed83587aa4de3f9f7d7843cf56065c295d49a62799abe23bce180e8e7bb5c62"
+    },
+    {
+      "display_order": 3,
+      "direction": "Personal journal",
+      "original": "/Users/toli/.codex/generated_images/01a1191f-2776-7a20-9914-2d99b95b2ba4/exec-55afe1ee-eee0-4019-835a-4dc6d703e4cf.png",
+      "retained_copy": "/Users/toli/Documents/toli-home-concepts-2026-10-08/concept-3.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "369eaf8a3fdfcae3ab49693e96b4eb2dfbfe84ab5f1aa3629c3333d43f516dae"
+    }
+  ],
+  "visual_review": "All three preserve cream/forest palette, upright circular previous portrait, main trio before Creative and thumbnail-left rows. Concepts1/3 have similar single-column hierarchies;2 has an About/Now sidebar. About/Now are draft proposals. Generated writing thumbnails/photo strips and an attributed quotation in2 are invented placeholders, not original gallery/approved words. Do not publish or reuse those without replacement/review. Exact spelling/asset fidelity is not production-verified.",
+  "decision": "Keep frozen brief and renders as unselected design proposals. No app implementation, deployment or selection. Public parody-video links remain pending."
+}
