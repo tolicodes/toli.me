@@ -120,6 +120,8 @@ Existing content/privacy/navigation/packaging tests, production and Storybook bu
 
 ## Approved travel additions — October 7, 2026
 
+October 8 design-only follow-up: Toli requested a drawing of the suggested About/Now additions. The committed `docs/home-context-concepts-2026-10-08/brief.json` freezes three image concepts, current style/portrait references and draft-copy boundaries before image generation. These are unselected proposals; application code, production behavior and deployment are unchanged. Generation and visual review evidence stay separate from the frozen brief.
+
 Implemented: the maintained U.S. selection now contains 17 states plus D.C. and 23 places. D.C. uses the existing complete district boundary and is counted separately from states. The original eight-state selection is preserved; additions are Portland, Fort Worth, Springdale/Zion, Jersey City, New Haven, Philadelphia, Pontoon Beach, Killington, Charlotte and Washington, D.C. Pins use approximate public place centers, not private photo GPS. Existing Leaflet selection, keyboard controls, reset, zoom and Hawaii inset remain shared.
 
 World now highlights 18 countries and lists Tulum under Mexico, Zürich under Switzerland and Pridelands under Kenya. Toli explicitly approved these additions and excluded London. Charlotte is included by his selection despite incomplete receipt evidence. The private metadata/email research remains partial; public selections do not imply exhaustive travel history. No private photo, receipt, message, visit date or research link enters the app.
