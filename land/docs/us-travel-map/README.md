@@ -28,3 +28,5 @@ Pins and place buttons are keyboard accessible, open named popups, and permit ex
 - Matched light-theme, top-scroll screenshots: `before-desktop.jpg` / `after-desktop.jpg`, `before-phone.jpg` / `after-phone.jpg`. Before is existing public World view; after is the new U.S. selection. `desktop-map.jpg` shows the complete map; `phone-hawaii.jpg` shows island interaction.
 - Visual inspection caught remote territories expanding mainland bounds despite correct pin/fill counts. Bounds are now independently checked. Initial map center/zoom precedes marker setup to avoid an undefined marker element.
 - Publication uses existing Netlify site `bc4a1b57-c973-49eb-b3f0-e7cb69a11925`; production and beta share it. Exact source/deploy/hash evidence is recorded in `release.json` after publication.
+
+Published source `bd124022060177082769adaff34effda122b0189` as ready Netlify `6ac705ba71ba3f5e52afa182`. All six deployed HTML/JS/CSS files match tested hashes; live desktop/phone rendering and Miami popup pass. See `release.json`, `live-desktop.jpg` and `live-phone.jpg`.

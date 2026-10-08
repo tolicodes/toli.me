@@ -1,0 +1,10 @@
+{
+  "site_id": "bc4a1b57-c973-49eb-b3f0-e7cb69a11925",
+  "site_name": "toli-land-beta",
+  "deploy_id": "6ac705ba71ba3f5e52afa182",
+  "deploy_url": "https://6ac705ba71ba3f5e52afa182--toli-land-beta.netlify.app",
+  "logs": "https://app.netlify.com/projects/toli-land-beta/deploys/6ac705ba71ba3f5e52afa182",
+  "function_logs": "https://app.netlify.com/projects/toli-land-beta/logs/functions",
+  "edge_function_logs": "https://app.netlify.com/projects/toli-land-beta/logs/edge-functions",
+  "url": "https://toli.me"
+}
