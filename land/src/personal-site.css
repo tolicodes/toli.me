@@ -165,7 +165,9 @@ body { margin: 0; min-width: 320px; }
 .personal-writing-description { display: block; font-size: 16px; line-height: 1.45; color: var(--muted); margin-top: 7px; }
 .personal-project-subtitle { font-size: 18px !important; color: var(--muted); }
 .personal-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
-.personal-photo-grid img { width: 100%; height: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 8px; }
+.personal-photo-grid img { width: 100%; height: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 8px; background: rgba(23, 59, 52, 0.04); }
+.personal-photo-panorama { grid-column: 1 / -1; }
+.personal-photo-panorama img { height: auto; aspect-ratio: auto; }
 .personal-more-photos { margin-top: 20px; }
 .personal-more-photos summary { cursor: pointer; padding: 14px 20px; text-align: center; border: 1px solid var(--line); border-radius: 6px; font-size: 18px; }
 .personal-more-photos summary:focus-visible { outline: 3px solid #a66f27; outline-offset: 5px; }

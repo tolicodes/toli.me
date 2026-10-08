@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-08",
+  "authorization": "Toli approved the pictured 12-photo shortlist: perfect use those.",
+  "selection": "First six initially visible; last six inside existing native More disclosure.",
+  "sourceScope": "Ten supported unmodified-original exports and two larger existing public gallery WebPs. No completeness claim about Apple Photos library.",
+  "privacy": "Only selected full-frame WebPs published; no GPS, capture dates, names, captions, source filenames or Live Photo video components copied to public assets.",
+  "optimization": "Auto-orient and metadata-strip; max 1600px without upscaling; WebP quality 87. Original source files retained privately. Landscape group photos use contain; panorama gets a full-width row.",
+  "photos": [
+    {
+      "number": 1,
+      "asset": "/assets/personal/profile-photo-01.webp",
+      "originalDimensions": [
+        720,
+        960
+      ],
+      "optimizedDimensions": [
+        720,
+        960
+      ],
+      "optimizedSha256": "142174c90a4742dfc738cafd91da06968c2baa0699d6432715c9419d22c8ee29",
+      "source": "Existing public gallery WebP"
+    },
+    {
+      "number": 2,
+      "asset": "/assets/personal/life-photo-02.webp",
+      "originalDimensions": [
+        720,
+        960
+      ],
+      "optimizedDimensions": [
+        720,
+        960
+      ],
+      "optimizedSha256": "bdae988dd7dda2940e65adb8196af962c1f58d32fcecd62b17066a741d76b08c",
+      "source": "Apple Photos supported Export Unmodified Original"
+    },
+    {
+      "number": 3,
+      "asset": "/assets/personal/life-photo-03.webp",
+      "originalDimensions": [
+        4032,
+        3024
+      ],
+      "optimizedDimensions": [
+        1600,
+        1200
+      ],
+      "optimizedSha256": "268f4929f6b644794dee7460a0a4d352a7b98f345ea9bff03091959ae78c0e2b",
+      "source": "Apple Photos supported Export Unmodified Original"
+    },
+    {
+      "number": 4,
+      "asset": "/assets/personal/life-photo-04.webp",
+      "originalDimensions": [
+        1080,
+        1079
+      ],
+      "optimizedDimensions": [
+        1080,
+        1079
+      ],
+      "optimizedSha256": "b64fb508498f3314b11b211e75806c4a5fedb8f3b48e64112e1327b950be2c63",
+      "source": "Apple Photos supported Export Unmodified Original"
+    },
+    {
+      "number": 5,
+      "asset": "/assets/personal/life-photo-05.webp",
+      "originalDimensions": [
+        4032,
+        3024
+      ],
+      "optimizedDimensions": [
+        1600,
+        1200
+      ],
+      "optimizedSha256": "eed5aa657e1df9df7bf1fb79041bfbb712cf243dd7e3ee476e002d80f078d7b1",
+      "source": "Apple Photos supported Export Unmodified Original"
+    },
+    {
+      "number": 6,
+      "asset": "/assets/personal/life-photo-06.webp",
+      "originalDimensions": [
+        3024,
+        4032
+      ],
+      "optimizedDimensions": [
+        1200,
+        1600
+      ],
+      "optimizedSha256": "63c8bc2b5e4579a294cc11769f2922dbc6f1daca46773bb8a586de98a7671b9b",
+      "source": "Apple Photos supported Export Unmodified Original"
+    },
+    {
+      "number": 7,
+      "asset": "/assets/personal/life-photo-07.webp",
+      "originalDimensions": [
+        2576,
+        1932
+      ],
+      "optimizedDimensions": [
+        1600,
+        1200
+      ],
+      "optimizedSha256": "d1145db25dad19e484be8ee0da280b8499a7370dbde94ce710b48e8085c9ae6d",
+      "source": "Apple Photos supported Export Unmodified Original"
+    },
+    {
+      "number": 8,
+      "asset": "/assets/personal/life-photo-08.webp",
+      "originalDimensions": [
+        1600,
+        1202
+      ],
+      "optimizedDimensions": [
+        1600,
+        1202
+      ],
+      "optimizedSha256": "d9e7212aa82ab063f5406cc891fff1540f69edb8effc6e3787219f281723b060",
+      "source": "Apple Photos supported Export Unmodified Original"
+    },
+    {
+      "number": 9,
+      "asset": "/assets/personal/life-photo-09.webp",
+      "originalDimensions": [
+        4032,
+        3024
+      ],
+      "optimizedDimensions": [
+        1600,
+        1200
+      ],
+      "optimizedSha256": "10df79b0a7522a7a09f1e708e806a4daa7e0486f7d401595f75e01f0e1d593c9",
+      "source": "Apple Photos supported Export Unmodified Original"
+    },
+    {
+      "number": 10,
+      "asset": "/assets/personal/profile-photo-14.webp",
+      "originalDimensions": [
+        721,
+        960
+      ],
+      "optimizedDimensions": [
+        721,
+        960
+      ],
+      "optimizedSha256": "ee003bb9643311da9b73ce20bfc1895e71b6aca77151a4eae3a9a835a0da4bf8",
+      "source": "Existing public gallery WebP"
+    },
+    {
+      "number": 11,
+      "asset": "/assets/personal/life-photo-11.webp",
+      "originalDimensions": [
+        2316,
+        3088
+      ],
+      "optimizedDimensions": [
+        1200,
+        1600
+      ],
+      "optimizedSha256": "59f6b4bc4c10855c96ba6c6d7a177848b59fad7fb85acf933ac0f335e8debb76",
+      "source": "Apple Photos supported Export Unmodified Original"
+    },
+    {
+      "number": 12,
+      "asset": "/assets/personal/life-photo-12.webp",
+      "originalDimensions": [
+        9181,
+        3445
+      ],
+      "optimizedDimensions": [
+        1600,
+        600
+      ],
+      "optimizedSha256": "946cccea0f065b7d26d70d6ac9c37f14c8e2761ba0d09f31146130885c2c5d9d",
+      "source": "Apple Photos supported Export Unmodified Original"
+    }
+  ]
+}

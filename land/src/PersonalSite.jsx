@@ -78,7 +78,7 @@ function CreativePreview() {
 }
 
 export function PhotoGallery({ initiallyExpanded = false }) {
-  const grid = (photos) => <div className="personal-photo-grid">{photos.map((photo) => <a key={photo.src} href={photo.src} target="_blank" rel="noopener noreferrer" aria-label={`${photo.alt} (opens full photo in a new tab)`}><img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" /></a>)}</div>;
+  const grid = (photos) => <div className="personal-photo-grid">{photos.map((photo) => <a key={photo.src} className={photo.layout === "panorama" ? "personal-photo-panorama" : undefined} href={photo.src} target="_blank" rel="noopener noreferrer" aria-label={`${photo.alt} (opens full photo in a new tab)`}><img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" /></a>)}</div>;
   return <section className="personal-home-section" aria-labelledby="photos-heading"><h2 id="photos-heading">Life in pictures</h2><p className="personal-section-intro">Play, adventure, friends, and Promise.</p>{grid(personalPhotos.slice(0, 6))}<details className="personal-more-photos" open={initiallyExpanded || undefined}><summary><span className="when-closed">Show {personalPhotos.length - 6} more photos</span><span className="when-open">Show fewer photos</span></summary>{grid(personalPhotos.slice(6))}</details></section>;
 }
 
