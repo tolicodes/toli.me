@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-08",
+  "source": "d853dad794bd21711435a4adc7fbdb9045efdd47",
+  "subject": "Freeze responsive phone concept drawing brief",
+  "frozen_checkout": "/Users/toli/Documents/toli-site-mobile-design-frozen-20261008",
+  "source_status": "Clean committed detached checkout before generation, held fixed throughout all three calls",
+  "brief": "land/docs/home-context-concepts-2026-10-08/mobile-brief.json",
+  "runtime": {
+    "tool": "built-in image_gen",
+    "model": "tool-selected default, no override exposed",
+    "transparent_background": false,
+    "requests": 3,
+    "requested_canvas": "1024x3072 bitmap representing a 390x1170 CSS-pixel scrolling phone page",
+    "references_per_request": "Corresponding desktop mockup plus original portrait and Energy Cords artwork from frozen source"
+  },
+  "renders": [
+    {
+      "display_order": 1,
+      "direction": "Mobile personal index",
+      "desktop_reference": "/Users/toli/Documents/toli-home-concepts-2026-10-08/concept-1.png",
+      "original": "/Users/toli/.codex/generated_images/01a1191f-2776-7a20-9914-2d99b95b2ba4/exec-01e739b3-ac3d-4d84-b480-a8bf69feae4b.png",
+      "retained_copy": "/Users/toli/Documents/toli-home-concepts-2026-10-08/mobile-1.png",
+      "dimensions": [
+        743,
+        2117
+      ],
+      "sha256": "3f9b3d8e1cb234fd932d9ab4f5979be5ca2c8beddb34dd0d834345f717a0c22b"
+    },
+    {
+      "display_order": 2,
+      "direction": "Mobile notes in the margin",
+      "desktop_reference": "/Users/toli/Documents/toli-home-concepts-2026-10-08/concept-2.png",
+      "original": "/Users/toli/.codex/generated_images/01a1191f-2776-7a20-9914-2d99b95b2ba4/exec-aa8b2687-dde4-4c41-82d5-cd687ef356b2.png",
+      "retained_copy": "/Users/toli/Documents/toli-home-concepts-2026-10-08/mobile-2.png",
+      "dimensions": [
+        724,
+        2172
+      ],
+      "sha256": "6bcb3c3ed9b665f85c04bb0d2190c1de0927d421688222af2b445c9f3d11bab2"
+    },
+    {
+      "display_order": 3,
+      "direction": "Mobile personal journal",
+      "desktop_reference": "/Users/toli/Documents/toli-home-concepts-2026-10-08/concept-3.png",
+      "original": "/Users/toli/.codex/generated_images/01a1191f-2776-7a20-9914-2d99b95b2ba4/exec-29c9f976-d796-464c-910e-672d1b237b72.png",
+      "retained_copy": "/Users/toli/Documents/toli-home-concepts-2026-10-08/mobile-3.png",
+      "dimensions": [
+        724,
+        2172
+      ],
+      "sha256": "76abd4fb40468fc55ca2e12b520735175954c56b5d5a940e5a35c693809f0ded"
+    }
+  ],
+  "visual_review": "All three show the previous upright circular portrait, main trio first as stacked thumbnail-left rows, Creative below and two Writing rows. Concept 2 moves About/Now below Writing; concept 3 uses a handwritten Now note. No portrait/text overlap is visible in generated images. Original portrait/Energy Cords art was supplied; generative asset fidelity and exact CSS dimensions are not verified. No invented photo strips or attributed quotations are displayed; About/Now, added biography and generic footer words are draft copy. Other thumbnails remain illustrative renderings of desktop reference assets. Image generation returned dimensions below the requested canvas; no resizing or postprocessing was applied. These are still mockups, not browser evidence or functional mobile checks.",
+  "decision": "Keep all three as unselected proposals paired with desktop concepts 1, 2 and 3. No runtime implementation or deployment. Public parody-video links remain pending."
+}
