@@ -1,0 +1,35 @@
+{
+  "observedDate": "2026-10-07",
+  "sources": [
+    {
+      "id": "getting-back-to-love",
+      "source": "https://miro.medium.com/v2/resize:fill:320:214/1*SgQ9seDzN2ZgbU1bOMzZUQ.jpeg",
+      "asset": "/assets/personal/getting-back-to-love.webp"
+    },
+    {
+      "id": "energy-cords",
+      "source": "https://miro.medium.com/v2/resize:fill:320:214/1*p1yxOlgVnSwHHeQMO6XhoQ.jpeg",
+      "asset": "/assets/personal/energy-cords.webp"
+    },
+    {
+      "id": "focus-on-negative",
+      "source": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*Ro4dxgVuKX_cw1ZmeHLZDA.png",
+      "asset": "/assets/personal/focus-on-negative.webp"
+    },
+    {
+      "id": "rejection-breakups",
+      "asset": "/assets/personal/toli-portrait.webp",
+      "fallback": "Existing author portrait; original Medium article has no lead artwork"
+    },
+    {
+      "id": "boredom-bipolar",
+      "asset": "/assets/personal/toli-portrait.webp",
+      "fallback": "Existing author portrait; original Medium article has no lead artwork"
+    },
+    {
+      "id": "dota-consciousness",
+      "asset": "/assets/personal/toli-portrait.webp",
+      "fallback": "Existing author portrait; original Medium article has no lead artwork"
+    }
+  ]
+}

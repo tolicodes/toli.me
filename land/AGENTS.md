@@ -37,3 +37,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Icon-sheet feedback (2026-10-03): the NYC apple does not communicate LeetCode. Use a coding/problem-solving community symbol for LeetCode and carry the same emblem into its podcast icon. Present the complete icon catalogue grouped into its seven categories. The specific puzzle-team replacement is a proposal until selected.
 - Add Storybook stories for components and meaningful interaction states. Verify desktop, phone, keyboard, reduced motion, navigation history, and zoom behavior.
 - Keep the legacy site outside this directory intact. Commit only this task's changes.
+
+- **Personal-site clarification, October 7, 2026:** Toli clarified that the photo/gallery, Creative and popular-writing requests apply to toli.me; misplaced dating-site edits should be undone. Use the previous laughing portrait at the top right, expand Creative higher on Home, lead Writing with the observed most-clapped essays, and include writing thumbnails. Preserve original source artwork where available and all six essays. The earlier yellow-coat selection is superseded by his previous-photo correction.

@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowUpRight, BookOpen, GlobeHemisphereWest, List, Palette, X } from "@phosphor-icons/react";
-import { creativeProjects, featuredProjects, publications, travelArchive, writing } from "./personal-content.js";
+import { creativeProjects, featuredProjects, publications, travelArchive, writing, popularWriting } from "./personal-content.js";
 import { pageHref, readPersonalRoute } from "./personal-routing.js";
 import { TravelMap } from "./TravelMap.jsx";
 import "./personal-site.css";
+import personalPhotos from "./personal-photos.json";
 
 const pageTitles = { home: "Hi, I’m Toli.", publications: "Publications", creative: "Creative", writing: "Writing", travels: "Places I’ve been" };
 const navPages = ["publications", "creative", "writing", "travels"];
@@ -39,13 +40,14 @@ export function FeaturedProject({ project }) {
       {project.id === "drawn" && <p className="personal-handwritten drawn-signature">Toli*Drawn</p>}
       <h2>{project.title}</h2>
       <p>{project.description}</p>
+      {project.subtitle && <p className="personal-project-subtitle">{project.subtitle}</p>}
       <OutboundLink href={project.href} className="personal-text-link">{project.cta}</OutboundLink>
     </div>
   </article>;
 }
 
 function WritingList({ items = writing }) {
-  return <ul className="personal-writing-list">{items.map((article) => <li key={article.id}><OutboundLink href={article.href}>{article.title}</OutboundLink></li>)}</ul>;
+  return <ul className="personal-writing-list">{items.map((article) => <li key={article.id}><OutboundLink href={article.href}><img src={article.image} alt="" width="320" height="214" loading="lazy" /><span><strong>{article.title}</strong><span className="personal-writing-description">{article.description}</span></span></OutboundLink></li>)}</ul>;
 }
 
 const exploreItems = [
@@ -54,17 +56,33 @@ const exploreItems = [
   { page: "travels", title: "Travels", copy: "A little of the world I’ve explored.", Icon: GlobeHemisphereWest },
 ];
 
+function CreativePreview() {
+  return <section className="personal-home-section" aria-labelledby="creative-heading">
+    <div className="personal-section-heading"><div><h2 id="creative-heading">Creative</h2><p className="personal-section-intro">Comics, strange little creatures, art collaborations, and wonderfully obscure videos.</p></div><a className="personal-text-link" href="#/creative">Explore creative <ArrowRight aria-hidden="true" /></a></div>
+    <div className="personal-creative-grid">{creativeProjects.slice(0, 3).map((project) => <article key={project.id}>
+      <a href={project.href} target="_blank" rel="noopener noreferrer" className={`personal-creative-image ${project.imageClass}`} tabIndex={-1}><img src={project.image} alt={project.imageAlt} width="800" height="800" loading="lazy" /></a>
+      <h3><OutboundLink href={project.href}>{project.title}</OutboundLink></h3><p>{project.description}</p>
+    </article>)}</div>
+    <div className="personal-creative-extras">{creativeProjects.slice(3).map((project) => <article key={project.id}><h3><OutboundLink href={project.href}>{project.title}</OutboundLink></h3><p>{project.description}</p></article>)}</div>
+  </section>;
+}
+
+export function PhotoGallery({ initiallyExpanded = false }) {
+  const grid = (photos) => <div className="personal-photo-grid">{photos.map((photo) => <a key={photo.src} href={photo.src} target="_blank" rel="noopener noreferrer" aria-label={`${photo.alt} (opens full photo in a new tab)`}><img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" /></a>)}</div>;
+  return <section className="personal-home-section" aria-labelledby="photos-heading"><h2 id="photos-heading">Life in pictures</h2><p className="personal-section-intro">Play, adventure, friends, and Promise.</p>{grid(personalPhotos.slice(0, 6))}<details className="personal-more-photos" open={initiallyExpanded || undefined}><summary><span className="when-closed">Show {personalPhotos.length - 6} more photos</span><span className="when-open">Show fewer photos</span></summary>{grid(personalPhotos.slice(6))}</details></section>;
+}
+
 export function HomePage() {
   return <>
     <section className="personal-hero" aria-labelledby="personal-title">
       <div><p className="personal-handwritten personal-hello">Hi,</p><h1 id="personal-title">Hi, I’m Toli.</h1><p className="personal-intro">Stories, strange little creations, and<br className="personal-desktop-break" /> things I’ve learned along the way.</p></div>
       <div className="personal-portrait"><img src="/assets/personal/toli-portrait.webp" width="640" height="640" alt="Toli laughing" /><p className="personal-handwritten">Nice to<br />meet you!</p></div>
     </section>
-    <section className="personal-featured" aria-label="A few things to start with">{featuredProjects.map((project) => <FeaturedProject key={project.id} project={project} />)}</section>
-    <div className="personal-index-columns">
-      <section aria-labelledby="writing-heading"><h2 id="writing-heading">Writing</h2><p className="personal-section-intro">Thoughts, reflections, and the occasional deep dive.</p><WritingList items={writing.slice(0, 3)} /><a className="personal-text-link" href="#/writing">All writing <ArrowRight aria-hidden="true" /></a></section>
-      <section aria-labelledby="explore-heading"><h2 id="explore-heading">More to explore</h2><p className="personal-section-intro">Other projects and creations.</p><ul className="personal-explore-list">{exploreItems.map(({ page, title, copy, Icon }) => <li key={page}><a href={pageHref(page)}><Icon size={40} weight="duotone" aria-hidden="true" /><div><h3>{title}</h3><p>{copy}</p></div><ArrowRight aria-hidden="true" /></a></li>)}</ul></section>
-    </div>
+    <CreativePreview />
+    <section className="personal-home-section personal-popular-writing" aria-labelledby="writing-heading"><div className="personal-section-heading"><div><h2 id="writing-heading">Writing</h2><p className="personal-section-intro">Reader favorites on connection, vulnerability, and the stories we tell ourselves.</p></div><a className="personal-text-link" href="#/writing">All writing <ArrowRight aria-hidden="true" /></a></div><WritingList items={popularWriting} /></section>
+    <section className="personal-featured" aria-label="Guides and personal projects">{featuredProjects.filter((project) => project.id !== "drawn").map((project) => <FeaturedProject key={project.id} project={project} />)}</section>
+    <PhotoGallery />
+    <section className="personal-home-section" aria-labelledby="explore-heading"><h2 id="explore-heading">More to explore</h2><ul className="personal-explore-list">{exploreItems.filter(({page}) => page !== "creative").map(({ page, title, copy, Icon }) => <li key={page}><a href={pageHref(page)}><Icon size={40} weight="duotone" aria-hidden="true" /><div><h3>{title}</h3><p>{copy}</p></div><ArrowRight aria-hidden="true" /></a></li>)}</ul></section>
   </>;
 }
 
@@ -74,7 +92,7 @@ export function CollectionPage({ page = "creative" }) {
     <PageHeading title={pageTitles[page]} intro={page === "publications" ? "Things I’ve learned, gathered into something you can take with you." : "Comics, creatures, collaborations, and a few very personal experiments."} />
     <div className="personal-collection">{projects.map((project) => <article className={`personal-project ${project.image ? "has-image" : ""}`} key={project.id}>
       {project.image && <a href={project.href} target="_blank" rel="noopener noreferrer" className={`personal-project-image ${project.imageClass || ""}`} tabIndex={-1}><img src={project.image} alt={project.imageAlt} loading="lazy" width="800" height="800" /></a>}
-      <div><h2>{project.title}</h2><p>{project.description}</p><OutboundLink href={project.href} className="personal-text-link">{project.cta}</OutboundLink></div>
+      <div><h2>{project.title}</h2><p>{project.description}</p>{project.subtitle && <p className="personal-project-subtitle">{project.subtitle}</p>}<OutboundLink href={project.href} className="personal-text-link">{project.cta}</OutboundLink></div>
     </article>)}</div>
   </>;
 }

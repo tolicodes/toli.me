@@ -14,14 +14,14 @@ npm test
 npm run build-storybook
 ```
 
-The packaging tests inspect the build output, so build before running checks from a fresh checkout. Storybook has 30 examples, including 12 Personal Index page, component, and phone states. `npm run storybook` opens its development server on port 6006. No accounts, secrets, database, or external font/image requests are needed.
+The packaging tests inspect the build output, so build before running checks from a fresh checkout. Storybook has 32 examples, including 14 Personal Index page, component, and phone states. `npm run storybook` opens its development server on port 6006. No accounts, secrets, database, or external font/image requests are needed.
 
 ## Content and navigation
 
-- Home features Drawn, Neurodiverse Guide, and Dating Bounty.
+- Home leads with Creative (all five projects, including Drawn) and three popular essays, followed by Neurodiverse Guide, Dating Bounty and a curated photo gallery.
 - `#/publications`: the guide and Principles.
 - `#/creative`: Drawn, Easter Creatures, Las Chicas, Spa Date, and Obscure Parody Videos.
-- `#/writing`: all six original essays, linked directly to Medium.
+- `#/writing`: all six original essays, linked directly to Medium, with thumbnails and short summaries.
 - `#/travels`: A world map above 15 countries grouped geographically: the original 14-country archive plus Spain, added at Toli’s request on October 3, 2026. No visit dates or complete lifetime count are inferred.
 - Work links directly to https://tolicodes.com.
 
@@ -79,3 +79,15 @@ Viewport correction deployed: runtime source 565fe125ccbb2b438b91e0d8e1e7710e1e5
 ## Workplace guide destination — October 7, 2026
 
 The featured and Publications Neurodiverse Guide entry now uses `https://neurodiverse.toli.me/`, replacing the broader ToliOS homepage. Both placements share the same content object; layout and navigation contracts are preserved. Free tests/build and the exact Netlify publication are verified separately in the task release receipt. This is a destination change, with no API or mobile behavior change.
+
+## Personal-site correction and editorial refresh — October 7, 2026
+
+Toli clarified that the portrait, photo-grid, expanded Creative and popular-writing requests belong on toli.me, and explicitly requested undoing the misplaced love.toli.me edits. The previous laughing portrait remains the chosen image; phone layout now places it at the top right alongside the introduction. The later yellow-coat request is superseded by “use the previous photo.”
+
+Home order is introduction → Creative → Writing → Neurodiverse Guide/Dating Bounty → Life in pictures → remaining exploration links. Creative expands to three illustrated projects and two additional project links with original-source descriptions; Drawn appears there instead of repeating a full featured row. The existing featured trio data remains shared with collection/Storybook components. All 15 personal destinations and existing hash/navigation, travel and analytics boundaries remain intact. Both shared guide listings include “(and my YouTube talk)” and retain the dedicated subdomain destination.
+
+Home writing now selects Energy Cords (52 visible Medium claps), Rejection/Breakups (51) and negative focus (22), using the previously inspected 30-story public archive. Claps are not unique people; this is a dated editorial selection, not a live feed or an all-platform claim. All six original titles and links remain on Writing. Each has a thumbnail and short description. Three reuse original article artwork documented in `docs/writing-image-sources.json`; the essays without lead artwork use the existing author portrait, with decorative image alternatives in the adjacent titled link. Summaries describe the author's historical personal perspective, not established scientific guidance.
+
+`src/personal-photos.json` contains 14 previously public, curated portraits/activity/friends/Promise photographs. Optimized WebPs live as `public/assets/personal/profile-photo-*.webp`; original photo files remain in their original repository. Six display initially and native disclosure reveals eight more, with three desktop/two phone columns and full-photo links. Curation is subjective presentation, not permanent deletion. Collapsed and expanded gallery states are available in Storybook. Build, existing content/privacy/route/package checks and matched desktop/phone browser QA precede the explicit Netlify publication; deployment/source matching is recorded separately in the task receipt.
+
+Storybook now disables Vite’s duplicate public-directory copy through `viteFinal` while retaining Storybook `staticDirs`; the two concurrent copy paths caused EEXIST errors. This affects component preview packaging only, not the production Vite/Netlify build.

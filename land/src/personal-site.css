@@ -147,3 +147,62 @@ body { margin: 0; min-width: 320px; }
 }
 @media (max-width: 360px) { .personal-travel-groups { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* October 7 personal-index editorial refresh. */
+.personal-home-section { border-top: 1px solid var(--line); padding: 30px 0; }
+.personal-home-section > h2, .personal-section-heading h2 { font-size: 46px; }
+.personal-section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 22px; }
+.personal-section-heading .personal-text-link { flex: 0 0 auto; }
+.personal-creative-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+.personal-creative-image { display: block; height: 205px; margin-bottom: 17px; }
+.personal-creative-image img { height: 100%; width: 100%; object-fit: contain; }
+.personal-creative-image.drawn img { object-fit: cover; object-position: top; border: 1px solid var(--ink); }
+.personal-creative-grid h3, .personal-creative-extras h3 { font-size: 31px; }
+.personal-creative-grid h3 a, .personal-creative-extras h3 a { display: inline-flex; align-items: baseline; gap: 7px; }
+.personal-creative-grid h3 svg, .personal-creative-extras h3 svg { width: 20px; height: 20px; }
+.personal-creative-grid p, .personal-creative-extras p { margin-top: 8px; font-size: 18px; color: var(--muted); }
+.personal-creative-extras { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; border-top: 1px solid var(--line); margin-top: 26px; padding-top: 20px; }
+.personal-writing-list a { align-items: center; gap: 16px; }
+.personal-writing-list img { width: 112px; height: 88px; flex: 0 0 112px; object-fit: cover; border-radius: 5px; }
+.personal-writing-list a > span:not(.personal-sr-only) { flex: 1; }
+.personal-writing-list strong { font-weight: 400; }
+.personal-writing-description { display: block; font-size: 16px; line-height: 1.45; color: var(--muted); margin-top: 7px; }
+.personal-project-subtitle { font-size: 18px !important; color: var(--muted); }
+.personal-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+.personal-photo-grid img { width: 100%; height: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 8px; }
+.personal-more-photos { margin-top: 20px; }
+.personal-more-photos summary { cursor: pointer; padding: 14px 20px; text-align: center; border: 1px solid var(--line); border-radius: 6px; font-size: 18px; }
+.personal-more-photos summary:focus-visible { outline: 3px solid #a66f27; outline-offset: 5px; }
+.personal-more-photos .when-open, .personal-more-photos[open] .when-closed { display: none; }
+.personal-more-photos[open] .when-open { display: inline; }
+.personal-hero { align-items: flex-start; }
+@media (max-width: 760px) {
+  .personal-hero { position: relative; display: block; padding-top: 24px; }
+  .personal-hero h1 { font-size: 57px; padding-right: 115px; }
+  .personal-portrait { position: absolute; top: 24px; right: 0; margin: 0; }
+  .personal-portrait p { display: none; }
+  .personal-intro { margin-top: 20px !important; }
+  .personal-home-section { padding: 28px 0; }
+  .personal-home-section > h2, .personal-section-heading h2 { font-size: 42px; }
+  .personal-section-heading { display: block; }
+  .personal-creative-grid { grid-template-columns: 1fr; gap: 26px; }
+  .personal-creative-image { height: 230px; }
+  .personal-creative-image.easter { height: 280px; }
+  .personal-creative-extras { grid-template-columns: 1fr; gap: 22px; }
+  .personal-writing-list a, .personal-all-writing .personal-writing-list a { font-size: 22px; align-items: flex-start; }
+  .personal-writing-list img { width: 80px; height: 80px; flex-basis: 80px; }
+  .personal-writing-description { font-size: 15px; }
+  .personal-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+}
+
+@media (max-width: 760px) {
+  .personal-creative-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; }
+  .personal-creative-grid article:first-child { grid-column: 1 / -1; }
+  .personal-creative-image, .personal-creative-image.easter { height: 150px; }
+  .personal-creative-image.drawn { height: 185px; }
+  .personal-creative-grid h3 { font-size: 28px; }
+  .personal-creative-grid p { font-size: 16px; }
+  .personal-creative-extras { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .personal-creative-extras h3 { font-size: 26px; }
+  .personal-creative-extras p { font-size: 16px; }
+}

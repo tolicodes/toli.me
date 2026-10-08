@@ -17,6 +17,7 @@ const guide = {
   id: "neurodiverse-guide",
   title: "Neurodiverse Guide",
   description: "Making work work for different minds.",
+  subtitle: "(and my YouTube talk)",
   href: "https://neurodiverse.toli.me/",
   cta: "Read the guide",
   image: "/assets/personal/guide-character.webp",
@@ -90,28 +91,36 @@ export const writing = [
   {
     id: "getting-back-to-love",
     title: "Getting Back to Love",
-    description: "Reflections on finding a way back to love.",
+    description: "A personal, spiritual reflection on returning to love through memories, attention, and connection.",
+    image: "/assets/personal/getting-back-to-love.webp",
+    imageAlt: "Colorful intertwined figures in the original Getting Back to Love artwork.",
     href: "https://tolicodes.medium.com/getting-back-to-love-2942d026882b",
     cta: "Read the essay",
   },
   {
     id: "energy-cords",
     title: "Energy Cords and Foreign Energy in your Aura",
-    description: "An exploration of energy cords and the aura.",
+    description: "My spiritual take on emotional attachments, other people’s influence, and choosing what to let go.",
+    image: "/assets/personal/energy-cords.webp",
+    imageAlt: "A glowing seated figure surrounded by blue light in the original Energy Cords artwork.",
     href: "https://tolicodes.medium.com/energy-cords-and-foreign-energy-in-your-aura-7bae5ac3c57c",
     cta: "Read the essay",
   },
   {
     id: "focus-on-negative",
     title: "Why We Focus on the Negative and How Can We Change It",
-    description: "On negative focus and the possibility of changing it.",
+    description: "My reflections on noticing thoughts, separating facts from stories, and making room for gratitude.",
+    image: "/assets/personal/focus-on-negative.webp",
+    imageAlt: "A cartoon cave dweller in the original negative-focus essay artwork.",
     href: "https://tolicodes.medium.com/why-we-focus-on-the-negative-and-how-its-keeping-us-from-happiness-da2224de0899",
     cta: "Read the essay",
   },
   {
     id: "rejection-breakups",
     title: "Rejection, Breakups, Vulnerability, and BDSM",
-    description: "A personal essay on rejection, vulnerability, and connection.",
+    description: "Learning to ask for what I want, face rejection, and explore trust without closing myself off to love.",
+    image: "/assets/personal/toli-portrait.webp",
+    imageAlt: "Toli laughing, used as an author portrait for an essay without lead artwork.",
     href: "https://tolicodes.medium.com/rejection-breakups-vulnurability-and-bdsm-b2f80b682373",
     cta: "Read the essay",
   },
@@ -119,6 +128,8 @@ export const writing = [
     id: "boredom-bipolar",
     title: "The Problem with Boredom and Bipolar",
     description: "A personal reflection on boredom and bipolar.",
+    image: "/assets/personal/toli-portrait.webp",
+    imageAlt: "Toli laughing, used as an author portrait for an essay without lead artwork.",
     href: "https://tolicodes.medium.com/the-problem-with-boredom-and-bipolar-442e62ed29ee",
     cta: "Read the essay",
   },
@@ -126,10 +137,16 @@ export const writing = [
     id: "dota-consciousness",
     title: "DOTA and Consciousness",
     description: "An essay connecting DOTA and consciousness.",
+    image: "/assets/personal/toli-portrait.webp",
+    imageAlt: "Toli laughing, used as an author portrait for an essay without lead artwork.",
     href: "https://tolicodes.medium.com/dota-and-conciousness-87609258854a",
     cta: "Read the essay",
   },
 ];
+
+// Public Medium clap totals observed October 7, 2026, among 30 visible stories.
+// Claps are not unique readers; this is an editorial selection, not a live feed.
+export const popularWriting = ["energy-cords", "rejection-breakups", "focus-on-negative"].map((id) => writing.find((article) => article.id === id));
 
 // Copied from docs/travel-import/travel-data.json, verified October 3, 2026
 // against the original travel page's explicit visited list and map permalink.
