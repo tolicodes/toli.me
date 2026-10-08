@@ -56,10 +56,12 @@ function MapPanel({ hawaii = false, controller }) {
 export default function USTravelMap() {
   const mainland = useRef(null);
   const hawaii = useRef(null);
+  const stateCount = usTravel.filter(({ kind }) => kind !== "district").length;
+  const placeCount = usTravel.reduce((total, { places }) => total + places.length, 0);
   return <section className="personal-us-travels" aria-labelledby="us-travel-heading">
-    <div className="us-travel-heading"><div><h2 id="us-travel-heading">Around the United States</h2><p>8 states, 13 places along the way.</p></div><button className="us-map-reset" onClick={() => { mainland.current?.reset(); hawaii.current?.reset(); }}>Reset view</button></div>
+    <div className="us-travel-heading"><div><h2 id="us-travel-heading">Around the United States</h2><p>{stateCount} states{usTravel.some(({ kind }) => kind === "district") ? " + D.C." : ""}, {placeCount} places along the way.</p></div><button className="us-map-reset" onClick={() => { mainland.current?.reset(); hawaii.current?.reset(); }}>Reset view</button></div>
     <div className="us-map-layout"><MapPanel controller={mainland} /><aside className="us-hawaii-inset"><h3>Hawaii</h3><MapPanel hawaii controller={hawaii} /></aside></div>
-    <div className="us-map-caption"><span><i className="us-state-key" aria-hidden="true" />States I’ve visited <i className="us-pin-key" aria-hidden="true" />Places I’ve been</span><a href="https://github.com/topojson/us-atlas" target="_blank" rel="noopener noreferrer">Map: U.S. Census / Leaflet<span className="personal-sr-only"> (opens in a new tab)</span></a></div>
+    <div className="us-map-caption"><span><i className="us-state-key" aria-hidden="true" />States & D.C. I’ve visited <i className="us-pin-key" aria-hidden="true" />Places I’ve been</span><a href="https://github.com/topojson/us-atlas" target="_blank" rel="noopener noreferrer">Map: U.S. Census / Leaflet<span className="personal-sr-only"> (opens in a new tab)</span></a></div>
     <p className="us-map-hint">Tap a pin or a place below. Zoom in to explore.</p>
     <div className="us-travel-list">{usTravel.map((state) => <section key={state.id}><h3>{state.name}</h3><ul>{state.places.map((place) => <li key={place.name}><button onClick={() => (state.id === "15" ? hawaii : mainland).current?.select(place.name)}>{place.name}{place.kind === "island" && <span> · island</span>}</button></li>)}</ul></section>)}</div>
   </section>;

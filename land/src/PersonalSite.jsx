@@ -124,7 +124,7 @@ export function TravelPage({ initialView = "world" }) {
     <div className="personal-travel-views" role="group" aria-label="Travel map view"><button aria-pressed={view === "world"} onClick={() => setView("world")}>World</button><button aria-pressed={view === "us"} onClick={() => setView("us")}>United States</button></div>
     {view === "us" ? <Suspense fallback={<p className="personal-archive-note" role="status">Loading the U.S. map…</p>}><USTravelMap /></Suspense> : <>
     <TravelMap />
-    <div className="personal-travel-groups">{groups.map((group, index) => <section key={group} aria-labelledby={`region-${index}`}><p className="personal-eyebrow">{String(index + 1).padStart(2, "0")}</p><h2 id={`region-${index}`}>{group}</h2><ul>{travelArchive.countries.filter((country) => country.group === group).map((country) => <li key={country.id}>{country.name}</li>)}</ul></section>)}</div>
+    <div className="personal-travel-groups">{groups.map((group, index) => <section key={group} aria-labelledby={`region-${index}`}><p className="personal-eyebrow">{String(index + 1).padStart(2, "0")}</p><h2 id={`region-${index}`}>{group}</h2><ul>{travelArchive.countries.filter((country) => country.group === group).map((country) => <li key={country.id}>{country.name}{country.places?.length > 0 && <span className="personal-travel-places"> · {country.places.join(", ")}</span>}</li>)}</ul></section>)}</div>
     <p className="personal-archive-note">Started with <OutboundLink href={travelArchive.sourceUrl}>my original travel page</OutboundLink>, with more places added along the way.</p>
     </>}
   </>;

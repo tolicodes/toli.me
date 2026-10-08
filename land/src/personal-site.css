@@ -95,6 +95,7 @@ body { margin: 0; min-width: 320px; }
 .personal-eyebrow { font-family: "Nunito Sans", sans-serif; font-size: 13px; color: #738164; margin-bottom: 12px !important; }
 .personal-travel-groups h2 { font-size: 34px; }
 .personal-travel-groups ul { margin-top: 18px; font-size: 21px; line-height: 1.8; }
+.personal-travel-places { color: var(--muted); font-size: .8em; }
 .personal-archive-note { max-width: 650px; color: var(--muted); font-size: 16px; padding: 28px 0; }
 .personal-archive-note a { text-decoration: underline; text-underline-offset: 3px; }
 .personal-archive-note svg { width: 15px; height: 15px; margin-left: 3px; }

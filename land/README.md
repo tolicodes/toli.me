@@ -22,7 +22,7 @@ The packaging tests inspect the build output, so build before running checks fro
 - `#/publications`: the guide and Principles.
 - `#/creative`: Drawn, Easter Creatures, Las Chicas, Spa Date, and Obscure Parody Videos.
 - `#/writing`: all six original essays, linked directly to Medium, with thumbnails and short summaries.
-- `#/travels`: World / United States map views. The U.S. view fills 8 selected states and pins 13 places; the default world view remains above 15 countries grouped geographically: the original 14-country archive plus Spain, added at Toli’s request on October 3, 2026. No visit dates or complete lifetime count are inferred.
+- `#/travels`: World / United States map views. The U.S. view fills 17 selected states plus D.C. and pins 23 places; the default world view remains above 18 countries grouped geographically: the original 14-country archive plus Spain, Mexico, Switzerland and Kenya. No visit dates or complete lifetime count are inferred.
 - Work links directly to https://tolicodes.com.
 
 Mobile navigation expands inline and supports Escape. Routes update the document title, focus the new content, reset scroll, and support browser history. Unknown/retired map URLs safely return to home. There is no map interaction required to find the retained content.
@@ -117,3 +117,11 @@ Toli requested the three main projects first, compactly, then Creative in the sa
 The existing Obscure Parody Videos link is visible in both Creative placements. Its actual YouTube page is marked Private in the authenticated session, so the listing states that status; no video privacy setting is changed and no private artwork/title is republished. A request for additional public video/playlist links remains pending. The linked channel's visible collections did not establish a parody playlist. This is not a verified watchable public video collection.
 
 Existing content/privacy/navigation/packaging tests, production and Storybook builds, hosted phone/desktop visual checks, original portrait separation and row-image sizing are verified before the established Netlify publication. Compact-main-project, Creative-row and mobile Creative stories cover the new presentation. Matched light-theme, top-scroll 430×844/1280×900 screenshots and a source/deployment receipt are retained in `/Users/toli/Documents/toli-compact-projects-2026-10-07/`; publication is recorded separately from implementation.
+
+## Approved travel additions — October 7, 2026
+
+Implemented: the maintained U.S. selection now contains 17 states plus D.C. and 23 places. D.C. uses the existing complete district boundary and is counted separately from states. The original eight-state selection is preserved; additions are Portland, Fort Worth, Springdale/Zion, Jersey City, New Haven, Philadelphia, Pontoon Beach, Killington, Charlotte and Washington, D.C. Pins use approximate public place centers, not private photo GPS. Existing Leaflet selection, keyboard controls, reset, zoom and Hawaii inset remain shared.
+
+World now highlights 18 countries and lists Tulum under Mexico, Zürich under Switzerland and Pridelands under Kenya. Toli explicitly approved these additions and excluded London. Charlotte is included by his selection despite incomplete receipt evidence. The private metadata/email research remains partial; public selections do not imply exhaustive travel history. No private photo, receipt, message, visit date or research link enters the app.
+
+Verified for this candidate: production build, all 33 local tests and Storybook build pass. Geographic tests check every pin inside its complete state/district boundary, original country import preservation and exclusion of the United Kingdom. Desktop 1024×900 and phone 390×844 show 18 fills, 23 pins and no page overflow; D.C./Charlotte selection and reset pass. The world list also has no overflow at 320px. Matched before/after screenshots stay in the private evidence directory. Production publication and remote-byte verification are recorded separately in the private travel-additions evidence receipt and Toli Wiki.

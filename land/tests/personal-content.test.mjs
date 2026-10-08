@@ -44,17 +44,23 @@ test("all six essays retain their original titles and direct Medium destinations
   for (const { href } of writing) assert.equal(new URL(href).hostname, "tolicodes.medium.com");
 });
 
-test("travel list preserves the original import and adds Spain as requested", () => {
-  assert.equal(travelArchive.countries.length, 15);
-  assert.equal(new Set(travelArchive.countries.map(({ id }) => id)).size, 15);
+test("travel list preserves the original import and user additions while excluding London", () => {
+  assert.equal(travelArchive.countries.length, 18);
+  assert.equal(new Set(travelArchive.countries.map(({ id }) => id)).size, 18);
   assert.deepEqual(travelArchive.countries.find(({ id }) => id === "es"), {
     id: "es", name: "Spain", group: "Europe",
   });
   assert.deepEqual(
-    travelArchive.countries.filter(({ id }) => id !== "es"),
+    travelArchive.countries.filter(({ id }) => !["es", "mx", "ch", "ke"].includes(id)),
     travelSource.visitedCountries.map(({ id, name, group }) => ({ id, name, group })),
   );
   assert.equal(travelArchive.sourceUrl, travelSource.source.url);
+  assert.deepEqual(travelArchive.countries.filter(({ id }) => ["mx", "ch", "ke"].includes(id)), [
+    { id: "mx", name: "Mexico", group: "Americas", places: ["Tulum"] },
+    { id: "ch", name: "Switzerland", group: "Europe", places: ["Zürich"] },
+    { id: "ke", name: "Kenya", group: "Africa", places: ["Pridelands"] },
+  ]);
+  assert.ok(!travelArchive.countries.some(({ id }) => id === "gb"));
   assert.ok(travelSource.visitedCountries.every(({ status, dates }) => status === "visited" && dates === null));
 });
 
