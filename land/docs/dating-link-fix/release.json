@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-03",
+  "verifiedAt": "2026-10-04T01:31:25.220803+00:00",
+  "implementationCommit": "a10a359ef446049682dd0e9789333d89e541c09d",
+  "deployId": "6ac1abf4cee16bf03d5710e9",
+  "siteId": "bc4a1b57-c973-49eb-b3f0-e7cb69a11925",
+  "url": "https://toli.me",
+  "betaUrl": "https://beta.toli.me",
+  "oldHref": "https://toli.love/",
+  "newHref": "https://love.toli.me/",
+  "checks": {
+    "productionBuild": "passed",
+    "tests": "24/24 passed",
+    "diffWhitespace": "passed",
+    "targetHttpsStatus": 200,
+    "liveBrowser": "Both image and Take a look links use love.toli.me on the deployed homepage; clicking the button opened https://love.toli.me/ with Meet Toli page. Browser used beta alias due preceding apex local DNS cache.",
+    "apexAssets": "curl --resolve toli.me:443:75.2.60.5 with normal TLS verification"
+  },
+  "liveAssets": [
+    {
+      "path": "index.html",
+      "httpStatus": 200,
+      "sha256": "02269c9f7657c47653fd95f67f7ff53fe53a53c939e4e2db67a153d5de919055",
+      "matchesBuild": true
+    },
+    {
+      "path": "assets/index-Bylbv5Mq.js",
+      "httpStatus": 200,
+      "sha256": "b2e2cc18d44718c416fcc1bfb5a5c43ddb626b5df03299859cf4df9e5050fd61",
+      "matchesBuild": true
+    },
+    {
+      "path": "assets/index-DTHa2RFe.css",
+      "httpStatus": 200,
+      "sha256": "5ea35e465ac047339547b7502f61d3da556af98089fde1a3a2ce92be45664947",
+      "matchesBuild": true
+    }
+  ],
+  "screenshots": {
+    "before": "before-desktop.jpg",
+    "after": "after-desktop.jpg",
+    "viewport": "1024x900",
+    "theme": "light",
+    "scroll": "top"
+  },
+  "dnsChanges": false,
+  "domainRedirectCreated": false,
+  "sourceDomainObservation": {
+    "domain": "toli.love",
+    "dns": "NXDOMAIN",
+    "registryRdap": "https://rdap.registry.love/rdap/domain/toli.love",
+    "registryStatus": 404,
+    "registryMessage": "Domain toli.love is available for registration"
+  }
+}

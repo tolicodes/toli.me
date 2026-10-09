@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-03",
+  "verifiedAt": "2026-10-04T01:44:16.841923+00:00",
+  "implementationCommit": "1c68a7531ca05d5306a337216511b34c35d4dabd",
+  "deployId": "6ac1af1c5a2b12a4fff0bb19",
+  "url": "https://toli.me/#/travels",
+  "betaUrl": "https://beta.toli.me/#/travels",
+  "addedCountry": {
+    "id": "es",
+    "name": "Spain",
+    "group": "Europe",
+    "source": "Explicit user request, October 3, 2026"
+  },
+  "countryCount": 15,
+  "originalImportPreserved": true,
+  "checks": {
+    "productionBuild": "passed",
+    "tests": "24/24 passed",
+    "whitespace": "passed",
+    "liveBrowser": "Spain appears under Europe, 15 countries, no horizontal overflow, top scroll at 1024x900 through beta alias",
+    "apexAssetVerification": "curl --resolve toli.me:443:75.2.60.5, normal TLS verification enabled"
+  },
+  "screenshots": {
+    "before": "before-desktop.jpg",
+    "after": "after-desktop.jpg",
+    "viewport": "1024x900",
+    "theme": "light",
+    "scrollY": 0
+  },
+  "liveAssets": [
+    {
+      "path": "index.html",
+      "httpStatus": 200,
+      "sha256": "a457eeb0b0c62b8ffd92476387ac06f6ca3aaf802048a89028f6627fb7bdf6b6",
+      "matchesBuild": true
+    },
+    {
+      "path": "assets/index-BEM5G34m.js",
+      "httpStatus": 200,
+      "sha256": "93690092b177dcdbf993d1a7ba9893e3aeb2530e4f5b952d7b24a07ccacabb69",
+      "matchesBuild": true
+    },
+    {
+      "path": "assets/index-DTHa2RFe.css",
+      "httpStatus": 200,
+      "sha256": "5ea35e465ac047339547b7502f61d3da556af98089fde1a3a2ce92be45664947",
+      "matchesBuild": true
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Toli Land — exploration check, October 3, 2026</title>
+<style>
+body{font:17px/1.6 system-ui,sans-serif;color:#243b31;background:#f8f6ef;max-width:980px;margin:48px auto;padding:0 24px}h1,h2{line-height:1.2}h1{font-size:34px}h2{margin-top:48px;font-size:25px}p{max-width:800px}img{display:block;max-width:100%;height:auto;border:1px solid #dedbcf;border-radius:8px;margin:20px 0 36px}figure{margin:0}figcaption{font-size:14px;color:#526259}a{color:#226a50}.phone{max-width:390px}.status{font-weight:700}
+</style>
+<h1>Toli Land: charm versus effort</h1>
+<p>October 3, 2026. Bounded live review of <a href="https://beta.toli.me">beta.toli.me</a> in the Codex in-app browser. The current 54-entry beta is the evidence; the newly requested 15-destination version has not been implemented.</p>
+<p><strong>Recommendation:</strong> make a normal scrolling page with visible titles, brief previews, recognizable illustrations and direct reading links the default. Keep the map as an optional “Explore Toli Land” experience. This is the assistant's recommendation in response to Toli's question, not an approved redesign.</p>
+<p>The artwork is distinctive and the category labels help. The main friction comes from successive maps, hidden destinations on a phone and an intermediary essay page that adds little information before the actual reading destination.</p>
+
+<h2>1. World map — clear categories, weak introduction</h2>
+<p class="status">Health: mixed.</p>
+<p>The seven category symbols have readable labels and the Capital offers a starting point. The first view gives no personal introduction or actual project/essay titles. A large share of the screen is blank space or navigation artwork. Zoom controls and “Drag to wander” establish an interaction to learn before browsing content.</p>
+<figure><img src="01-world.jpg" width="798" height="1117" alt="Toli Land world map at the browser's default 798 by 1117 viewport"><figcaption>Default viewport, current beta home. Captured this review.</figcaption></figure>
+
+<h2>2. Writing map — subjects appear after another navigation step</h2>
+<p class="status">Health: mixed.</p>
+<p>Selecting Writing opens Story Grove after an animated transition. All six landmarks fit at this viewport; Back and Browse writing are visible. Short labels such as “Vulnerability” and “A Different Perspective” give less information than the actual essay titles, and there are no summaries to help choose. “Story Grove” is decorative vocabulary a visitor has to connect with Writing.</p>
+<figure><img src="02-writing.jpg" width="798" height="1117" alt="Writing map with six illustrated essay landmarks"><figcaption>Settled Writing state; the transient zoom frame was rejected.</figcaption></figure>
+
+<h2>3. DOTA essay introduction — clear action, limited added value</h2>
+<p class="status">Health: action clear; extra step.</p>
+<p>Selecting DOTA &amp; Consciousness opens a large character image, title, generic one-sentence description and “Read the essay” link to Medium. The observed route is World → Writing → essay introduction → external reading link. For this item, the intermediate page offers little substantive context. The external link was inspected but not opened; destination availability and the reading experience were not tested.</p>
+<figure><img src="03-essay.jpg" width="798" height="1117" alt="DOTA and Consciousness introduction with Read the essay button"><figcaption>The direct reading action is clear once this page is reached.</figcaption></figure>
+
+<h2>4. Writing at 390 × 844 — exploration requires panning</h2>
+<p class="status">Health: high discovery friction.</p>
+<p>On returning to Writing at this phone-sized viewport, only Energy Cords and Vulnerability are fully visible. Two more landmarks are partially cut off at the right edge, and the remaining two are off-screen. Panning or zooming is required to discover the whole set. “Browse writing” offers a useful alternative, but it takes another action.</p>
+<p><strong>Accessibility risk:</strong> spatial exploration and small hint text add demands on low-vision or motor-impaired visitors. The captured accessibility tree exposes named controls and describes keyboard alternatives; this review did not test keyboard operation, screen readers, contrast ratios or reduced-motion behavior, so it does not establish compliance or failure.</p>
+<figure><img class="phone" src="04-phone-writing.jpg" width="390" height="844" alt="Phone Writing map with two whole essay landmarks and partial landmarks off the right edge"><figcaption>390 × 844 responsive viewport, not a physical-device test.</figcaption></figure>
+
+<h2>5. Browse writing / The atlas — useful list, secondary position</h2>
+<p class="status">Health: useful fallback with excess navigation overhead.</p>
+<p>Browse writing opens a searchable atlas filtered to Writing. Full titles are easier to scan. Seven category links and other atlas controls occupy the top portion before the essay list. The default list contains five essays; the accessibility tree also shows an unchecked “Include the after-hours corners” control. The map displayed six landmarks. This filter was not toggled in this review.</p>
+<figure><img class="phone" src="05-phone-list.jpg" width="390" height="844" alt="Phone atlas with search, category links and Writing essay list"><figcaption>Existing list alternative; captured after opening Browse writing.</figcaption></figure>
+
+<h2>Recommended next design</h2>
+<p>For the retained 15 personal destinations, show a short introduction, three or four highlighted works, then Publications, Creative, Writing and Travels in a scrolling layout. Work links to ToliCodes; Dating Bounty remains visible as a separate personal project. Keep original covers, characters and illustrations alongside plain titles and brief descriptions. Reading links should open the writing directly; project pages should exist when they add useful context. Offer “Explore Toli Land” as an optional map mode.</p>
+<p>These are design judgments from a bounded walkthrough, not measured user behavior. No usability study, complete content review, loading-performance measurement, outbound-destination audit or full accessibility test was conducted. The viewport override was reset. No application implementation or deployment occurred.</p>
+</html>

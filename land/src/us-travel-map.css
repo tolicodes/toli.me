@@ -1,0 +1,40 @@
+.personal-us-travels { margin-top: 28px; }
+.us-travel-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.us-travel-heading h2 { font-size: 38px; }
+.us-travel-heading p, .us-map-hint { font-size: 15px; color: var(--muted); margin-top: 8px; }
+.us-map-reset { border: 1px solid var(--line); border-radius: 5px; padding: 10px 14px; background: var(--paper); color: var(--ink); font: 14px "Nunito Sans", sans-serif; cursor: pointer; white-space: nowrap; }
+.us-map-layout { position: relative; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #f1f0e3; }
+.us-map-panel { height: 470px; background: #f1f0e3; z-index: 0; }
+.us-hawaii-inset { position: absolute; left: 50%; transform: translateX(-50%); bottom: 16px; width: 210px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; z-index: 1; }
+.us-hawaii-inset h3 { font-size: 22px; padding: 10px 12px 0; }
+.us-map-panel--hawaii { height: 130px; background: var(--paper); }
+.us-map-panel--hawaii .leaflet-control-zoom { display: none; }
+.personal-us-travels .leaflet-control-zoom a { color: var(--ink); background: var(--paper); }
+.personal-us-travels .leaflet-popup-content, .personal-us-travels .leaflet-tooltip { font-family: "Nunito Sans", sans-serif; color: var(--ink); }
+.personal-us-travels .leaflet-popup-content p { margin: 0; }
+.personal-us-travels .leaflet-popup-content, .personal-world-travels .leaflet-popup-content { max-width: calc(100vw - 150px); overflow-wrap: break-word; }
+.us-map-pin { background: transparent; border: 0; }
+.us-map-pin-shape { display: block; position: absolute; left: 5px; top: 6px; width: 18px; height: 18px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: #bd8541; border: 2px solid #fcfaf1; box-shadow: 0 1px 3px #102e2960; }
+.us-map-pin-shape::after { content: ""; position: absolute; left: 4px; top: 4px; width: 6px; height: 6px; background: #fcfaf1; border-radius: 50%; }
+.us-map-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; font: 12px "Nunito Sans", sans-serif; color: var(--muted); }
+.us-map-caption > span { display: flex; align-items: center; gap: 8px; }
+.us-map-caption a { text-decoration: underline; text-underline-offset: 3px; }
+.us-state-key, .us-pin-key { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #527550; }
+.us-pin-key { background: #bd8541; margin-left: 12px; }
+.us-map-hint { margin-top: 12px !important; }
+.us-travel-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 28px; margin-top: 12px; }
+.us-travel-list section { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.us-travel-list h3 { font-size: 29px; margin-bottom: 12px; }
+.us-travel-list button { display: block; text-align: left; background: none; border: 0; color: var(--ink); font: 18px Georgia, serif; padding: 8px 0; min-height: 44px; cursor: pointer; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.us-travel-list button:hover { color: #456c40; }
+.us-travel-list button span { color: var(--muted); font-size: 14px; }
+@media (max-width: 760px) {
+  .us-travel-heading { align-items: start; }
+  .us-travel-heading h2 { font-size: 31px; }
+  .us-map-panel { height: 300px; }
+  .us-hawaii-inset { position: relative; left: auto; transform: none; bottom: auto; width: auto; border: 0; border-top: 1px solid var(--line); border-radius: 0; }
+  .us-map-panel--hawaii { height: 160px; }
+  .us-map-caption { align-items: start; flex-direction: column; }
+  .us-travel-list { grid-template-columns: 1fr 1fr; gap: 0 22px; }
+  .us-travel-list h3 { font-size: 27px; }
+}

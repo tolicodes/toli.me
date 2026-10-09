@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-05",
+  "verifiedAt": "2026-10-05T07:52:43.116052+00:00",
+  "implementationCommit": "75942a05867787077210711f1520858f3a1ceec7",
+  "deployId": "6ac3571db1623cfc2f042bcd",
+  "url": "https://toli.me/#/travels",
+  "countryCount": 15,
+  "checks": {
+    "productionBuild": "passed",
+    "tests": "25/25 passed",
+    "storybookBuild": "passed",
+    "whitespace": "passed",
+    "liveBrowser": "Passed at 1024x900 and 390x844 CSS pixels: 15 country highlights, 15 list entries, no horizontal overflow, no browser errors/warnings"
+  },
+  "screenshots": {
+    "desktopViewport": "1024x900 CSS pixels",
+    "phoneViewport": "390x844 CSS pixels",
+    "theme": "light",
+    "scrollY": 0,
+    "liveDesktop": "live-desktop.jpg",
+    "livePhone": "live-phone.jpg"
+  },
+  "liveAssets": [
+    {
+      "path": "index.html",
+      "httpStatus": 200,
+      "sha256": "4f34bb239684b9c1860c5a7006a002175534e2b138fcb6aa56284efb818917ec",
+      "matchesBuild": true
+    },
+    {
+      "path": "assets/index-BO46rmQK.js",
+      "httpStatus": 200,
+      "sha256": "6b8055899374c6f534039c67cf72917520a9e150b3ba4f2641bc336d592e33f6",
+      "matchesBuild": true
+    },
+    {
+      "path": "assets/index-BRiY0mpn.css",
+      "httpStatus": 200,
+      "sha256": "c5dfa6e6824339f2650b8c17467306a51a1acc11da1c2ae06cb919cec5b1796d",
+      "matchesBuild": true
+    }
+  ]
+}

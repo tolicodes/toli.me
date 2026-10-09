@@ -1,0 +1,187 @@
+// Selected personal-site scope, October 3, 2026. Original destinations and
+// writing titles are preserved from docs/content-inventory.json. Drawn was
+// added in the later scope decision; Principles' maintained repository now
+// identifies https://principles.toli.me as its canonical public site.
+const drawn = {
+  id: "drawn",
+  title: "Drawn",
+  description: "Life, in comic form.",
+  href: "https://drawn.toli.me/",
+  cta: "Read the comics",
+  image: "/assets/personal/drawn-toli-banters-sober-ish.webp",
+  imageAlt: "Sober-ish, a published Toli Banters comic showing a colorful conversation on a sofa.",
+  imageClass: "drawn",
+};
+
+const guide = {
+  id: "neurodiverse-guide",
+  title: "Neurodiverse Guide",
+  description: "Making work work for different minds.",
+  subtitle: "(and my YouTube talk)",
+  href: "https://neurodiverse.toli.me/",
+  cta: "Read the guide",
+  image: "/assets/personal/guide-character.webp",
+  imageAlt: "An illustrated Neurodiverse Guide book with welcoming arms and walking boots.",
+  imageClass: "guide",
+};
+
+const datingBounty = {
+  id: "dating-bounty",
+  title: "Dating Bounty",
+  description: "A very personal side project.",
+  href: "https://love.toli.me/",
+  cta: "Take a look",
+  image: "/assets/personal/dating-bounty.webp",
+  imageAlt: "A cheerful pink envelope character with a heart seal and a little matchmaking note.",
+  imageClass: "dating",
+};
+
+export const featuredProjects = [drawn, guide, datingBounty];
+
+export const publications = [
+  guide,
+  {
+    id: "principles",
+    title: "Principles",
+    description: "A collaborative book about approaching life’s obstacles.",
+    href: "https://principles.toli.me",
+    cta: "Read the book",
+  },
+];
+
+export const creativeProjects = [
+  drawn,
+  {
+    id: "easter-creatures",
+    title: "Easter Creatures",
+    description: "Creature drawings, hidden eggs, and a Miami art experiment.",
+    href: "https://eastercreatures.carrd.co/",
+    cta: "Meet the creatures",
+    image: "/assets/personal/easter-creatures.webp",
+    imageAlt: "Original Easter Creatures sketch of a top-hatted creature holding a hot drink, with balloons and a small companion.",
+    imageClass: "easter",
+  },
+  {
+    id: "las-chicas",
+    title: "Las Chicas",
+    description: "A visit to an art collective and printmaking workshop in Granada, Nicaragua.",
+    href: "https://laschicas.tolicodes.com/",
+    cta: "Visit the workshop",
+    image: "/assets/personal/las-chicas.webp",
+    imageAlt: "Las Chicas artists in their Granada workshop holding Dropbox Growth prints behind a display of handmade art.",
+    imageClass: "las-chicas",
+  },
+  {
+    id: "spa-date",
+    title: "Spa Date",
+    description: "A playful invitation to a spa date.",
+    href: "https://spadate.toli.me",
+    cta: "Take a look",
+    image: "/assets/personal/spa-date.webp",
+    imageAlt: "Two cheerful illustrated feet in a candlelit jacuzzi, from the original Spa Date page.",
+    imageClass: "spa-date",
+  },
+  {
+    id: "obscure-parody-vids",
+    title: "Obscure Parody Videos",
+    description: "A detour into the wonderfully obscure.",
+    subtitle: "Currently private on YouTube.",
+    href: "https://www.youtube.com/watch?v=484U5bUcnb0",
+    cta: "Watch the video",
+    image: "/assets/personal/obscure-parody.webp",
+    imageAlt: "A still from Toli’s parody video with three performers and a vacuum cleaner.",
+    imageClass: "parody",
+  },
+];
+
+export const writing = [
+  {
+    id: "getting-back-to-love",
+    title: "Getting Back to Love",
+    description: "A personal, spiritual reflection on returning to love through memories, attention, and connection.",
+    image: "/assets/personal/getting-back-to-love.webp",
+    imageAlt: "Colorful intertwined figures in the original Getting Back to Love artwork.",
+    href: "https://tolicodes.medium.com/getting-back-to-love-2942d026882b",
+    cta: "Read the essay",
+  },
+  {
+    id: "energy-cords",
+    title: "Energy Cords and Foreign Energy in your Aura",
+    description: "My spiritual take on emotional attachments, other people’s influence, and choosing what to let go.",
+    image: "/assets/personal/energy-cords.webp",
+    imageAlt: "A glowing seated figure surrounded by blue light in the original Energy Cords artwork.",
+    href: "https://tolicodes.medium.com/energy-cords-and-foreign-energy-in-your-aura-7bae5ac3c57c",
+    cta: "Read the essay",
+  },
+  {
+    id: "focus-on-negative",
+    title: "Why We Focus on the Negative and How Can We Change It",
+    description: "My reflections on noticing thoughts, separating facts from stories, and making room for gratitude.",
+    image: "/assets/personal/focus-on-negative.webp",
+    imageAlt: "A cartoon cave dweller in the original negative-focus essay artwork.",
+    href: "https://tolicodes.medium.com/why-we-focus-on-the-negative-and-how-its-keeping-us-from-happiness-da2224de0899",
+    cta: "Read the essay",
+  },
+  {
+    id: "rejection-breakups",
+    title: "Rejection, Breakups, Vulnerability, and BDSM",
+    description: "Learning to ask for what I want, face rejection, and explore trust without closing myself off to love.",
+    image: "/assets/personal/rejection-breakups-cartoon.webp",
+    imageAlt: "An illustrated Toli gently holding a cracked, glowing heart on a garden bench at dusk.",
+    href: "https://tolicodes.medium.com/rejection-breakups-vulnurability-and-bdsm-b2f80b682373",
+    cta: "Read the essay",
+  },
+  {
+    id: "boredom-bipolar",
+    title: "The Problem with Boredom and Bipolar",
+    description: "A personal reflection on boredom and bipolar.",
+    image: "/assets/personal/toli-portrait.webp",
+    imageAlt: "Toli laughing, used as an author portrait for an essay without lead artwork.",
+    href: "https://tolicodes.medium.com/the-problem-with-boredom-and-bipolar-442e62ed29ee",
+    cta: "Read the essay",
+  },
+  {
+    id: "dota-consciousness",
+    title: "DOTA and Consciousness",
+    description: "An essay connecting DOTA and consciousness.",
+    image: "/assets/personal/toli-portrait.webp",
+    imageAlt: "Toli laughing, used as an author portrait for an essay without lead artwork.",
+    href: "https://tolicodes.medium.com/dota-and-conciousness-87609258854a",
+    cta: "Read the essay",
+  },
+];
+
+// Public Medium clap totals observed October 7, 2026, among 30 visible stories.
+// Claps are not unique readers; this is an editorial selection, not a live feed.
+export const popularWriting = ["energy-cords", "rejection-breakups", "focus-on-negative"].map((id) => writing.find((article) => article.id === id));
+
+// Copied from docs/travel-import/travel-data.json, verified October 3, 2026
+// against the original travel page's explicit visited list and map permalink.
+// Spain was added at Toli’s request on October 3, 2026. The original imported
+// list remains preserved in docs/travel-import/. No trip dates or complete
+// lifetime tally are inferred; ambiguous source mentions stay excluded.
+export const travelArchive = {
+  title: "Places I’ve been",
+  intro: "A little of the world I’ve explored.",
+  sourceUrl: "https://travel.tolicodes.com/",
+  countries: [
+    { id: "ca", name: "Canada", group: "Americas" },
+    { id: "cr", name: "Costa Rica", group: "Americas" },
+    { id: "ni", name: "Nicaragua", group: "Americas", places: ["Granada", "San Juan del Sur"] },
+    { id: "us", name: "United States", group: "Americas", places: ["Goleta", "Santa Barbara area", "Rising Sun area"] },
+    { id: "mx", name: "Mexico", group: "Americas", places: ["Tulum", "Cabo San Lucas"] },
+    { id: "fi", name: "Finland", group: "Europe" },
+    { id: "fr", name: "France", group: "Europe" },
+    { id: "it", name: "Italy", group: "Europe" },
+    { id: "es", name: "Spain", group: "Europe", places: ["Granada"] },
+    { id: "ch", name: "Switzerland", group: "Europe", places: ["Zürich"] },
+    { id: "ru", name: "Russia", group: "Europe & Asia" },
+    { id: "tz", name: "Tanzania", group: "Africa", places: ["Kiwengwa / Zanzibar"] },
+    { id: "ke", name: "Kenya", group: "Africa", places: ["Pridelands"] },
+    { id: "il", name: "Israel", group: "Asia" },
+    { id: "my", name: "Malaysia", group: "Asia" },
+    { id: "th", name: "Thailand", group: "Asia" },
+    { id: "vn", name: "Vietnam", group: "Asia" },
+    { id: "au", name: "Australia", group: "Oceania" },
+  ],
+};

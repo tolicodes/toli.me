@@ -1,0 +1,94 @@
+{
+  "verified_at": "2026-10-08T02:54:01.999334+00:00",
+  "source_sha": "bd124022060177082769adaff34effda122b0189",
+  "source_subject": "Add U.S. travel map with state fills and place pins",
+  "deploy": {
+    "site_id": "bc4a1b57-c973-49eb-b3f0-e7cb69a11925",
+    "site_name": "toli-land-beta",
+    "deploy_id": "6ac705ba71ba3f5e52afa182",
+    "deploy_url": "https://6ac705ba71ba3f5e52afa182--toli-land-beta.netlify.app",
+    "logs": "https://app.netlify.com/projects/toli-land-beta/deploys/6ac705ba71ba3f5e52afa182",
+    "function_logs": "https://app.netlify.com/projects/toli-land-beta/logs/functions",
+    "edge_function_logs": "https://app.netlify.com/projects/toli-land-beta/logs/edge-functions",
+    "url": "https://toli.me"
+  },
+  "free_checks": {
+    "tests": 33,
+    "production_build": "passed",
+    "storybook_build": "passed"
+  },
+  "assets": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "expected_sha256": "ba20a999c901e6684004fbf8e2b7805320aa2243bebcba9b47e3086e51bd3f34",
+      "live_sha256": "ba20a999c901e6684004fbf8e2b7805320aa2243bebcba9b47e3086e51bd3f34",
+      "match": true
+    },
+    {
+      "path": "assets/USTravelMap-KO2I0wkt.js",
+      "status": 200,
+      "expected_sha256": "1b75336bbd81e9f6a9b85254180a11e766d49f5eae3fe926b5d95a498682723f",
+      "live_sha256": "1b75336bbd81e9f6a9b85254180a11e766d49f5eae3fe926b5d95a498682723f",
+      "match": true
+    },
+    {
+      "path": "assets/index-BtI36iXM.js",
+      "status": 200,
+      "expected_sha256": "80397f42f26cdb95836eb7b0b8a3ff13365832cea8490dbd253e8fe58d3309db",
+      "live_sha256": "80397f42f26cdb95836eb7b0b8a3ff13365832cea8490dbd253e8fe58d3309db",
+      "match": true
+    },
+    {
+      "path": "assets/module-CfNfz3YC.js",
+      "status": 200,
+      "expected_sha256": "27b6b3b9b3ebba03973a3fbc78e5db40befa38d8003bbdb682bfb0f5329ace8c",
+      "live_sha256": "27b6b3b9b3ebba03973a3fbc78e5db40befa38d8003bbdb682bfb0f5329ace8c",
+      "match": true
+    },
+    {
+      "path": "assets/USTravelMap-DRQMGghq.css",
+      "status": 200,
+      "expected_sha256": "225fdadd7fb3a1736d717e86edbda7245696ee42e9630c62f101c4d76a5ca697",
+      "live_sha256": "225fdadd7fb3a1736d717e86edbda7245696ee42e9630c62f101c4d76a5ca697",
+      "match": true
+    },
+    {
+      "path": "assets/index-Zd3sNieM.css",
+      "status": 200,
+      "expected_sha256": "56e5897edd364672c3573cc9ed953890f0f947fb0eb33cfd5605936234bc59f1",
+      "live_sha256": "56e5897edd364672c3573cc9ed953890f0f947fb0eb33cfd5605936234bc59f1",
+      "match": true
+    }
+  ],
+  "deploy_verification": {
+    "id": "6ac705ba71ba3f5e52afa182",
+    "state": "ready",
+    "published_at": "2026-10-08T02:53:48.479Z",
+    "url": "https://toli.me",
+    "ssl_url": "https://toli.me"
+  },
+  "live_browser": {
+    "desktop": {
+      "viewport": [
+        1024,
+        900
+      ],
+      "filled_states": 8,
+      "pins": 13,
+      "horizontal_overflow": false,
+      "screenshot": "live-desktop.jpg"
+    },
+    "phone": {
+      "viewport": [
+        390,
+        844
+      ],
+      "filled_states": 8,
+      "pins": 13,
+      "horizontal_overflow": false,
+      "place_selection_popup": "Miami, Florida",
+      "screenshot": "live-phone.jpg"
+    }
+  }
+}

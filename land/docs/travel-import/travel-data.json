@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "retrievedOn": "2026-10-03",
+  "source": {
+    "title": "Toli Travels",
+    "url": "https://travel.tolicodes.com/",
+    "countryListSelector": "#list02 ol",
+    "countryCountSelector": "#text17",
+    "originalMapUrl": "https://www.amcharts.com/visited_countries/#FI,FR,IT,RU,CA,CR,NI,US,TZ,IL,MY,TH,VN,AU",
+    "mapImageUrl": "https://travel.tolicodes.com/assets/images/image03.jpg?v=e51bc810",
+    "archiveCaveat": "The source declares 14 visited countries but does not state when the country list was last updated. This is a copied travel archive, not a verified current lifetime total."
+  },
+  "display": {
+    "title": "Places I’ve been",
+    "intro": "A little of the world I’ve explored.",
+    "countLabel": "14 countries in my travel archive",
+    "dateLabel": null,
+    "sourceLabel": "From my original travel page",
+    "countryGroups": [
+      "Americas",
+      "Europe",
+      "Europe & Asia",
+      "Africa",
+      "Asia",
+      "Oceania"
+    ],
+    "groupingNote": "Geographic groupings are editorial organization; the visited countries are copied exactly from the source list."
+  },
+  "visitedCountries": [
+    {
+      "id": "ca",
+      "iso2": "CA",
+      "name": "Canada",
+      "group": "Americas",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "cr",
+      "iso2": "CR",
+      "name": "Costa Rica",
+      "group": "Americas",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "ni",
+      "iso2": "NI",
+      "name": "Nicaragua",
+      "group": "Americas",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "us",
+      "iso2": "US",
+      "name": "United States",
+      "group": "Americas",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "fi",
+      "iso2": "FI",
+      "name": "Finland",
+      "group": "Europe",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "fr",
+      "iso2": "FR",
+      "name": "France",
+      "group": "Europe",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "it",
+      "iso2": "IT",
+      "name": "Italy",
+      "group": "Europe",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "ru",
+      "iso2": "RU",
+      "name": "Russia",
+      "group": "Europe & Asia",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "tz",
+      "iso2": "TZ",
+      "name": "Tanzania",
+      "group": "Africa",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "il",
+      "iso2": "IL",
+      "name": "Israel",
+      "group": "Asia",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "my",
+      "iso2": "MY",
+      "name": "Malaysia",
+      "group": "Asia",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "th",
+      "iso2": "TH",
+      "name": "Thailand",
+      "group": "Asia",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "vn",
+      "iso2": "VN",
+      "name": "Vietnam",
+      "group": "Asia",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    },
+    {
+      "id": "au",
+      "iso2": "AU",
+      "name": "Australia",
+      "group": "Oceania",
+      "status": "visited",
+      "dates": null,
+      "notes": null,
+      "sourceUrl": "https://travel.tolicodes.com/#list02",
+      "evidence": "Explicitly listed in “So Far I’ve Been to 14 Countries” and present in the amCharts permalink."
+    }
+  ],
+  "additionalMentions": [
+    {
+      "id": "hawaii",
+      "name": "Hawaii",
+      "parentCountryIso2": "US",
+      "status": "mentioned-before-planned-section",
+      "visitedVerified": false,
+      "dates": null,
+      "sourceUrl": "https://travel.tolicodes.com/#text05",
+      "evidence": "A heading reading HAWAII appears before Planned Trips. The adjacent body is lorem ipsum and the photo depicts a printmaking studio, so neither timing nor a completed visit can be reliably inferred.",
+      "publishAsVisitedPlace": false
+    },
+    {
+      "id": "nicaragua-june-2020",
+      "name": "Nicaragua",
+      "countryIso2": "NI",
+      "status": "ambiguous-trip",
+      "visitedVerified": true,
+      "dates": {
+        "rawLabel": "2020 Jun - Nicaragua",
+        "normalizedMonth": "2020-06",
+        "completedVisitVerified": false
+      },
+      "sourceUrl": "https://travel.tolicodes.com/#text07",
+      "duplicatePlannedSourceUrl": "https://travel.tolicodes.com/#text02",
+      "evidence": "The identical June 2020 heading occurs once above and once below Planned Trips. Nicaragua itself is explicitly in the visited-country list, but this month must not be attached as a verified completed-trip date.",
+      "publishAsVisitedPlace": false
+    }
+  ],
+  "plannedTrips": [
+    {
+      "id": "planned-nicaragua-june-2020",
+      "name": "Nicaragua",
+      "countryIso2": "NI",
+      "status": "historical-plan",
+      "dateLabel": "June 2020",
+      "sourceUrl": "https://travel.tolicodes.com/#text02",
+      "evidence": "Listed under Planned Trips in the old source; no evidence that this dated plan was completed. It may be an unfinished duplicate."
+    }
+  ],
+  "unresolved": [
+    "Whether the 14-country source list is still the full current travel history.",
+    "Whether Hawaii was a completed visit.",
+    "The actual date or dates of Nicaragua travel.",
+    "The locations and dates of the unlabeled source photos."
+  ],
+  "excludedTemplateContent": [
+    "All lorem ipsum body text.",
+    "Magnis parturient gallery title.",
+    "Nisl sed ultricies contact section and placeholder social links."
+  ],
+  "verification": {
+    "visitedCountryCount": 14,
+    "uniqueCountryCodes": 14,
+    "matchesSourceList": true,
+    "matchesMapPermalink": true,
+    "completedTripDatesImported": 0,
+    "geocodedCitiesImported": 0
+  }
+}
