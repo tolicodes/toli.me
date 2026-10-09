@@ -48,15 +48,15 @@ test("travel list preserves the original import and user additions while excludi
   assert.equal(travelArchive.countries.length, 18);
   assert.equal(new Set(travelArchive.countries.map(({ id }) => id)).size, 18);
   assert.deepEqual(travelArchive.countries.find(({ id }) => id === "es"), {
-    id: "es", name: "Spain", group: "Europe",
+    id: "es", name: "Spain", group: "Europe", places: ["Granada"],
   });
   assert.deepEqual(
-    travelArchive.countries.filter(({ id }) => !["es", "mx", "ch", "ke"].includes(id)),
+    travelArchive.countries.filter(({ id }) => !["es", "mx", "ch", "ke"].includes(id)).map(({ id, name, group }) => ({ id, name, group })),
     travelSource.visitedCountries.map(({ id, name, group }) => ({ id, name, group })),
   );
   assert.equal(travelArchive.sourceUrl, travelSource.source.url);
   assert.deepEqual(travelArchive.countries.filter(({ id }) => ["mx", "ch", "ke"].includes(id)), [
-    { id: "mx", name: "Mexico", group: "Americas", places: ["Tulum"] },
+    { id: "mx", name: "Mexico", group: "Americas", places: ["Tulum", "Cabo San Lucas"] },
     { id: "ch", name: "Switzerland", group: "Europe", places: ["Zürich"] },
     { id: "ke", name: "Kenya", group: "Africa", places: ["Pridelands"] },
   ]);

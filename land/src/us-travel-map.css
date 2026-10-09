@@ -12,6 +12,7 @@
 .personal-us-travels .leaflet-control-zoom a { color: var(--ink); background: var(--paper); }
 .personal-us-travels .leaflet-popup-content, .personal-us-travels .leaflet-tooltip { font-family: "Nunito Sans", sans-serif; color: var(--ink); }
 .personal-us-travels .leaflet-popup-content p { margin: 0; }
+.personal-us-travels .leaflet-popup-content, .personal-world-travels .leaflet-popup-content { max-width: calc(100vw - 150px); overflow-wrap: break-word; }
 .us-map-pin { background: transparent; border: 0; }
 .us-map-pin-shape { display: block; position: absolute; left: 5px; top: 6px; width: 18px; height: 18px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: #bd8541; border: 2px solid #fcfaf1; box-shadow: 0 1px 3px #102e2960; }
 .us-map-pin-shape::after { content: ""; position: absolute; left: 4px; top: 4px; width: 6px; height: 6px; background: #fcfaf1; border-radius: 50%; }

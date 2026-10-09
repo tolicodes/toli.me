@@ -1,3 +1,4 @@
+import { travelPlaceDetails } from "./travel-place-details.js";
 // Explicit selections from Toli, October 7, 2026. Coordinates are approximate
 // city centers; Kauai is represented by an island-center pin, not a city.
 export const getUsMapFeatures = (features, hawaii = false) => features.filter(({ id }) => hawaii ? id === "15" : Number(id) <= 56 && !["02", "15"].includes(id));
@@ -13,6 +14,7 @@ export const usTravel = [
     { name: "San Francisco", lat: 37.7749, lng: -122.4194 },
     { name: "San Diego", lat: 32.7157, lng: -117.1611 },
     { name: "Palm Springs", lat: 33.8303, lng: -116.5453 },
+    ...travelPlaceDetails.filter(({ stateId }) => stateId === "06"),
   ] },
   { id: "32", name: "Nevada", places: [{ name: "Las Vegas", lat: 36.1699, lng: -115.1398 }] },
   { id: "15", name: "Hawaii", places: [
@@ -31,5 +33,6 @@ export const usTravel = [
   { id: "17", name: "Illinois", places: [{ name: "Pontoon Beach", lat: 38.7317, lng: -90.0804 }] },
   { id: "50", name: "Vermont", places: [{ name: "Killington", lat: 43.6639, lng: -72.7906 }] },
   { id: "37", name: "North Carolina", places: [{ name: "Charlotte", lat: 35.2271, lng: -80.8431 }] },
+  { id: "24", name: "Maryland", places: travelPlaceDetails.filter(({ stateId }) => stateId === "24") },
   { id: "11", name: "District of Columbia", kind: "district", places: [{ name: "Washington, D.C.", lat: 38.9072, lng: -77.0369 }] },
 ];

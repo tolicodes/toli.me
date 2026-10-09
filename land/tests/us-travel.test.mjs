@@ -14,25 +14,26 @@ test("the mainland viewport excludes remote territories and keeps all lower 48 s
   assert.deepEqual(getUsMapFeatures(geography.features, true).map(({ id }) => id), ["15"]);
 });
 
-test("the U.S. map includes Toli’s 17 selected states, D.C. and 23 places", () => {
+test("the U.S. map includes Toli’s 18 selected states, D.C. and 26 places", () => {
   assert.deepEqual(Object.fromEntries(usTravel.map(({ name, places }) => [name, places.map(({ name }) => name)])), {
     Florida: ["Miami", "Orlando"], "New York": ["New York City"],
-    California: ["Los Angeles", "San Francisco", "San Diego", "Palm Springs"],
+    California: ["Los Angeles", "San Francisco", "San Diego", "Palm Springs", "Goleta", "Santa Barbara area"],
     Nevada: ["Las Vegas"], Hawaii: ["Honolulu", "Kauai"],
     Washington: ["Seattle"], Massachusetts: ["Boston"], Arizona: ["Sedona"],
     Oregon: ["Portland"], Texas: ["Fort Worth"], Utah: ["Springdale / Zion National Park"],
     "New Jersey": ["Jersey City"], Connecticut: ["New Haven"], Pennsylvania: ["Philadelphia"],
     Illinois: ["Pontoon Beach"], Vermont: ["Killington"], "North Carolina": ["Charlotte"],
+    Maryland: ["Rising Sun area"],
     "District of Columbia": ["Washington, D.C."],
   });
-  assert.equal(usTravel.filter(({ kind }) => kind !== "district").length, 17);
+  assert.equal(usTravel.filter(({ kind }) => kind !== "district").length, 18);
   assert.deepEqual(usTravel.filter(({ kind }) => kind === "district").map(({ id }) => id), ["11"]);
-  assert.equal(usTravel.reduce((total, { places }) => total + places.length, 0), 23);
+  assert.equal(usTravel.reduce((total, { places }) => total + places.length, 0), 26);
   assert.equal(usTravel.find(({ name }) => name === "Hawaii").places.find(({ name }) => name === "Kauai").kind, "island");
 });
 
 test("each selected pin lies inside the correct complete state geometry", () => {
-  assert.equal(new Set(usTravel.map(({ id }) => id)).size, 18);
+  assert.equal(new Set(usTravel.map(({ id }) => id)).size, 19);
   for (const state of usTravel) {
     const boundary = geography.features.find(({ id }) => id === state.id);
     assert.equal(boundary?.properties.name, state.name);

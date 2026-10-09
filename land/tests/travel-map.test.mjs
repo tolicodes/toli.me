@@ -6,6 +6,22 @@ import { travelGeographyIds } from "../src/travel-map.js";
 
 const geography = JSON.parse(readFileSync(new URL("../src/travel-geography.json", import.meta.url), "utf8"));
 
+test("Leaflet world rings never draw dateline crossings through other countries", () => {
+  const world = JSON.parse(readFileSync(new URL("../src/world-geography.json", import.meta.url), "utf8"));
+  assert.equal(world.features.length, geography.countries.length);
+  for (const country of world.features) {
+    assert.ok(country.geometry.coordinates.length, country.properties.name);
+    for (const polygon of country.geometry.coordinates) for (const ring of polygon) {
+      assert.deepEqual(ring[0], ring.at(-1));
+      for (let i = 1; i < ring.length; i++) {
+        const [lng, lat] = ring[i];
+        assert.ok(lng >= -180 && lng <= 180 && lat >= -90 && lat <= 90);
+        assert.ok(Math.abs(lng - ring[i - 1][0]) <= 180, `${country.properties.name} crosses the viewport`);
+      }
+    }
+  }
+});
+
 test("every archived country maps to its real country boundary", () => {
   const expectedNames = { us: "United States of America" };
   const highlighted = new Set();
