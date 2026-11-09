@@ -1,55 +1,49 @@
-import assert from "node:assert/strict";
-import test from "node:test";
-import { cleanUrl, sanitizeEvent, startAnalytics } from "../src/analytics-policy.js";
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import { startAnalytics } from '../src/analytics-policy.js';
 
-const site = "toli.me";
-function fixture(overrides = {}) {
-  const calls = [];
-  const listeners = {};
-  const win = { location: { hostname: site, href: "https://toli.me/?token=secret#/travels" }, navigator: {}, addEventListener: (name, fn) => { listeners[name] = fn; }, ...overrides };
-  const client = { init: (key, config) => { calls.push(["init", key, config]); config.loaded(client); }, register: (value) => calls.push(["register", value]), capture: (...args) => calls.push(["capture", ...args]), startSessionRecording: () => calls.push(["replay"]) };
-  return { calls, listeners, win, client, options: { projectToken: "phc_test", apiHost: "https://us.i.posthog.com", site, win, hashRouting: true } };
+function fixture() {
+  const scripts = [], attributes = [];
+  const win = { location: { hostname: 'toli.me', href: 'https://toli.me/' }, navigator: {} };
+  const doc = { referrer: '', querySelector: () => scripts[0], querySelectorAll: () => [{ setAttribute: (...args) => attributes.push(args) }], createElement: () => ({ setAttribute() {} }), head: { appendChild: (script) => scripts.push(script) } };
+  return { projectId: 'zb5fa2mqgu', site: 'toli.me', win, doc, scripts, attributes };
 }
 
-test("does not initialize on previews, missing configuration or privacy opt-out", () => {
-  for (const overrides of [{ location: { hostname: "beta.toli.me" } }, { navigator: { doNotTrack: "1" } }, { navigator: { globalPrivacyControl: true } }]) {
-    const f = fixture(overrides);
-    assert.equal(startAnalytics(f.client, f.options), false);
-    assert.equal(f.calls.length, 0);
+test('production capture masks inputs and denies cookies before inserting one official tag', () => {
+  const f = fixture();
+  assert.equal(startAnalytics(f), true);
+  assert.equal(f.scripts[0].src, 'https://www.clarity.ms/tag/zb5fa2mqgu');
+  assert.equal(f.scripts[0].async, true);
+  assert.deepEqual(f.win.clarity.q, [['consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' }], ['set', 'site', f.site]]);
+  assert.deepEqual(f.attributes, [['data-clarity-mask', 'true']]);
+  assert.equal(startAnalytics(f), false);
+  assert.equal(f.scripts.length, 1);
+});
+
+test('previews, opt-outs, missing IDs and credential-bearing URLs never load a collector', () => {
+  const changes = [
+    f => { f.win.location.hostname = 'preview.example.com'; },
+    f => { f.win.navigator.doNotTrack = '1'; },
+    f => { f.win.navigator.globalPrivacyControl = true; },
+    f => { f.projectId = ''; },
+    f => { f.win.location.href += '?token=private'; },
+    f => { f.win.location.href += '#access-token'; },
+    f => { f.doc.referrer = 'https://example.com/?token=private'; },
+  ];
+  for (const change of changes) {
+    const f = fixture(); change(f);
+    assert.equal(startAnalytics(f), false);
+    assert.equal(f.scripts.length, 0);
   }
+});
+
+test('blocked scripts and DOM failures cannot break rendering', () => {
   const f = fixture();
-  assert.equal(startAnalytics(f.client, { ...f.options, projectToken: "" }), false);
+  f.doc.createElement = () => { throw new Error('unavailable'); };
+  assert.equal(startAnalytics(f), false);
 });
 
-test("retains public routes while removing URL credentials, queries and unknown hashes", () => {
-  assert.equal(cleanUrl("https://user:pass@toli.me/?token=secret#/travels"), "https://toli.me/#/travels");
-  assert.equal(cleanUrl("https://tolicodes.com/?email=private#access-token"), "https://tolicodes.com/");
-});
-
-test("sanitizes event, initial referrer and clicked-link metadata without mutating originals", () => {
-  const event = { event: "$autocapture", properties: { $current_url: "https://toli.me/?secret=1", $search: "?secret=1", $set_once: { $initial_referrer: "https://example.com/?secret=2" }, $elements: [{ attr__href: "https://example.com/?secret=3", attr__value: "private" }] } };
-  const clean = sanitizeEvent(event);
-  assert.equal(clean.properties.$current_url, "https://toli.me/");
-  assert.equal(clean.properties.$search, undefined);
-  assert.equal(clean.properties.$set_once.$initial_referrer, "https://example.com/");
-  assert.deepEqual(clean.properties.$elements, [{ attr__href: "https://example.com/" }]);
-  assert.equal(event.properties.$elements[0].attr__value, "private");
-});
-
-test("records initial and hash-route pageviews with masked inputs and no console/network payloads", () => {
-  const f = fixture();
-  assert.equal(startAnalytics(f.client, f.options), true);
-  const config = f.calls[0][2];
-  assert.equal(config.session_recording.maskAllInputs, true);
-  assert.equal(config.session_recording.recordHeaders, false);
-  assert.equal(config.session_recording.recordBody, false);
-  assert.equal(config.session_recording.maskCapturedNetworkRequestFn({}), null);
-  assert.equal(config.enable_recording_console_log, false);
-  assert.equal(config.person_profiles, "never");
-  assert.equal(config.cross_subdomain_cookie, false);
-  assert.deepEqual(f.calls[2], ["capture", "$pageview", { $current_url: "https://toli.me/#/travels" }]);
-  f.win.location.href = "https://toli.me/?email=private#/creative";
-  f.listeners.hashchange();
-  assert.deepEqual(f.calls.at(-1), ["capture", "$pageview", { $current_url: "https://toli.me/#/creative" }]);
-  assert.ok(f.calls.some(([name]) => name === "replay"));
+test('known public collection deep links record while unknown hashes stay excluded', () => {
+  const f = fixture(); f.win.location.href += '#/travels';
+  assert.equal(startAnalytics(f), true);
 });
