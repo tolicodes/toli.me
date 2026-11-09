@@ -70,6 +70,20 @@ startup and analytics failures cannot affect the app. Historical PostHog recordi
 remain available; its SDK is no longer imported by the application. Source
 checks, publication and actual playback are verified separately.
 
+The versioned `/analytics/clarity-metrics-1.0.0.js` asset serves a separate,
+allowlisted integration for owned private apps. It bundles Microsoft's MIT-licensed
+`clarity-js` 0.8.77, with provenance and license in `analytics/private-metrics/vendor`.
+It captures anonymous usage metrics and a generic click count, with no session
+replay. A positive outbound schema discards DOM/playback, private paths, queries,
+fragments, referrers, titles, content-derived dimensions, coordinates and arbitrary
+events. Only a canonical root URL and fixed source labels identify the app.
+Storage consent is denied, requests omit credentials and referrers, and server
+commands cannot enable replay. Unsupported payloads fail closed; DNT/GPC and
+credential-bearing URLs skip capture. The integration version is distinct from
+each consuming app's release. Apps retain their own authentication and audience.
+The raw SDK/browser fixture and schema tests cover private-content canaries;
+publication and actual collector acceptance are separate receipt evidence.
+
 ## Workplace guide destination — October 7, 2026
 
 The featured and Publications Neurodiverse Guide entry now uses `https://neurodiverse.toli.me/`, replacing the broader ToliOS homepage. Both placements share the same content object; layout and navigation contracts are preserved. Free tests/build and the exact Netlify publication are verified separately in the task release receipt. This is a destination change, with no API or mobile behavior change.
