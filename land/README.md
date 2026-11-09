@@ -58,23 +58,17 @@ Only `dist/client` is deployed. Design notes, source evidence, QA images, and wo
 
 The October 6 production inspection confirmed this Netlify site still owns `toli.me`, `www.toli.me`, and `beta.toli.me`, with a ready production deployment and no linked Git build configuration. GitHub Pages retains a `toli.me` custom-domain setting on the earlier repository's `main` branch, but current DNS and the live homepage identify Netlify's Personal Index. A push to this checkout is source backup; publication remains the explicit Netlify command above.
 
-## PostHog session replay trial — October 7, 2026
+## Interaction analytics
 
-Implemented with pinned `posthog-js` 1.438.2: `src/analytics.js` loads the SDK after the app starts, only for the site's production apex; localhost, generated preview URLs and aliases do not initialize it. `src/posthog-config.js` accepts only the publishable project token and US ingestion host, never a personal API key. The owner completed PostHog organization setup. Project 651591 (US) is now configured with its publishable token; this committed candidate enables recording on the production apex. Deployment and actual replay receipt are verified separately from source checks.
-
-Hash changes between the public collection pages create pageview events. Anonymous events include a `site` property; no named identities/person profiles or cross-subdomain cookies are enabled. Replay masks form inputs, blocks hidden/file inputs and explicitly private elements, and disables console logs, network headers/bodies and captured network requests. Analytics URL metadata strips query strings, credentials and unknown fragments. This metadata filter is not a claim that every URL embedded in replay snapshots is redacted. Public page text/artwork remains visible in replay; this policy must be revisited before adding authenticated or private content. Do Not Track and Global Privacy Control prevent initialization. Analytics loading failures do not prevent rendering.
-
-Free verification: production build and all 29 tests passed, including host/opt-out boundaries, analytics URL redaction and hash-pageview behavior. Project configuration and deployment are complete. Actual recording receipt is verified separately in the Wiki/rollout evidence. The existing hosting/canonical redirects and site design are preserved.
-
-October 7 deployment verification: Netlify deploy `6ac69700143c29686c92bd74` is live at https://toli.me; trusted HTTPS homepage bytes match the tested build. This documentation commit does not republish application code.
-
-## Replay viewport correction — October 7, 2026
-
-The original network-mask callback returned null for every call. SDK 1.438.2 also invokes it with a URL-only object to mask replay page metadata; dropping that call removed the rrweb Meta event and its viewport dimensions, leaving the playback iframe hidden. Received sessions/full DOM snapshots alone did not verify usable playback; a recorded viewport resize could incidentally make some earlier playback work.
-
-The callback now retains sanitized URL-only metadata and rejects actual network-request records. Headers, bodies, console capture, input masking, production-host/privacy opt-outs and private-context gates retain their contracts. Replay page URLs now use the existing URL sanitizer. A regression invokes the installed SDK's actual URL-mask path and verifies that page metadata survives while request payloads are rejected. Corrected source and checks are committed before publishing; new visual playback and deployment receipts are verified separately. Old recordings lacking viewport metadata are preserved and may remain black.
-
-Viewport correction deployed: runtime source 565fe125ccbb2b438b91e0d8e1e7710e1e5c0af1; Netlify 6ac6d104143c29859092be98. New toli.me playback visibly renders the recorded page. This verifies the corrected shared callback; per-host live source checks do not establish visual playback on every host. Old recordings lacking viewport metadata remain preserved. This documentation follow-up does not rebuild or redeploy runtime code.
+Microsoft Clarity project `zb5fa2mqgu` replaces PostHog on the production apex.
+The official async tag skips aliases/previews, DNT/GPC, URL queries, unknown
+fragments and referrers containing queries/fragments. Known public collection
+hash routes are supported. Inputs and private-marked elements are masked before
+startup; the project uses Strict text masking. Both advertising and analytics
+storage consent are denied. No custom identities/content are supplied. Duplicate
+startup and analytics failures cannot affect the app. Historical PostHog recordings
+remain available; its SDK is no longer imported by the application. Source
+checks, publication and actual playback are verified separately.
 
 ## Workplace guide destination — October 7, 2026
 
