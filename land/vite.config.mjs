@@ -1,9 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  publicDir: mode === "places" ? false : "public",
   build: {
-    outDir: "dist/client",
+    outDir: mode === "places" ? "dist/places-site" : "dist/client",
+    ...(mode === "places" && {
+      assetsDir: "places-assets",
+      rollupOptions: { input: "places.html" },
+    }),
   },
   optimizeDeps: {
     include: ["react", "react-dom/client"],
@@ -16,4 +21,4 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-});
+}));

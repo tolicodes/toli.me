@@ -8,6 +8,8 @@ import "./personal-site.css";
 import personalPhotos from "./personal-photos.json";
 
 const pageTitles = { home: "Hi, I’m Toli.", publications: "Publications", creative: "Creative", writing: "Writing", travels: "Places I’ve been" };
+const travelMapUrl = "https://travel.toli.me/places";
+const navigationHref = (page) => page === "travels" ? travelMapUrl : pageHref(page);
 const navPages = ["publications", "creative", "writing", "travels"];
 
 function OutboundLink({ href, children, className = "", ...props }) {
@@ -26,7 +28,7 @@ export function SiteHeader({ currentPage = "home", initiallyOpen = false }) {
     <a href="#/" className="personal-wordmark" aria-label="Toli, home" onClick={() => setOpen(false)}>toli.me<span>.</span></a>
     <button ref={menuButton} className="personal-menu-button" aria-expanded={open} aria-controls="personal-navigation" onClick={() => setOpen(!open)}>{open ? <X size={22} /> : <List size={22} />}<span>{open ? "Close" : "Menu"}</span></button>
     <nav id="personal-navigation" aria-label="Main navigation" className={open ? "is-open" : ""}>
-      {navPages.map((page) => <a key={page} href={pageHref(page)} aria-current={currentPage === page ? "page" : undefined} onClick={() => setOpen(false)}>{page === "travels" ? "Travels" : pageTitles[page]}</a>)}
+      {navPages.map((page) => <a key={page} href={navigationHref(page)} aria-current={currentPage === page ? "page" : undefined} onClick={() => setOpen(false)}>{page === "travels" ? "Travels" : pageTitles[page]}</a>)}
       <OutboundLink href="https://tolicodes.com">Work</OutboundLink>
     </nav>
   </header>;
@@ -93,7 +95,7 @@ export function HomePage() {
     <CreativePreview />
     <section className="personal-home-section personal-popular-writing" aria-labelledby="writing-heading"><div className="personal-section-heading"><div><h2 id="writing-heading">Writing</h2><p className="personal-section-intro">Reader favorites on connection, vulnerability, and the stories we tell ourselves.</p></div><a className="personal-text-link" href="#/writing">All writing <ArrowRight aria-hidden="true" /></a></div><WritingList items={popularWriting} /></section>
     <PhotoGallery />
-    <section className="personal-home-section" aria-labelledby="explore-heading"><h2 id="explore-heading">More to explore</h2><ul className="personal-explore-list">{exploreItems.filter(({page}) => page !== "creative").map(({ page, title, copy, Icon }) => <li key={page}><a href={pageHref(page)}><Icon size={40} weight="duotone" aria-hidden="true" /><div><h3>{title}</h3><p>{copy}</p></div><ArrowRight aria-hidden="true" /></a></li>)}</ul></section>
+    <section className="personal-home-section" aria-labelledby="explore-heading"><h2 id="explore-heading">More to explore</h2><ul className="personal-explore-list">{exploreItems.filter(({page}) => page !== "creative").map(({ page, title, copy, Icon }) => <li key={page}><a href={navigationHref(page)}><Icon size={40} weight="duotone" aria-hidden="true" /><div><h3>{title}</h3><p>{copy}</p></div><ArrowRight aria-hidden="true" /></a></li>)}</ul></section>
   </>;
 }
 
@@ -108,24 +110,24 @@ export function CollectionPage({ page = "creative" }) {
   </>;
 }
 
-function PageHeading({ title, intro, children }) {
-  return <div className="personal-page-heading"><a className="personal-back" href="#/">← Back home</a><h1 id="personal-title">{title}</h1><p>{intro}</p>{children}</div>;
+function PageHeading({ title, intro, children, backHref = "#/", backLabel = "← Back home" }) {
+  return <div className="personal-page-heading"><a className="personal-back" href={backHref}>{backLabel}</a><h1 id="personal-title">{title}</h1><p>{intro}</p>{children}</div>;
 }
 
 export function WritingPage() {
   return <><PageHeading title="Writing" intro="Thoughts, reflections, and the occasional deep dive." /><div className="personal-all-writing"><WritingList /></div></>;
 }
 
-export function TravelPage({ initialView = "world" }) {
+export function TravelPage({ initialView = "world", standalone = false }) {
   const [view, setView] = useState(initialView);
   const groups = [...new Set(travelArchive.countries.map(({ group }) => group))];
   return <>
-    <PageHeading title="Places I’ve been" intro="A little of the world I’ve explored."><p className="personal-travel-note"><GlobeHemisphereWest size={22} weight="duotone" aria-hidden="true" />{view === "world" ? `${travelArchive.countries.length} countries in my travel archive` : "A closer look at my U.S. travels"}</p></PageHeading>
+    <PageHeading title="Places I’ve been" intro="A little of the world I’ve explored." backHref={standalone ? "/" : undefined} backLabel={standalone ? "Travel home" : undefined}><p className="personal-travel-note"><GlobeHemisphereWest size={22} weight="duotone" aria-hidden="true" />{view === "world" ? `${travelArchive.countries.length} countries in my travel archive` : "A closer look at my U.S. travels"}</p></PageHeading>
     <div className="personal-travel-views" role="group" aria-label="Travel map view"><button aria-pressed={view === "world"} onClick={() => setView("world")}>World</button><button aria-pressed={view === "us"} onClick={() => setView("us")}>United States</button></div>
     {view === "us" ? <Suspense fallback={<p className="personal-archive-note" role="status">Loading the U.S. map…</p>}><USTravelMap /></Suspense> : <>
     <Suspense fallback={<p className="personal-archive-note" role="status">Loading the world map…</p>}><TravelMap /></Suspense>
     <div className="personal-travel-groups">{groups.map((group, index) => <section key={group} aria-labelledby={`region-${index}`}><p className="personal-eyebrow">{String(index + 1).padStart(2, "0")}</p><h2 id={`region-${index}`}>{group}</h2><ul>{travelArchive.countries.filter((country) => country.group === group).map((country) => <li key={country.id}>{country.name}{country.places?.length > 0 && <span className="personal-travel-places"> · {country.places.join(", ")}</span>}</li>)}</ul></section>)}</div>
-    <p className="personal-archive-note">Started with <OutboundLink href={travelArchive.sourceUrl}>my original travel page</OutboundLink>, with more places added along the way.</p>
+    {!standalone && <p className="personal-archive-note"><a className="personal-text-link" href={travelMapUrl}>Open the maps on travel.toli.me</a></p>}
     </>}
   </>;
 }
